@@ -1,0 +1,24 @@
+[project]
+name = "neon-agent-house"
+version = "1.0.0"
+description = "Autonomous 5-agent Agent House built on Google ADK 2.x and Gemini 4 Neon with shared Hall Room, max-2-round Verifier loop, and weekly self-improvement."
+requires-python = ">=3.11"
+dependencies = [
+    "google-adk>=2.15.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.0",
+]
+
+[project.scripts]
+agent-house = "agent_house.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["agent_house*"]

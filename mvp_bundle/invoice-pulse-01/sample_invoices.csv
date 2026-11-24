@@ -1,0 +1,6 @@
+invoice_id,client_name,client_email,amount_usd,due_date,status,payment_url
+INV-101,Northstar Studio,ap@northstar.example,1800,2026-11-21,unpaid,https://pay.example.com/inv-101
+INV-102,Brightline Agency,billing@brightline.example,3200,2026-11-08,unpaid,https://pay.example.com/inv-102
+INV-103,Kestrel Labs,finance@kestrel.example,4500,2026-10-20,unpaid,https://pay.example.com/inv-103
+INV-104,Harbor Commerce,accounts@harbor.example,1250,2026-11-15,paid,https://pay.example.com/inv-104
+INV-105,Summit Media,ap@summit.example,950,2026-12-05,unpaid,https://pay.example.com/inv-105

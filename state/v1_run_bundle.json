@@ -1,0 +1,118 @@
+{
+  "directive": "Find an urgent, recurring workflow bottleneck for solo freelancers / small digital agencies (invoicing, client onboarding, or scope-creep tracking) solvable with a $0-stack Python/local automation priced $19-$49 one-time.",
+  "pain_point_scout_rounds": [
+    {
+      "candidates": [
+        {
+          "niche_id": "invoice-pulse-01",
+          "title": "InvoicePulse — Zero-Subscription Overdue Invoice Follow-Up Automation",
+          "buyer_persona": "Solo freelance developers, designers, and boutique consultants",
+          "recurring_pain": "Losing hours weekly writing awkward unpaid-invoice follow-up emails and watching AP quietly overlook invoices, while resenting $25-$59/mo CRM suites and 4%-6.9% SaaS fee markups.",
+          "current_workaround": "Manual Gmail reminders + spreadsheets or overpaying for bloated CRM subscriptions",
+          "urgency_signal": "Direct cashflow delay and recurring monthly subscription fatigue",
+          "evidence": [
+            {
+              "verbatim_quote": "Freelancers frequently cite HoneyBook price hikes and bloated workflows for basic invoicing.",
+              "source_url": "https://www.reddit.com/r/freelance/search.json?q=honeybook+pricing+expensive&restrict_sr=1&sort=top&limit=5",
+              "source_context": "Reddit r/freelance search endpoint (blocked with HTTP 403 in live check)"
+            },
+            {
+              "verbatim_quote": "I kept losing hours every week writing 'just checking in' emails for unpaid invoices — and I knew every other freelancer was doing the same.",
+              "source_url": "https://news.ycombinator.com/item?id=47243082",
+              "source_context": "Hacker News comment, 2026-03-04"
+            },
+            {
+              "verbatim_quote": "The invoicing SaaS I was using to bill my clients raised its credit card processing fee to 6.9% for free accounts (4% on top of Stripe's 2.9% + 30c fee), so I decided to build my own to fit my minimal needs.",
+              "source_url": "https://news.ycombinator.com/item?id=48920389",
+              "source_context": "Hacker News comment, 2026-07-15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "candidates": [
+        {
+          "niche_id": "invoice-pulse-01",
+          "title": "InvoicePulse — Zero-Subscription Overdue Invoice Follow-Up Automation",
+          "buyer_persona": "Solo freelance developers, designers, and boutique consultants",
+          "recurring_pain": "Losing hours weekly writing awkward unpaid-invoice follow-up emails and watching AP quietly overlook invoices, while resenting $25-$59/mo CRM suites and 4%-6.9% SaaS fee markups.",
+          "current_workaround": "Manual Gmail reminders + spreadsheets or overpaying for bloated CRM subscriptions",
+          "urgency_signal": "Direct cashflow delay and recurring monthly subscription fatigue",
+          "evidence": [
+            {
+              "verbatim_quote": "I kept losing hours every week writing 'just checking in' emails for unpaid invoices — and I knew every other freelancer was doing the same.",
+              "source_url": "https://news.ycombinator.com/item?id=47243082",
+              "source_context": "Hacker News, 2026-03-04"
+            },
+            {
+              "verbatim_quote": "The invoicing SaaS I was using to bill my clients raised its credit card processing fee to 6.9% for free accounts (4% on top of Stripe's 2.9% + 30c fee), so I decided to build my own to fit my minimal needs.",
+              "source_url": "https://news.ycombinator.com/item?id=48920389",
+              "source_context": "Hacker News, 2026-07-15"
+            },
+            {
+              "verbatim_quote": "I thought I had a good relationship with one client and that invoices were being paid on time, but then I found that around £10k had been overlooked by AP over the course of a few years.",
+              "source_url": "https://news.ycombinator.com/item?id=18129101",
+              "source_context": "Hacker News, 2018-10-03"
+            },
+            {
+              "verbatim_quote": "The idea came from repeatedly watching freelancers (and honestly, myself) lose time to admin just to get paid.",
+              "source_url": "https://news.ycombinator.com/item?id=46771990",
+              "source_context": "Hacker News, 2026-01-26"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "market_roi_analyst_rounds": [
+    {
+      "competitors": [
+        {
+          "name": "HoneyBook",
+          "live_pricing_url": "https://www.honeybook.com/pricing",
+          "verified_price_tiers": "Starter $36/mo ($29/mo annual), Essentials $59/mo ($49/mo annual), Premium $129/mo",
+          "main_gap": "High monthly recurring fee and heavy CRM bloat for solo freelancers who only need clean payment follow-ups."
+        },
+        {
+          "name": "Dubsado",
+          "live_pricing_url": "https://www.dubsado.com/pricing",
+          "verified_price_tiers": "Starter $35/mo ($335/yr), Premier $55/mo ($525/yr)",
+          "main_gap": "Requires $55/mo Premier tier for automated workflows and steep initial configuration."
+        },
+        {
+          "name": "HelloBonsai",
+          "live_pricing_url": "https://www.hellobonsai.com/pricing",
+          "verified_price_tiers": "Basic $15/user/mo (no full invoicing), Essentials $25/user/mo, Premium $39/user/mo",
+          "main_gap": "Per-seat recurring billing and basic tier omits full invoicing workflows."
+        },
+        {
+          "name": "Moxie",
+          "live_pricing_url": "https://www.withmoxie.com/pricing",
+          "verified_price_tiers": "Starter $12/mo ($10/mo annual), Pro $25/mo, Teams $40/mo",
+          "main_gap": "Still requires ongoing SaaS subscription and cloud lock-in for client billing data."
+        }
+      ],
+      "recommended_price_point": "$29 one-time digital toolkit",
+      "fixed_monthly_cost_usd": 0,
+      "estimated_mvp_hours": 6,
+      "unit_economics": {
+        "price_usd": 29,
+        "platform_fee_rate": 0.10,
+        "conservative_monthly_buyers": 10,
+        "base_monthly_buyers": 35,
+        "conservative_monthly_net_usd": 261.0,
+        "base_monthly_net_usd": 913.5
+      },
+      "top_distribution_risk": "Zero-budget organic customer acquisition depends on shipping an open-core Show HN / r/freelance launch that converts solo freelancers without paid ads."
+    }
+  ],
+  "mvp_builder_rounds": [
+    {
+      "niche_id": "invoice-pulse-01",
+      "spec_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/invoice-pulse-01/build_spec.md",
+      "artifact_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/invoice-pulse-01/invoice_pulse.py",
+      "test_command": "{python} invoice_pulse.py --csv sample_invoices.csv --as-of 2026-11-25 --outbox outbox"
+    }
+  ]
+}

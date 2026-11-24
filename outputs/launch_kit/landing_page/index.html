@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>InvoicePulse — Zero-Subscription Overdue Invoice Follow-Up Toolkit</title>
+<style>
+  :root {
+    --bg: #080d1a;
+    --card: #11192e;
+    --border: #233054;
+    --text: #eef3ff;
+    --muted: #98a9cc;
+    --cyan: #38bdf8;
+    --emerald: #34d399;
+    --rose: #fb7185;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+    background: radial-gradient(circle at 20% 0%, #15254d 0%, var(--bg) 55%);
+    color: var(--text); line-height: 1.6;
+  }
+  .container { max-width: 960px; margin: 0 auto; padding: 48px 20px 80px; }
+  .eyebrow {
+    display: inline-block; padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 700;
+    background: rgba(56, 189, 248, 0.14); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.35);
+    margin-bottom: 18px;
+  }
+  h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; letter-spacing: -0.03em; margin: 0 0 18px; }
+  .lead { font-size: 18px; color: var(--muted); max-width: 700px; margin: 0 0 28px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; }
+  .btn {
+    display: inline-flex; align-items: center; padding: 14px 24px; border-radius: 12px;
+    font-weight: 700; font-size: 15px; text-decoration: none;
+  }
+  .btn.primary { background: var(--cyan); color: #051120; }
+  .btn.secondary { background: var(--card); color: var(--text); border: 1px solid var(--border); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 48px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 22px;
+  }
+  .card h3 { margin: 0 0 8px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 14.5px; }
+  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; margin-bottom: 48px; }
+  th, td { padding: 14px 16px; border-bottom: 1px solid var(--border); text-align: left; font-size: 14px; }
+  th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .win { color: var(--emerald); font-weight: 700; }
+  .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .price-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 26px; }
+  .price-card.featured { border-color: var(--cyan); box-shadow: 0 0 0 1px rgba(56,189,248,0.25); }
+  .price { font-size: 40px; font-weight: 800; margin: 10px 0; }
+  .price span { font-size: 15px; color: var(--muted); font-weight: 500; }
+  ul { padding-left: 18px; color: var(--muted); font-size: 14.5px; }
+  li { margin-bottom: 8px; }
+  footer { margin-top: 56px; color: var(--muted); font-size: 13px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="container">
+  <span class="eyebrow">100% Local &bull; Python Stdlib Only &bull; Zero Monthly Subscriptions</span>
+  <h1>Stop paying $36–$59/mo just to chase overdue invoices.</h1>
+  <p class="lead">
+    InvoicePulse turns a plain local CSV into an interactive overdue cashflow dashboard, automatic late-fee calculator,
+    and 1-click tone-calibrated follow-up emails—so you get paid faster without handing another dollar to bloated CRMs.
+  </p>
+  <div class="cta-row">
+    <a class="btn primary" href="#pricing">Get InvoicePulse — $9 One-Time</a>
+    <a class="btn secondary" href="#compare">Compare vs. Monthly Suites</a>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>60-Second Local Setup</h3>
+      <p>Zero pip installs, zero databases, zero cloud accounts. Runs locally on built-in Python 3 across macOS, Windows, and Linux.</p>
+    </div>
+    <div class="card">
+      <h3>4 Escalation Stages Built In</h3>
+      <p>Automatically drafts Day-3 friendly nudges, Day-7 AP follow-ups, Day-14 late-fee notices, and Day-30 deliverable-pause emails.</p>
+    </div>
+    <div class="card">
+      <h3>Interactive Command UI</h3>
+      <p>Generates a private dark-mode HTML dashboard with Total Cash at Risk KPIs, 1-click <code>mailto:</code> send, clipboard copy, and Mark Paid tracking.</p>
+    </div>
+  </div>
+
+  <h2 id="compare">Why Solo Freelancers Switch</h2>
+  <table>
+    <thead>
+      <tr><th>Tool</th><th>Cost</th><th>Billing Model</th><th>Data Privacy</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>HoneyBook</td><td>$36 – $129 / month</td><td>Recurring SaaS</td><td>Cloud locked</td></tr>
+      <tr><td>Dubsado</td><td>$35 – $55 / month</td><td>Recurring SaaS</td><td>Cloud locked</td></tr>
+      <tr><td>HelloBonsai</td><td>$15 – $59 / user / mo</td><td>Per-seat SaaS</td><td>Cloud locked</td></tr>
+      <tr><td class="win">InvoicePulse v3</td><td class="win">$9 one-time</td><td class="win">Own forever ($0/mo)</td><td class="win">100% local CSV</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="pricing">Simple One-Time Pricing</h2>
+  <div class="pricing">
+    <div class="price-card featured">
+      <h3>Starter Fast-Win</h3>
+      <div class="price">$9 <span>one-time</span></div>
+      <ul>
+        <li>Complete <code>invoice_pulse.py</code> source code (zero dependencies)</li>
+        <li>Interactive dark-mode HTML dashboard generator</li>
+        <li>4 tone-calibrated follow-up templates + late-fee math</li>
+        <li>Sample CSV ledger + 60-second Quickstart guide</li>
+      </ul>
+      <a class="btn primary" href="https://adorable48.gumroad.com/l/zcnhpu" target="_blank" rel="noopener">Buy Starter ($9)</a>
+    </div>
+    <div class="price-card">
+      <h3>Pro Lifetime</h3>
+      <div class="price">$29 <span>one-time</span></div>
+      <ul>
+        <li>Everything in Starter Fast-Win</li>
+        <li>Commercial / multi-client agency license</li>
+        <li>Lifetime v3.x &amp; v4 updates + custom template packs</li>
+        <li>Priority issue support via GitHub</li>
+      </ul>
+      <a class="btn secondary" href="https://adorable48.gumroad.com/l/zcnhpu" target="_blank" rel="noopener">Buy Pro ($29)</a>
+    </div>
+  </div>
+
+  <footer>InvoicePulse v3 &bull; Built for solo freelancers who hate recurring SaaS bloat.</footer>
+</div>
+</body>
+</html>

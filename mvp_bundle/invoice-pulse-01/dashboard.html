@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>InvoicePulse — Local Cashflow & Follow-Up Dashboard (2026-11-25)</title>
+<style>
+  :root {
+    --bg: #0b1020;
+    --panel: #131a2e;
+    --panel-2: #1a233d;
+    --border: #273355;
+    --text: #e6ecf8;
+    --muted: #93a3c7;
+    --cyan: #38bdf8;
+    --emerald: #34d399;
+    --amber: #fbbf24;
+    --rose: #fb7185;
+    --violet: #a78bfa;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+    background: radial-gradient(circle at top right, #162244 0%, var(--bg) 55%);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 32px 20px 64px; }
+  header {
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+    gap: 16px; margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 18px;
+  }
+  .brand h1 { margin: 0; font-size: 26px; letter-spacing: -0.02em; }
+  .brand p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+  .pill {
+    background: rgba(52, 211, 153, 0.14); color: var(--emerald);
+    border: 1px solid rgba(52, 211, 153, 0.35); padding: 6px 12px;
+    border-radius: 999px; font-size: 12px; font-weight: 600;
+  }
+  .kpis {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 14px; margin-bottom: 24px;
+  }
+  .kpi {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 18px;
+  }
+  .kpi .label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+  .kpi .value { font-size: 28px; font-weight: 700; margin-top: 6px; }
+  .kpi.risk .value { color: var(--rose); }
+  .kpi.fees .value { color: var(--amber); }
+  .kpi.count .value { color: var(--cyan); }
+  .kpi.crit .value { color: var(--violet); }
+  .controls {
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 18px;
+  }
+  .search {
+    flex: 1; min-width: 220px; background: var(--panel); border: 1px solid var(--border);
+    color: var(--text); padding: 10px 14px; border-radius: 10px; font-size: 14px;
+  }
+  .filter-btn {
+    background: var(--panel); color: var(--muted); border: 1px solid var(--border);
+    padding: 8px 14px; border-radius: 10px; cursor: pointer; font-size: 13px; font-weight: 600;
+  }
+  .filter-btn.active { background: var(--cyan); color: #061325; border-color: var(--cyan); }
+  .cards { display: flex; flex-direction: column; gap: 14px; }
+  .card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px;
+    transition: opacity 0.2s ease, border-color 0.2s ease;
+  }
+  .card.paid { opacity: 0.45; border-style: dashed; }
+  .card-top {
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;
+  }
+  .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .inv-id { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 700; color: var(--cyan); }
+  .client { font-size: 17px; font-weight: 700; }
+  .email { color: var(--muted); font-size: 13px; }
+  .badge {
+    padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+  }
+  .DAY_30_ESCALATION { background: rgba(251, 113, 133, 0.18); color: var(--rose); border: 1px solid rgba(251, 113, 133, 0.4); }
+  .DAY_14_LATE_FEE { background: rgba(251, 191, 36, 0.16); color: var(--amber); border: 1px solid rgba(251, 191, 36, 0.4); }
+  .DAY_7_FOLLOWUP { background: rgba(167, 139, 250, 0.16); color: var(--violet); border: 1px solid rgba(167, 139, 250, 0.4); }
+  .DAY_3_NUDGE { background: rgba(56, 189, 248, 0.16); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.4); }
+  .CURRENT { background: rgba(52, 211, 153, 0.16); color: var(--emerald); border: 1px solid rgba(52, 211, 153, 0.4); }
+  .amounts { text-align: right; }
+  .total { font-size: 22px; font-weight: 700; }
+  .sub { font-size: 12px; color: var(--muted); }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 9px;
+    font-size: 13px; font-weight: 600; text-decoration: none; cursor: pointer;
+    border: 1px solid var(--border); background: var(--panel-2); color: var(--text);
+  }
+  .btn.primary { background: var(--cyan); color: #061325; border-color: var(--cyan); }
+  .btn.success { background: rgba(52, 211, 153, 0.15); color: var(--emerald); border-color: rgba(52, 211, 153, 0.4); }
+  details { margin-top: 12px; background: #0d1324; border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; }
+  summary { cursor: pointer; font-size: 13px; color: var(--muted); font-weight: 600; }
+  pre { white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: #cbd5e1; margin: 10px 0 0; }
+  .toast {
+    position: fixed; bottom: 20px; right: 20px; background: var(--emerald); color: #062118;
+    padding: 10px 16px; border-radius: 10px; font-weight: 700; font-size: 13px; display: none;
+  }
+  footer { margin-top: 32px; text-align: center; color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <h1>InvoicePulse — Overdue Cashflow Command</h1>
+      <p>Audit Date: 2026-11-25 &bull; 100% Local &amp; Private &bull; $0/mo Subscription</p>
+    </div>
+    <div class="pill">Zero SaaS Fees &bull; Stdlib Only</div>
+  </header>
+
+  <section class="kpis">
+    <div class="kpi risk"><div class="label">Total Cash At Risk</div><div class="value" id="kpiRisk">$9,608.20</div></div>
+    <div class="kpi fees"><div class="label">Accrued Late Fees</div><div class="value" id="kpiFees">$108.20</div></div>
+    <div class="kpi count"><div class="label">Overdue Invoices</div><div class="value" id="kpiCount">3</div></div>
+    <div class="kpi crit"><div class="label">30+ Day Escalations</div><div class="value" id="kpiCrit">1</div></div>
+  </section>
+
+  <div class="controls">
+    <input class="search" id="searchBox" type="search" placeholder="Filter by client, invoice ID, or email..." />
+    <button class="filter-btn active" data-stage="ALL">All Unpaid</button>
+    <button class="filter-btn" data-stage="OVERDUE">Overdue Only</button>
+    <button class="filter-btn" data-stage="DAY_30_ESCALATION">30d+ Urgent</button>
+    <button class="filter-btn" data-stage="DAY_14_LATE_FEE">14d+ Late Fee</button>
+    <button class="filter-btn" data-stage="DAY_3_NUDGE">Day 3 Nudge</button>
+  </div>
+
+  <div class="cards" id="cards"></div>
+  <footer>Generated locally by InvoicePulse v3 &mdash; your invoice CSV never leaves your computer.</footer>
+</div>
+<div class="toast" id="toast">Copied email draft to clipboard!</div>
+
+<script>
+const ITEMS = [{"invoice_id": "INV-103", "client_name": "Kestrel Labs", "client_email": "finance@kestrel.example", "amount_usd": 4500.0, "due_date": "2026-10-20", "days_overdue": 36, "stage": "DAY_30_ESCALATION", "late_fee_usd": 81.0, "total_due_usd": 4581.0, "payment_url": "https://pay.example.com/inv-103", "email_subject": "URGENT: 30+ Days Overdue \u2014 Invoice #INV-103 ($4,581.00)", "email_body": "Hi Kestrel Labs,\n\nInvoice #INV-103 (due 2026-10-20) is now 36 days overdue (original $4,500.00 + late fee $81.00 = $4,581.00).\nWork and handoffs are paused until payment clears via https://pay.example.com/inv-103. Please reply today with payment confirmation.\n\nRegards,\n[Your Name]", "mailto_href": "mailto:finance%40kestrel.example?subject=URGENT%3A%2030%2B%20Days%20Overdue%20%E2%80%94%20Invoice%20%23INV-103%20%28%244%2C581.00%29&body=Hi%20Kestrel%20Labs%2C%0A%0AInvoice%20%23INV-103%20%28due%202026-10-20%29%20is%20now%2036%20days%20overdue%20%28original%20%244%2C500.00%20%2B%20late%20fee%20%2481.00%20%3D%20%244%2C581.00%29.%0AWork%20and%20handoffs%20are%20paused%20until%20payment%20clears%20via%20https%3A//pay.example.com/inv-103.%20Please%20reply%20today%20with%20payment%20confirmation.%0A%0ARegards%2C%0A%5BYour%20Name%5D"}, {"invoice_id": "INV-102", "client_name": "Brightline Agency", "client_email": "billing@brightline.example", "amount_usd": 3200.0, "due_date": "2026-11-08", "days_overdue": 17, "stage": "DAY_14_LATE_FEE", "late_fee_usd": 27.2, "total_due_usd": 3227.2, "payment_url": "https://pay.example.com/inv-102", "email_subject": "Action needed: Overdue Invoice #INV-102 ($3,227.20)", "email_body": "Hi Brightline Agency,\n\nInvoice #INV-102 (due 2026-11-08) is now 17 days past due. Per our agreement, a prorated late fee of $27.20 applies, bringing the total due to $3,227.20.\nPlease process payment within 3 business days to keep project deliverables on schedule: https://pay.example.com/inv-102\n\nRegards,\n[Your Name]", "mailto_href": "mailto:billing%40brightline.example?subject=Action%20needed%3A%20Overdue%20Invoice%20%23INV-102%20%28%243%2C227.20%29&body=Hi%20Brightline%20Agency%2C%0A%0AInvoice%20%23INV-102%20%28due%202026-11-08%29%20is%20now%2017%20days%20past%20due.%20Per%20our%20agreement%2C%20a%20prorated%20late%20fee%20of%20%2427.20%20applies%2C%20bringing%20the%20total%20due%20to%20%243%2C227.20.%0APlease%20process%20payment%20within%203%20business%20days%20to%20keep%20project%20deliverables%20on%20schedule%3A%20https%3A//pay.example.com/inv-102%0A%0ARegards%2C%0A%5BYour%20Name%5D"}, {"invoice_id": "INV-101", "client_name": "Northstar Studio", "client_email": "ap@northstar.example", "amount_usd": 1800.0, "due_date": "2026-11-21", "days_overdue": 4, "stage": "DAY_3_NUDGE", "late_fee_usd": 0.0, "total_due_usd": 1800.0, "payment_url": "https://pay.example.com/inv-101", "email_subject": "Quick check-in: Invoice #INV-101 ($1,800.00)", "email_body": "Hi Northstar Studio,\n\nHope your week is going well. Quick heads-up that Invoice #INV-101 for $1,800.00 (due 2026-11-21) is now 4 day(s) past due.\nIf it was already scheduled with AP, feel free to ignore\u2014otherwise you can settle it directly here: https://pay.example.com/inv-101\n\nThanks,\n[Your Name]", "mailto_href": "mailto:ap%40northstar.example?subject=Quick%20check-in%3A%20Invoice%20%23INV-101%20%28%241%2C800.00%29&body=Hi%20Northstar%20Studio%2C%0A%0AHope%20your%20week%20is%20going%20well.%20Quick%20heads-up%20that%20Invoice%20%23INV-101%20for%20%241%2C800.00%20%28due%202026-11-21%29%20is%20now%204%20day%28s%29%20past%20due.%0AIf%20it%20was%20already%20scheduled%20with%20AP%2C%20feel%20free%20to%20ignore%E2%80%94otherwise%20you%20can%20settle%20it%20directly%20here%3A%20https%3A//pay.example.com/inv-101%0A%0AThanks%2C%0A%5BYour%20Name%5D"}, {"invoice_id": "INV-105", "client_name": "Summit Media", "client_email": "ap@summit.example", "amount_usd": 950.0, "due_date": "2026-12-05", "days_overdue": -10, "stage": "CURRENT", "late_fee_usd": 0.0, "total_due_usd": 950.0, "payment_url": "https://pay.example.com/inv-105", "email_subject": "Invoice #INV-105 upcoming reminder ($950.00)", "email_body": "Hi Summit Media,\n\nFriendly reminder that Invoice #INV-105 for $950.00 is due on 2026-12-05.\nPayment link: https://pay.example.com/inv-105\n\nThanks,\n[Your Name]", "mailto_href": "mailto:ap%40summit.example?subject=Invoice%20%23INV-105%20upcoming%20reminder%20%28%24950.00%29&body=Hi%20Summit%20Media%2C%0A%0AFriendly%20reminder%20that%20Invoice%20%23INV-105%20for%20%24950.00%20is%20due%20on%202026-12-05.%0APayment%20link%3A%20https%3A//pay.example.com/inv-105%0A%0AThanks%2C%0A%5BYour%20Name%5D"}];
+const PAID_KEY = "invoicepulse_paid_ids_v3";
+let activeStage = "ALL";
+let paidSet = new Set(JSON.parse(localStorage.getItem(PAID_KEY) || "[]"));
+
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.style.display = "block";
+  clearTimeout(window.__toastTimer);
+  window.__toastTimer = setTimeout(() => { t.style.display = "none"; }, 2200);
+}
+
+function money(n) {
+  return "$" + Number(n).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+function togglePaid(id) {
+  if (paidSet.has(id)) paidSet.delete(id); else paidSet.add(id);
+  localStorage.setItem(PAID_KEY, JSON.stringify([...paidSet]));
+  render();
+}
+
+function copyDraft(id) {
+  const item = ITEMS.find(x => x.invoice_id === id);
+  if (!item) return;
+  const full = `To: ${item.client_email}\nSubject: ${item.email_subject}\n\n${item.email_body}`;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(full).then(() => showToast("Copied draft for #" + id));
+  } else {
+    showToast("Draft ready in preview for #" + id);
+  }
+}
+
+function render() {
+  const q = document.getElementById("searchBox").value.trim().toLowerCase();
+  const activeOverdue = ITEMS.filter(x => x.days_overdue > 0 && !paidSet.has(x.invoice_id));
+  document.getElementById("kpiRisk").textContent = money(activeOverdue.reduce((s, x) => s + x.total_due_usd, 0));
+  document.getElementById("kpiFees").textContent = money(activeOverdue.reduce((s, x) => s + x.late_fee_usd, 0));
+  document.getElementById("kpiCount").textContent = String(activeOverdue.length);
+  document.getElementById("kpiCrit").textContent = String(activeOverdue.filter(x => x.days_overdue >= 30).length);
+
+  const filtered = ITEMS.filter(x => {
+    if (activeStage === "OVERDUE" && x.days_overdue <= 0) return false;
+    if (activeStage !== "ALL" && activeStage !== "OVERDUE" && x.stage !== activeStage) return false;
+    if (!q) return true;
+    return `${x.invoice_id} ${x.client_name} ${x.client_email} ${x.stage}`.toLowerCase().includes(q);
+  });
+
+  const root = document.getElementById("cards");
+  root.innerHTML = filtered.map(item => {
+    const isPaid = paidSet.has(item.invoice_id);
+    const overdueTxt = item.days_overdue > 0 ? `${item.days_overdue} days overdue` : `Due in ${Math.abs(item.days_overdue)} days`;
+    return `
+      <article class="card ${isPaid ? "paid" : ""}">
+        <div class="card-top">
+          <div>
+            <div class="meta">
+              <span class="inv-id">#${item.invoice_id}</span>
+              <span class="client">${item.client_name}</span>
+              <span class="badge ${item.stage}">${item.stage.replaceAll("_", " ")}</span>
+            </div>
+            <div class="email">${item.client_email} &bull; Due ${item.due_date} &bull; ${overdueTxt}</div>
+          </div>
+          <div class="amounts">
+            <div class="total">${money(item.total_due_usd)}</div>
+            <div class="sub">Principal ${money(item.amount_usd)} + Late Fee ${money(item.late_fee_usd)}</div>
+          </div>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="${item.mailto_href}">Open Email Draft</a>
+          <button class="btn" onclick="copyDraft('${item.invoice_id}')">Copy Follow-Up Text</button>
+          <a class="btn" href="${item.payment_url}" target="_blank" rel="noopener">Payment Link</a>
+          <button class="btn success" onclick="togglePaid('${item.invoice_id}')">${isPaid ? "Undo Paid" : "Mark Paid"}</button>
+        </div>
+        <details>
+          <summary>Preview Follow-Up Email (${item.email_subject})</summary>
+          <pre>To: ${item.client_email}
+Subject: ${item.email_subject}
+
+${item.email_body}</pre>
+        </details>
+      </article>
+    `;
+  }).join("");
+}
+
+document.getElementById("searchBox").addEventListener("input", render);
+document.querySelectorAll(".filter-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    activeStage = btn.dataset.stage;
+    render();
+  });
+});
+render();
+</script>
+</body>
+</html>
