@@ -5,6 +5,7 @@
 ## Operating Constraints
 - 100% free stack only ($0/month fixed hosting/API/tool cost; Antigravity Pro + local Python + GitHub Free).
 - Once the user issues a final command, run the full internal pipeline with zero mid-run interruptions; pause only before unapproved external release or weekly prompt changes.
+- Standing user directive (ALWAYS ALLOWED): Never ask permission before uploading QA-verified YouTube Shorts via YouTube Data API v3 (`auto_upload=True` default once OAuth token is present).
 - Zero fabricated URLs, quotes, prices, or untested code stubs.
 
 ## Excluded / Saturated Niches

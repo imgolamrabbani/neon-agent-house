@@ -17,6 +17,11 @@ from agent_house.continuous import run_continuous_sync
 from agent_house.graph import build_agent_house_workflow
 from agent_house.weekly import run_weekly_review
 from agent_house.youtube_graph import run_youtube_wing_sync
+from agent_house.youtube_uploader import (
+    authorize_youtube_oauth,
+    is_youtube_api_configured,
+    upload_short_via_api,
+)
 
 
 def _make_replay_providers(replay_data: dict[str, Any]):
@@ -128,10 +133,19 @@ def main(argv: list[str] | None = None) -> int:
     cont_p.add_argument("--model", default=DEFAULT_MODEL_ID, help=f"Gemini model ID (default: {DEFAULT_MODEL_ID}).")
     cont_p.add_argument("--skip-live-urls", action="store_true", help="Skip live HTTP URL checks (offline tests only).")
 
-    yt_p = sub.add_parser("youtube", help="Run Wing 2 YouTube Automation House (doomscroll -> render 1080x1920 Short -> ffprobe QA -> Hall Room).")
+    yt_p = sub.add_parser("youtube", help="Run Wing 2 YouTube Automation House (doomscroll -> render 1080x1920 Short -> 100/100 SEO & QA -> auto-upload).")
     yt_p.add_argument("--niche-id", default="invoice-pulse-01", help="Hall Room niche_id to turn into a YouTube Short.")
     yt_p.add_argument("--short-id", default=None, help="Optional output short_id.")
     yt_p.add_argument("--skip-live-doomscroll", action="store_true", help="Reuse cached state/yt_trends.json instead of querying YouTube.")
+    yt_p.add_argument("--no-auto-upload", action="store_true", help="Render & QA only without uploading via YouTube API.")
+    yt_p.add_argument("--privacy", default="public", choices=["public", "unlisted", "private"], help="YouTube visibility (default: public).")
+
+    sub.add_parser("yt-auth", help="One-time OAuth sign-in to authorize hands-free YouTube Data API v3 uploads (zero future prompts).")
+
+    up_p = sub.add_parser("yt-upload", help="Upload an already-rendered Short directory directly via YouTube Data API v3.")
+    up_p.add_argument("short_dir", type=Path, help="Path to Short folder (e.g., outputs/youtube_shorts/yt-short-01).")
+    up_p.add_argument("--privacy", default="public", choices=["public", "unlisted", "private"])
+    up_p.add_argument("--publish-at", default=None, help="Optional RFC3339 schedule timestamp (e.g., 2026-11-26T14:00:00Z).")
 
     args = parser.parse_args(argv)
 
@@ -149,11 +163,32 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(result, indent=2))
         return 0
 
+    if args.command == "yt-auth":
+        token_path = authorize_youtube_oauth()
+        print(json.dumps({"status": "AUTHORIZED", "token_path": str(token_path), "ready": True}, indent=2))
+        return 0
+
+    if args.command == "yt-upload":
+        status = is_youtube_api_configured()
+        if not status["ready_for_unattended_upload"]:
+            print(json.dumps({"status": "AWAITING_ONE_TIME_YT_AUTH", **status}, indent=2))
+            return 2
+        res = upload_short_via_api(
+            args.short_dir,
+            privacy_status=args.privacy,
+            publish_at_iso=args.publish_at,
+            post_cta_comment=True,
+        )
+        print(json.dumps(res, indent=2))
+        return 0
+
     if args.command == "youtube":
         events = run_youtube_wing_sync(
             niche_id=args.niche_id,
             short_id=args.short_id,
             skip_live_doomscroll=args.skip_live_doomscroll,
+            auto_upload=not args.no_auto_upload,
+            privacy_status=args.privacy,
         )
         print(json.dumps(events, indent=2, default=str))
         return 0

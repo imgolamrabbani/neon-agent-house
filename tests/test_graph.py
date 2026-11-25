@@ -307,4 +307,21 @@ def test_wing2_hall_room_shorts_authority_and_blueprint(tmp_path: Path):
     assert len(board["verified_youtube_shorts"]) == 1
 
 
+def test_outstanding_youtube_seo_scores_100_across_all_5_niches():
+    from agent_house.youtube_seo import SEO_PROFILES, build_outstanding_seo
+
+    for niche_id in SEO_PROFILES:
+        seo = build_outstanding_seo(
+            niche_id=niche_id,
+            cta_url="https://adorable48.gumroad.com/l/zcnhpu",
+            bundle_url="https://adorable48.gumroad.com/l/cxsyhr",
+            storefront_url="https://imgolamrabbani.github.io/neon-agent-house/",
+        )
+        assert seo["seo_audit"]["score"] == 100, f"{niche_id} failed SEO audit: {seo['seo_audit']}"
+        assert seo["seo_audit"]["pass"] is True
+        assert seo["category_id"] == "28"
+        assert seo["made_for_kids"] is False
+
+
+
 

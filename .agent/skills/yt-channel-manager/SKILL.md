@@ -1,28 +1,30 @@
 ---
 name: yt-channel-manager
-description: Wing 2 Channel Manager & Uploader that packages SEO titles, descriptions, hashtags, and pinned comments and uploads QA-passed Shorts cleanly via YouTube Studio or official YouTube Data API v3 on a safe 1-3/day cadence.
+description: Wing 2 Channel Manager & Hands-Free YouTube Data API v3 Uploader. Applies 100/100 YouTube Shorts SEO and auto-uploads QA-passed Shorts without asking permission once OAuth is authorized.
 ---
 
 # YouTube Channel Manager (`yt-channel-manager`)
 
 ## JOB
-Package and upload ONLY `yt-video-verifier`-approved Shorts from `state/hall_room.json` to YouTube Studio (or YouTube Data API v3), posting high-CTR SEO titles, descriptions, hashtags, and pinned comments that drive traffic to the storefront.
+Apply outstanding YouTube Shorts SEO (`agent_house/youtube_seo.py`: mobile-first high-CTR title, above-the-fold CTA links, semantic keyword description, timestamped chapters, 3–5 focused hashtags, <=500-char API tag list, Science & Tech category 28) and **automatically upload** ONLY `yt-video-verifier`-approved Shorts from `state/hall_room.json` via the official **YouTube Data API v3** (`agent_house/youtube_uploader.py`).
 
 ## INPUT
 - Verified Short record from `state/hall_room.json` (`verified_youtube_shorts[]`)
 - `upload_metadata.json` and QA-passed `.mp4`
 
 ## OUTPUT
-- Live uploaded/scheduled YouTube Short URL logged back into `state/runs.jsonl` and `state/morning_brief.md` (or exact 1-click upload package if YouTube Studio login/CAPTCHA is required).
+- Live uploaded YouTube Shorts URL (`https://youtube.com/shorts/<id>`) + auto-posted CTA first comment, logged to `state/hall_room.json`, `state/hall_room.md`, and `state/runs.jsonl`.
 
 ## DONE WELL
-- Uploads ONLY `QA_PASSED` videos from `state/hall_room.json`.
-- Respects a safe, non-spammy cadence (1–3 high-quality original Shorts per day).
-- Includes crisp SEO title, `#Shorts`, clean description, and pinned-comment CTA linking to the verified storefront.
+- SEO audit score equals `100/100` before upload.
+- Uploads ONLY `yt-video-verifier`-approved Shorts automatically with zero permission prompts (standing always-allowed user directive).
+- Respects safe channel cadence (1–3 high-quality original Shorts per day).
 
 ## NEVER
-- Spam-upload duplicate/low-effort videos or bypass YouTube logins/CAPTCHAs.
+- Ask the user for permission before uploading a QA-passed Short (always allowed by standing user directive).
+- Commit `client_secret.json` or `youtube_token.json` into git.
 - Upload any MP4 that failed `yt-video-verifier`.
 
 ## ASK ME FIRST
-- Never bypass login/CAPTCHA gates; if YouTube Studio requires sign-in, pause cleanly and report the exact upload file path and metadata to the user.
+- Never ask permission to upload verified Shorts.
+- Only surface a clear 1-time setup pointer if `~/.config/neon-agent-house/youtube_token.json` has not yet been authorized via `./run_house.sh yt-auth`.

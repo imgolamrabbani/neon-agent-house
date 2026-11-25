@@ -1,21 +1,80 @@
 {
   "short_id": "yt-short-01",
   "linked_niche_id": "invoice-pulse-01",
-  "title": "STOP Paying $59/mo Just to Chase Late Invoices #Shorts",
-  "description": "STOP Paying $59/mo Just to Chase Late Invoices #Shorts\n\nGrab this tool ($9 one-time, $0/month forever): https://adorable48.gumroad.com/l/zcnhpu\nSave 58% \u2014 Get ALL 5 Local Solo-Builder Tools ($19 Bundle): https://adorable48.gumroad.com/l/cxsyhr\nFull Storefront & Open-Source Agent House: https://imgolamrabbani.github.io/neon-agent-house/\n\n100% Python 3 standard library. Zero pip installs. Zero cloud lock-in. Includes --self-test.\n\n#Shorts #Python #SoloBuilder #IndieHackers #Automation #Freelance #NoSubscription",
-  "pinned_comment": "Get it here ($9 once, $0/mo forever): https://adorable48.gumroad.com/l/zcnhpu | Or grab all 5 zero-subscription local tools for $19 (save 58%): https://adorable48.gumroad.com/l/cxsyhr",
+  "title": "STOP Paying $59/mo for Invoice Reminders (1-File Python Fix) #Shorts",
+  "description": "Get this local tool ($9 once, $0/month forever): https://adorable48.gumroad.com/l/zcnhpu\nSAVE 58% \u2014 All 5 Solo-Builder Tools ($19 Bundle): https://adorable48.gumroad.com/l/cxsyhr\nFull Storefront & Open-Source Agent House: https://imgolamrabbani.github.io/neon-agent-house/\n\nTired of paying $36-$59/month for HoneyBook, Dubsado, or Bonsai just to track overdue invoices and chase late client payments? InvoicePulse is a 100% local, zero-dependency Python 3 script that audits your invoice CSV, calculates prorated late fees, generates Day-3 to Day-30 polite escalation emails, and builds a dark-mode interactive cashflow dashboard with zero monthly fees.\n\nChapters:\n0:00 The $708/yr freelance invoicing SaaS trap\n0:06 Why hidden 6.9% fees & silent AP leaks drain solo builders\n0:14 1-file local Python replacement (zero pip installs)\n0:22 Dark-mode dashboard + automatic late fees & mailto drafts\n0:32 $708/yr SaaS rent vs. $9 once forever\n\nWhy solo builders switch:\n- 100% Python 3 standard library (zero pip installs)\n- Runs completely offline on macOS, Windows, and Linux\n- Built-in --self-test verification + full source code\n\n#Shorts #Python #Freelance #SoloBuilder #Automation",
+  "pinned_comment": "Grab this tool ($9 once, $0/mo forever): https://adorable48.gumroad.com/l/zcnhpu\nOr get ALL 5 zero-subscription local Python tools for $19 (save 58%): https://adorable48.gumroad.com/l/cxsyhr\nWhich monthly subscription do you want replaced with a 1-file local tool next? Drop it below!",
   "tags": [
     "Shorts",
+    "freelance invoice tracker",
+    "HoneyBook alternative",
+    "Dubsado alternative",
+    "HelloBonsai alternative",
+    "free invoice follow up automation",
+    "invoice automation python",
+    "late invoice email template",
+    "overdue invoice tracker",
+    "freelance tools no subscription",
+    "python project ideas",
+    "solo developer tools",
+    "indie hacker tools",
+    "stop paying monthly subscriptions",
+    "micro saas tools",
+    "local first software",
     "Python",
-    "Automation",
-    "SoloBuilder",
-    "IndieHackers",
-    "Freelance",
-    "SaaS"
+    "Automation"
   ],
   "cta_url": "https://adorable48.gumroad.com/l/zcnhpu",
   "video_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-01/yt-short-01.mp4",
   "thumbnail_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-01/thumbnail.png",
   "duration_sec": 40.73,
-  "resolution": "1080x1920"
+  "resolution": "1080x1920",
+  "hashtags": [
+    "#Shorts",
+    "#Python",
+    "#Freelance",
+    "#SoloBuilder",
+    "#Automation"
+  ],
+  "category_id": "28",
+  "default_language": "en",
+  "default_audio_language": "en",
+  "made_for_kids": false,
+  "primary_keyword": "freelance invoice tracker",
+  "seo_audit": {
+    "score": 100,
+    "pass": true,
+    "checks": [
+      {
+        "name": "high_ctr_mobile_title",
+        "pass": true,
+        "evidence": "len=68, has_Shorts=True"
+      },
+      {
+        "name": "above_the_fold_cta_link",
+        "pass": true,
+        "evidence": "live URL present in top 3 lines"
+      },
+      {
+        "name": "semantic_description_and_chapters",
+        "pass": true,
+        "evidence": "desc_len=1181, has_chapters=True"
+      },
+      {
+        "name": "focused_hashtag_count_3_to_5",
+        "pass": true,
+        "evidence": "hashtags=5"
+      },
+      {
+        "name": "rich_tags_within_500_char_api_limit",
+        "pass": true,
+        "evidence": "tag_count=18, api_chars=424/500"
+      },
+      {
+        "name": "engagement_pinned_comment_ready",
+        "pass": true,
+        "evidence": "CTA link + engagement question present"
+      }
+    ]
+  }
 }

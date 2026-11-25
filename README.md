@@ -22,8 +22,12 @@ A **Multi-Wing Autonomous Agent House** built on **Google ADK 2.x** (`google-adk
    # Wing 1: Continuous multi-niche product portfolio
    ./run_house.sh continuous --max-new 3
 
-   # Wing 2: Doomscroll YouTube + render & QA-verify a 1080x1920 Short
+   # Wing 2: Doomscroll YouTube + render & QA-verify a 1080x1920 Short (auto-uploads via YouTube API once authorized)
    ./run_house.sh youtube --niche-id invoice-pulse-01 --short-id yt-short-01
+
+   # One-time YouTube Data API v3 OAuth (zero browser upload prompts forever)
+   ./run_house.sh yt-auth
+   ./run_house.sh yt-upload outputs/youtube_shorts/yt-short-01
 
    # Weekly self-improvement audit
    ./run_house.sh weekly

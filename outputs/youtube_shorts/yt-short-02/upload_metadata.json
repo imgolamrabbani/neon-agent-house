@@ -1,21 +1,80 @@
 {
   "short_id": "yt-short-02",
   "linked_niche_id": "saas-sub-trimmer-01",
-  "title": "Why Giving Plaid Your Bank Password Is Insane (Local CSV Fix) #Shorts",
-  "description": "Why Giving Plaid Your Bank Password Is Insane (Local CSV Fix) #Shorts\n\nGrab this tool ($9 one-time, $0/month forever): https://adorable48.gumroad.com/l/ijrfzn\nSave 58% \u2014 Get ALL 5 Local Solo-Builder Tools ($19 Bundle): https://adorable48.gumroad.com/l/cxsyhr\nFull Storefront & Open-Source Agent House: https://imgolamrabbani.github.io/neon-agent-house/\n\n100% Python 3 standard library. Zero pip installs. Zero cloud lock-in. Includes --self-test.\n\n#Shorts #Python #SoloBuilder #IndieHackers #Automation #Freelance #NoSubscription",
-  "pinned_comment": "Get it here ($9 once, $0/mo forever): https://adorable48.gumroad.com/l/ijrfzn | Or grab all 5 zero-subscription local tools for $19 (save 58%): https://adorable48.gumroad.com/l/cxsyhr",
+  "title": "STOP Giving Apps Your Bank Password (Local CSV Audit Fix) #Shorts",
+  "description": "Get this local tool ($9 once, $0/month forever): https://adorable48.gumroad.com/l/ijrfzn\nSAVE 58% \u2014 All 5 Solo-Builder Tools ($19 Bundle): https://adorable48.gumroad.com/l/cxsyhr\nFull Storefront & Open-Source Agent House: https://imgolamrabbani.github.io/neon-agent-house/\n\nWhy pay $14.99/month for YNAB, Monarch Money, or Rocket Money AND hand over your bank username, password, and MFA to Plaid? SubTrim is a 100% offline Python 3 CSV statement auditor that detects forgotten recurring SaaS renewals, flags silent price hikes in red, and calculates your instant annual savings in a dark-mode local HTML dashboard\u2014without ever sharing a single bank login.\n\nChapters:\n0:00 Why sharing bank passwords with budget apps is broken\n0:07 How forgotten SaaS trials & price hikes drain $1,700+/yr\n0:15 Zero-Plaid local CSV audit in 1 Python command\n0:23 Dark-mode savings dashboard + instant price-hike alerts\n0:33 Own it for $9 once instead of renting $180/yr\n\nWhy solo builders switch:\n- 100% Python 3 standard library (zero pip installs)\n- Runs completely offline on macOS, Windows, and Linux\n- Built-in --self-test verification + full source code\n\n#Shorts #Privacy #Python #PersonalFinance #NoSubscription",
+  "pinned_comment": "Grab this tool ($9 once, $0/mo forever): https://adorable48.gumroad.com/l/ijrfzn\nOr get ALL 5 zero-subscription local Python tools for $19 (save 58%): https://adorable48.gumroad.com/l/cxsyhr\nWhich monthly subscription do you want replaced with a 1-file local tool next? Drop it below!",
   "tags": [
     "Shorts",
+    "Plaid alternative subscription tracker",
+    "YNAB alternative",
+    "Monarch Money alternative",
+    "Rocket Money alternative",
+    "offline subscription tracker CSV",
+    "cancel forgotten subscriptions",
+    "bank csv analyzer python",
+    "plaid privacy alternative",
+    "saas spend tracker",
+    "personal finance python script",
+    "offline budget tool",
+    "indie hacker finance",
+    "stop subscription creep",
+    "local first finance",
+    "solo founder tools",
     "Python",
-    "Automation",
-    "SoloBuilder",
-    "IndieHackers",
-    "Freelance",
-    "SaaS"
+    "Automation"
   ],
   "cta_url": "https://adorable48.gumroad.com/l/ijrfzn",
   "video_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-02/yt-short-02.mp4",
   "thumbnail_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-02/thumbnail.png",
   "duration_sec": 40.3,
-  "resolution": "1080x1920"
+  "resolution": "1080x1920",
+  "hashtags": [
+    "#Shorts",
+    "#Privacy",
+    "#Python",
+    "#PersonalFinance",
+    "#NoSubscription"
+  ],
+  "category_id": "28",
+  "default_language": "en",
+  "default_audio_language": "en",
+  "made_for_kids": false,
+  "primary_keyword": "Plaid alternative subscription tracker",
+  "seo_audit": {
+    "score": 100,
+    "pass": true,
+    "checks": [
+      {
+        "name": "high_ctr_mobile_title",
+        "pass": true,
+        "evidence": "len=65, has_Shorts=True"
+      },
+      {
+        "name": "above_the_fold_cta_link",
+        "pass": true,
+        "evidence": "live URL present in top 3 lines"
+      },
+      {
+        "name": "semantic_description_and_chapters",
+        "pass": true,
+        "evidence": "desc_len=1201, has_chapters=True"
+      },
+      {
+        "name": "focused_hashtag_count_3_to_5",
+        "pass": true,
+        "evidence": "hashtags=5"
+      },
+      {
+        "name": "rich_tags_within_500_char_api_limit",
+        "pass": true,
+        "evidence": "tag_count=18, api_chars=431/500"
+      },
+      {
+        "name": "engagement_pinned_comment_ready",
+        "pass": true,
+        "evidence": "CTA link + engagement question present"
+      }
+    ]
+  }
 }

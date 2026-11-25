@@ -18,6 +18,7 @@ from typing import Any
 from PIL import Image, ImageDraw, ImageFont
 
 from agent_house.config import ROOT_DIR, STATE_DIR
+from agent_house.youtube_seo import build_outstanding_seo, score_youtube_seo
 
 YT_TRENDS_JSON = STATE_DIR / "yt_trends.json"
 YT_OUTPUTS_DIR = ROOT_DIR / "outputs" / "youtube_shorts"
@@ -309,23 +310,18 @@ def build_short_blueprint(
         }
 
     top_ref = (trends.get("top_outliers") or [{}])[0]
-    description = (
-        f"{cfg['title']}\n\n"
-        f"Grab this tool ($9 one-time, $0/month forever): {cta_url}\n"
-        f"Save 58% — Get ALL 5 Local Solo-Builder Tools ($19 Bundle): {bundle_url}\n"
-        f"Full Storefront & Open-Source Agent House: {STOREFRONT_URL}\n\n"
-        "100% Python 3 standard library. Zero pip installs. Zero cloud lock-in. Includes --self-test.\n\n"
-        "#Shorts #Python #SoloBuilder #IndieHackers #Automation #Freelance #NoSubscription"
-    )
-    pinned_comment = (
-        f"Get it here ($9 once, $0/mo forever): {cta_url} | "
-        f"Or grab all 5 zero-subscription local tools for $19 (save 58%): {bundle_url}"
+    seo = build_outstanding_seo(
+        niche_id=niche_id,
+        cta_url=cta_url,
+        bundle_url=bundle_url,
+        storefront_url=STOREFRONT_URL,
+        fallback_title=cfg["title"],
     )
 
     return {
         "short_id": short_id,
         "linked_niche_id": niche_id,
-        "title": cfg["title"],
+        "title": seo["title"],
         "hook_badge": cfg["hook_badge"],
         "accent_hex": cfg["accent_hex"],
         "scenes": cfg["scenes"],
@@ -333,9 +329,15 @@ def build_short_blueprint(
         "bundle_url": bundle_url,
         "storefront_url": STOREFRONT_URL,
         "inspired_by_outlier": top_ref.get("title", ""),
-        "description": description,
-        "pinned_comment": pinned_comment,
-        "tags": ["Shorts", "Python", "Automation", "SoloBuilder", "IndieHackers", "Freelance", "SaaS"],
+        "description": seo["description"],
+        "pinned_comment": seo["pinned_comment"],
+        "tags": seo["tags"],
+        "hashtags": seo["hashtags"],
+        "category_id": seo["category_id"],
+        "default_language": seo["default_language"],
+        "default_audio_language": seo["default_audio_language"],
+        "made_for_kids": seo["made_for_kids"],
+        "seo_audit": seo["seo_audit"],
     }
 
 
@@ -750,6 +752,12 @@ def render_short_video(
         "description": blueprint["description"],
         "pinned_comment": blueprint["pinned_comment"],
         "tags": blueprint["tags"],
+        "hashtags": blueprint.get("hashtags", []),
+        "category_id": blueprint.get("category_id", "28"),
+        "default_language": blueprint.get("default_language", "en"),
+        "default_audio_language": blueprint.get("default_audio_language", "en"),
+        "made_for_kids": blueprint.get("made_for_kids", False),
+        "seo_audit": blueprint.get("seo_audit", {}),
         "cta_url": blueprint["cta_url"],
         "video_path": str(video_path),
         "thumbnail_path": str(thumb_path),
@@ -831,16 +839,15 @@ def verify_rendered_short(metadata: dict[str, Any]) -> dict[str, Any]:
     if not non_blank:
         fixes.append("Visual frame appears blank/low contrast; inspect renderer.")
 
-    seo_ok = (
-        bool(metadata.get("title"))
-        and len(metadata.get("title", "")) <= 100
-        and "#Shorts" in metadata.get("description", "")
-        and "https://" in metadata.get("description", "")
-        and thumb_path.is_file()
-    )
-    checks.append({"name": "seo_metadata_and_thumbnail", "pass": seo_ok, "evidence": f"title_len={len(metadata.get('title', ''))}, thumb={thumb_path.is_file()}"})
+    seo_eval = score_youtube_seo(metadata)
+    seo_ok = seo_eval["pass"] and thumb_path.is_file()
+    checks.append({
+        "name": "outstanding_seo_and_thumbnail",
+        "pass": seo_ok,
+        "evidence": f"seo_score={seo_eval['score']}/100, tags={len(metadata.get('tags', []))}, thumb={thumb_path.is_file()}",
+    })
     if not seo_ok:
-        fixes.append("Include <=100 char title, #Shorts tag, live CTA URL in description, and thumbnail.png.")
+        fixes.append("Ensure YouTube SEO audit scores 100/100 (title, chapters, 3-5 hashtags, <=500-char tags, CTA comment, thumbnail).")
 
     passed = sum(1 for c in checks if c["pass"])
     score = int(round((passed / len(checks)) * 100))

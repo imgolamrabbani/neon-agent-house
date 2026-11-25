@@ -32,6 +32,7 @@ from agent_house.youtube_tools import (
     render_short_video,
     verify_rendered_short,
 )
+from agent_house.youtube_uploader import is_youtube_api_configured, upload_short_via_api
 
 
 def build_youtube_wing_workflow(
@@ -43,6 +44,8 @@ def build_youtube_wing_workflow(
     trends_json: Path = YT_TRENDS_JSON,
     output_root: Path = YT_OUTPUTS_DIR,
     skip_live_doomscroll: bool = False,
+    auto_upload: bool = True,
+    privacy_status: str = "public",
 ) -> Workflow:
     """Construct the Wing 2 YouTube Automation ADK 2.x Workflow graph."""
 
@@ -150,16 +153,37 @@ def build_youtube_wing_workflow(
         return Event(output=qa, actions=EventActions(route="ESCALATE"))
 
     def yt_channel_manager(ctx: Context, node_input: Any) -> dict[str, Any]:
-        """Log run telemetry, update memory.md, and output final upload-ready package."""
-        sh = ctx.state["verified_short"]
+        """Auto-upload via YouTube Data API v3 when OAuth token is present (always allowed), log telemetry."""
+        sh = dict(ctx.state["verified_short"])
         qa = ctx.state["yt_qa"]
+        upload_result: dict[str, Any] = {"status": "SKIPPED_NO_UPLOAD_FLAG"}
+
+        if auto_upload:
+            cfg_status = is_youtube_api_configured()
+            if cfg_status["ready_for_unattended_upload"]:
+                upload_result = upload_short_via_api(
+                    ctx.state["short_metadata"],
+                    privacy_status=privacy_status,
+                    post_cta_comment=True,
+                    hall_room_json=hall_room_json,
+                    hall_room_md=hall_room_md,
+                )
+                sh["status"] = "PUBLISHED_YOUTUBE"
+                sh["youtube_url"] = upload_result["youtube_url"]
+            else:
+                upload_result = {
+                    "status": "AWAITING_ONE_TIME_YT_AUTH",
+                    "hint": "Place Google OAuth Desktop client_secret.json at ~/.config/neon-agent-house/client_secret.json and run `./run_house.sh yt-auth` once.",
+                }
+
         append_run_log(
             {
-                "version": "v5-youtube-wing",
+                "version": "v5.1-youtube-api",
                 "wing": "youtube_shorts",
-                "directive": f"Produce YouTube Short for {sh['linked_niche_id']}",
+                "directive": f"Produce & upload YouTube Short for {sh['linked_niche_id']}",
                 "niche_id": sh["short_id"],
-                "status": "VERIFIED_COMPLETE",
+                "status": sh["status"],
+                "youtube_url": sh.get("youtube_url", ""),
                 "first_pass": ctx.state["qa_round"] == 0,
                 "research_rounds": 0,
                 "mvp_rounds": ctx.state["qa_round"],
@@ -172,13 +196,14 @@ def build_youtube_wing_workflow(
             runs_path=runs_jsonl,
         )
         append_memory_lesson(
-            f"[v5-yt] Rendered & QA-passed '{sh['short_id']}' ({sh['duration_sec']}s, {sh['resolution']}, score={qa['score']}/100).",
+            f"[v5.1-yt] Verified '{sh['short_id']}' ({sh['duration_sec']}s, QA={qa['score']}/100, upload={upload_result['status']}).",
             memory_path=memory_md,
         )
         return {
-            "status": "QA_PASSED_READY_FOR_UPLOAD",
+            "status": sh["status"],
             "short": sh,
             "qa": qa,
+            "upload": upload_result,
             "node_trace": ctx.state["node_trace"],
         }
 
@@ -217,8 +242,14 @@ async def run_youtube_wing_once(
     niche_id: str = "invoice-pulse-01",
     short_id: str | None = None,
     skip_live_doomscroll: bool = False,
+    auto_upload: bool = True,
+    privacy_status: str = "public",
 ) -> list[dict[str, Any]]:
-    wf = build_youtube_wing_workflow(skip_live_doomscroll=skip_live_doomscroll)
+    wf = build_youtube_wing_workflow(
+        skip_live_doomscroll=skip_live_doomscroll,
+        auto_upload=auto_upload,
+        privacy_status=privacy_status,
+    )
     runner = InMemoryRunner(node=wf, app_name="neon_youtube_wing")
     session = await runner.session_service.create_session(app_name="neon_youtube_wing", user_id="solo_builder")
     payload = json.dumps({"niche_id": niche_id, "short_id": short_id or f"yt-{niche_id}"})
