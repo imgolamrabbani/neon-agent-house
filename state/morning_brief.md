@@ -1,34 +1,27 @@
-# Good Morning Brief — Neon Agent House v4 (3 Live Products Shipped Overnight)
+# Good Morning Brief — Neon Agent House v4 (All 6 Gumroad Listings LIVE!)
 
-**Status:** Agent House upgraded to **v4 Continuous Never-Idle Portfolio Engine**. All **3 distinct `$9` digital products** passed 100/100 live Hall Room verification (live HTTP 200 primary-source HN quotes + live quote-in-page grounding + live competitor pricing + `--self-test` + dark-mode HTML UI + ZIP), and **ALL 3 ARE PUBLISHED LIVE ON GUMROAD** at `$0` investment!
+**Status:** All **5 verified niches (100/100 Hall Room score each)** + the **$19 All-5 Bundle** are built, `--self-test` verified, packaged, and **PUBLISHED LIVE ON GUMROAD** at **$0 investment**.
 
 ---
 
-## 1. Live Published Gumroad Catalog (Any 1 Single Sale = ~$8.10 Net, Clearing Your $5+ Target)
-1. **InvoicePulse v3 ($9)** — Overdue Invoice Tracker & Follow-Up Command Center  
-   - Live Checkout: https://adorable48.gumroad.com/l/zcnhpu  
-   - Edit: https://gumroad.com/products/zcnhpu/edit
-2. **ScopeShield v1 ($9)** — Freelance Scope-Creep & Change-Order Generator  
-   - Live Checkout: https://adorable48.gumroad.com/l/ktulbs  
-   - Edit: https://gumroad.com/products/ktulbs/edit
-3. **LaunchCheck v1 ($9)** — Pre-Launch SEO, Broken-Link & Security-Header Auditor  
-   - Live Checkout: https://adorable48.gumroad.com/l/pgehvq  
-   - Edit: https://gumroad.com/products/pgehvq/edit
+## 1. Live Published Gumroad Catalog (6 Live Listings — Verified HTTP 200)
+*(1 single `$9` sale = ~\$8.10 net; 1 single `$19` bundle sale = ~\$17.10 net!)*
+
+1. **All 5 Tools Bundle (`$19`, Save 58%):** https://adorable48.gumroad.com/l/cxsyhr *(Edit: https://gumroad.com/products/cxsyhr/edit)*
+2. **InvoicePulse v3 (`$9`):** https://adorable48.gumroad.com/l/zcnhpu *(Edit: https://gumroad.com/products/zcnhpu/edit)*
+3. **ScopeShield v1 (`$9`):** https://adorable48.gumroad.com/l/ktulbs *(Edit: https://gumroad.com/products/ktulbs/edit)*
+4. **LaunchCheck v1 (`$9`):** https://adorable48.gumroad.com/l/pgehvq *(Edit: https://gumroad.com/products/pgehvq/edit)*
+5. **SubTrim v1 (`$9`):** https://adorable48.gumroad.com/l/ijrfzn *(Edit: https://gumroad.com/products/ijrfzn/edit)*
+6. **ChangelogKit v1 (`$9`):** https://adorable48.gumroad.com/l/svfzm *(Edit: https://gumroad.com/products/svfzm/edit)*
 
 ## 2. Live Storefront & Open-Source Repo ($0 Hosting)
-- **Live 3-Product Storefront (GitHub Pages — scored 100/100 on LaunchCheck!):**  
+- **Live 5-Tool Storefront (GitHub Pages — 100/100 LaunchCheck SEO Score):**  
   https://imgolamrabbani.github.io/neon-agent-house/
-- **Public GitHub Repo (tagged for organic discovery):**  
+- **Public GitHub Repo:**  
   https://github.com/imgolamrabbani/neon-agent-house
 
-## 3. Continuous Never-Idle Engine (`v4`)
-- **Backlog Queue Ready:** `state/niche_queue.json` already has Niches #4 (`saas-sub-trimmer-01`) and #5 (`git-changelog-kit-01`) queued!
-- **One-Command Continuous Mode:** `./run_house.sh continuous --max-new 3`
-- **Active Schedules:**
-  - **Overnight Continuous Loop:** Fires every 2 hours (`0 */2 * * *`, max 3 runs) to keep researching/building queued backlog niches so the House never idles.
-  - **Weekly Improvement Loop:** Fires every Sunday at 09:00 (`0 9 * * 0`) to analyze `state/runs.jsonl` and propose ONE surgical prompt edit for your approval.
-
-## 4. Fastest 3-Minute Morning Actions to Land Your First $5+ Today
-1. Verify payout settings at https://gumroad.com/settings/payments.
-2. Submit the unified 3-tool **Show HN** post from `outputs/launch_kit/launch_posts.md` at https://news.ycombinator.com/submit pointing to `https://imgolamrabbani.github.io/neon-agent-house/` and reply live to comments for 60 minutes.
-3. Share the Reddit (`r/SideProject`) and X posts from `outputs/launch_kit/launch_posts.md`.
+## 3. Fastest 2-Minute Launch Checklist (Drives Real First $5+ Revenue Today)
+1. Confirm your Gumroad payout settings: https://gumroad.com/settings/payments
+2. Submit your **Show HN** post (while awake to reply to comments!) at https://news.ycombinator.com/submit pointing to `https://imgolamrabbani.github.io/neon-agent-house/` using the copy in `outputs/launch_kit/launch_posts.md`.
+3. Post the Reddit (`r/SideProject`) & X thread variants from `outputs/launch_kit/launch_posts.md`.
+4. Weekly Improvement Loop runs automatically every **Sunday at 09:00** (`0 9 * * 0`) and waits for your explicit `approve` before editing any agent prompt.
