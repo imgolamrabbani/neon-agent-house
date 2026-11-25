@@ -12,9 +12,12 @@ from __future__ import annotations
 
 import json
 import math
+import os
 import subprocess
 import sys
 import tempfile
+import urllib.error
+import urllib.request
 from pathlib import Path
 from typing import Any
 
@@ -25,6 +28,10 @@ from agent_house.youtube_seo import YOUTUBE_CATEGORY_SCIENCE_TECH, score_youtube
 from agent_house.youtube_tools import FONT_BOLD_CANDIDATES, _probe_duration, verify_rendered_short
 
 CINEMA_OUT_DIR = ROOT_DIR / "outputs" / "youtube_shorts"
+ELEVENLABS_ENV_FILE = Path.home() / ".config" / "neon-agent-house" / "elevenlabs.env"
+# Brian (deep, resonant American documentary narrator on ElevenLabs)
+DEFAULT_ELEVENLABS_VOICE_ID = os.environ.get("ELEVENLABS_VOICE_ID", "nPczCjzI2devNBz1zQrb")
+DEFAULT_ELEVENLABS_MODEL = os.environ.get("ELEVENLABS_MODEL_ID", "eleven_multilingual_v2")
 WIDTH = 1080
 HEIGHT = 1920
 FPS = 30
@@ -40,34 +47,102 @@ def _font(size: int) -> Any:
     return ImageFont.load_default()
 
 
-def _synthesize_dramatic_voice(text: str, out_wav: Path, voice: str = "en-US-ChristopherNeural") -> float:
-    """Deep, dramatic cinematic documentary narrator via edge-tts (fallback: macOS Daniel)."""
+def _get_elevenlabs_api_key() -> str | None:
+    """Read ElevenLabs API key strictly from env var or private ~/.config file (never git)."""
+    key = os.environ.get("ELEVENLABS_API_KEY", "").strip()
+    if key:
+        return key
+    if ELEVENLABS_ENV_FILE.is_file():
+        for line in ELEVENLABS_ENV_FILE.read_text(encoding="utf-8").splitlines():
+            if line.strip().startswith("ELEVENLABS_API_KEY="):
+                return line.split("=", 1)[1].strip().strip('"').strip("'")
+    return None
+
+
+def _synthesize_elevenlabs(text: str, out_mp3: Path, api_key: str) -> None:
+    """Call ElevenLabs eleven_multilingual_v2 for human Netflix-documentary narration."""
+    voice_id = os.environ.get("ELEVENLABS_VOICE_ID", DEFAULT_ELEVENLABS_VOICE_ID)
+    url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}?output_format=mp3_44100_128"
+    payload = json.dumps(
+        {
+            "text": text,
+            "model_id": DEFAULT_ELEVENLABS_MODEL,
+            "voice_settings": {
+                "stability": 0.42,
+                "similarity_boost": 0.80,
+                "style": 0.35,
+                "use_speaker_boost": True,
+            },
+        }
+    ).encode("utf-8")
+    req = urllib.request.Request(
+        url,
+        data=payload,
+        headers={
+            "xi-api-key": api_key,
+            "Content-Type": "application/json",
+            "Accept": "audio/mpeg",
+        },
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        out_mp3.write_bytes(resp.read())
+
+
+def _synthesize_dramatic_voice(
+    text: str,
+    out_wav: Path,
+    voice: str = "en-US-BrianMultilingualNeural",
+) -> tuple[float, str]:
+    """3-Tier Broadcast Voice Engine:
+    1) ElevenLabs eleven_multilingual_v2 (when valid key is configured)
+    2) en-US-BrianMultilingualNeural (zero artificial pitch shift, warm studio mic EQ)
+    3) macOS say fallback (offline)
+    Returns (duration_sec, engine_used).
+    """
     mp3_tmp = out_wav.with_suffix(".mp3")
-    try:
+    engine_used = "unknown"
+
+    el_key = _get_elevenlabs_api_key()
+    if el_key:
+        try:
+            _synthesize_elevenlabs(text, mp3_tmp, el_key)
+            engine_used = "elevenlabs"
+        except Exception:
+            mp3_tmp.unlink(missing_ok=True)
+
+    if engine_used == "unknown":
+        try:
+            subprocess.run(
+                [
+                    sys.executable,
+                    "-m",
+                    "edge_tts",
+                    "--voice",
+                    voice,
+                    "--rate=+0%",
+                    "--text",
+                    text,
+                    "--write-media",
+                    str(mp3_tmp),
+                ],
+                check=True,
+                capture_output=True,
+                timeout=25,
+            )
+            engine_used = f"edge_tts:{voice}"
+        except Exception:
+            mp3_tmp.unlink(missing_ok=True)
+
+    if mp3_tmp.is_file() and mp3_tmp.stat().st_size > 1000:
+        # Warm studio condenser vocal EQ: gentle chest boost (180Hz) + de-harsh (3.2kHz) + smooth compression
+        vocal_eq = "highpass=f=75,equalizer=f=180:t=q:w=1.2:g=3.0,equalizer=f=3200:t=q:w=1.5:g=-1.8,acompressor=threshold=-18dB:ratio=2.8:attack=10:release=120"
         subprocess.run(
-            [
-                sys.executable,
-                "-m",
-                "edge_tts",
-                "--voice",
-                voice,
-                "--rate=+2%",
-                "--pitch=-4Hz",
-                "--text",
-                text,
-                "--write-media",
-                str(mp3_tmp),
-            ],
-            check=True,
-            capture_output=True,
-            timeout=25,
-        )
-        subprocess.run(
-            ["ffmpeg", "-y", "-v", "error", "-i", str(mp3_tmp), "-ar", "44100", "-ac", "2", str(out_wav)],
+            ["ffmpeg", "-y", "-v", "error", "-i", str(mp3_tmp), "-af", vocal_eq, "-ar", "44100", "-ac", "2", str(out_wav)],
             check=True,
         )
         mp3_tmp.unlink(missing_ok=True)
-    except Exception:
+    else:
         aiff_tmp = out_wav.with_suffix(".aiff")
         subprocess.run(["say", "-v", "Daniel", "-r", "175", "-o", str(aiff_tmp), text], check=True)
         subprocess.run(
@@ -75,7 +150,9 @@ def _synthesize_dramatic_voice(text: str, out_wav: Path, voice: str = "en-US-Chr
             check=True,
         )
         aiff_tmp.unlink(missing_ok=True)
-    return _probe_duration(out_wav)
+        engine_used = "macos_say"
+
+    return _probe_duration(out_wav), engine_used
 
 
 def _prepare_plate(image_path: Path) -> Image.Image:
@@ -292,9 +369,11 @@ def render_cinema_short(
         wavs: list[Path] = []
         durations: list[float] = []
 
+        voice_engines: list[str] = []
         for idx, sc in enumerate(scenes):
             raw_w = tmp_dir / f"v_{idx}.wav"
-            _synthesize_dramatic_voice(sc["narration"], raw_w)
+            _, eng = _synthesize_dramatic_voice(sc["narration"], raw_w)
+            voice_engines.append(eng)
             pad_w = tmp_dir / f"vp_{idx}.wav"
             subprocess.run(
                 ["ffmpeg", "-y", "-v", "error", "-i", str(raw_w), "-af", "apad=pad_dur=0.22", "-ar", "44100", "-ac", "2", str(pad_w)],
@@ -400,6 +479,7 @@ def render_cinema_short(
         "thumbnail_path": str(thumb_path),
         "duration_sec": round(_probe_duration(video_path), 2),
         "resolution": f"{WIDTH}x{HEIGHT}",
+        "voice_engine": voice_engines[0] if voice_engines else "unknown",
     }
     meta_path.write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
     qa = verify_rendered_short(metadata)
