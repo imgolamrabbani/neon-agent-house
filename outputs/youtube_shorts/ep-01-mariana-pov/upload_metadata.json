@@ -1,0 +1,77 @@
+{
+  "short_id": "ep-01-mariana-pov",
+  "linked_niche_id": "the-deep-chronicle",
+  "title": "POV: Your Submersible Loses Power at 11,000 Meters Deep #Shorts",
+  "description": "What happens if your submersible loses all power at the bottom of the Mariana Trench\u201411,000 meters below the Pacific Ocean under 1,086 bars of crushing pressure? Experience the terrifying beauty of the abyssal zone in 45 seconds.\nSubscribe to The Deep Chronicle for daily untold history, abyssal ocean mysteries, and forgotten worlds: https://www.youtube.com/@TheDeepChronicle\n\nChapters:\n0:00 11,000 meters beneath the Pacific Ocean\n0:08 Main power failure inside the titanium hull\n0:16 16,000 PSI crushing abyssal pressure\n0:24 Bioluminescent encounter outside the viewport\n0:32 The colossal silhouette in the abyss\n0:39 Emergency drop-weights & ascent\n\nCrafted with original AI cinema visuals & atmospheric sound design.\n#Shorts #Thalassophobia #DeepSea #MarianaTrench #POV",
+  "pinned_comment": "Would you take ,000,000 to spend 1 hour at the bottom of the Mariana Trench? Subscribe for tomorrow's deep-dive: https://www.youtube.com/@TheDeepChronicle",
+  "tags": [
+    "Shorts",
+    "Mariana Trench",
+    "thalassophobia",
+    "deep sea mysteries",
+    "ocean abyss",
+    "POV story",
+    "deep ocean documentary",
+    "scary ocean facts",
+    "submersible POV",
+    "bioluminescent sea creatures",
+    "giant squid",
+    "deepest part of the ocean",
+    "AI cinema shorts",
+    "The Deep Chronicle",
+    "untold mysteries",
+    "survival POV"
+  ],
+  "hashtags": [
+    "#Shorts",
+    "#Thalassophobia",
+    "#DeepSea",
+    "#MarianaTrench",
+    "#POV"
+  ],
+  "category_id": "27",
+  "default_language": "en",
+  "default_audio_language": "en",
+  "made_for_kids": false,
+  "seo_audit": {
+    "score": 100,
+    "pass": true,
+    "checks": [
+      {
+        "name": "high_ctr_mobile_title",
+        "pass": true,
+        "evidence": "len=63, has_Shorts=True"
+      },
+      {
+        "name": "above_the_fold_cta_link",
+        "pass": true,
+        "evidence": "live URL present in top 3 lines"
+      },
+      {
+        "name": "semantic_description_and_chapters",
+        "pass": true,
+        "evidence": "desc_len=775, has_chapters=True"
+      },
+      {
+        "name": "focused_hashtag_count_3_to_5",
+        "pass": true,
+        "evidence": "hashtags=5"
+      },
+      {
+        "name": "rich_tags_within_500_char_api_limit",
+        "pass": true,
+        "evidence": "tag_count=16, api_chars=296/500"
+      },
+      {
+        "name": "engagement_pinned_comment_ready",
+        "pass": true,
+        "evidence": "CTA link + engagement question present"
+      }
+    ]
+  },
+  "cta_url": "https://www.youtube.com/@TheDeepChronicle",
+  "video_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-01-mariana-pov/ep-01-mariana-pov.mp4",
+  "thumbnail_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-01-mariana-pov/thumbnail.png",
+  "duration_sec": 54.07,
+  "resolution": "1080x1920"
+}

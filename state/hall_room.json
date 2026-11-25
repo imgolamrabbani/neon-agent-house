@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "house_name": "Neon Agent House",
   "write_authority": "hall-room-verifier",
-  "updated_at": "2026-11-25T09:08:35Z",
+  "updated_at": "2026-11-25T09:27:02Z",
   "verified_opportunities": [
     {
       "niche_id": "invoice-pulse-01",
@@ -396,6 +396,21 @@
       "thumbnail_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-02/thumbnail.png",
       "youtube_url": "ready_for_upload",
       "verified_at": "2026-11-25T09:08:35Z"
+    },
+    {
+      "short_id": "ep-01-mariana-pov",
+      "title": "POV: Your Submersible Loses Power at 11,000 Meters Deep #Shorts",
+      "status": "QA_PASSED_READY_FOR_UPLOAD",
+      "qa_score": 100,
+      "resolution": "1080x1920",
+      "duration_sec": 54.07,
+      "mean_volume_db": -24.1,
+      "linked_niche_id": "the-deep-chronicle",
+      "cta_url": "https://www.youtube.com/@TheDeepChronicle",
+      "video_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-01-mariana-pov/ep-01-mariana-pov.mp4",
+      "thumbnail_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-01-mariana-pov/thumbnail.png",
+      "youtube_url": "ready_for_upload",
+      "verified_at": "2026-11-25T09:27:02Z"
     }
   ]
 }

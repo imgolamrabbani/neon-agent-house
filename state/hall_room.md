@@ -1,6 +1,6 @@
 # Neon Agent House — Shared Hall Room
 
-> **Write Authority:** Exclusively `hall-room-verifier` | **Last Updated:** 2026-11-25T09:08:35Z
+> **Write Authority:** Exclusively `hall-room-verifier` | **Last Updated:** 2026-11-25T09:27:02Z
 
 ## invoice-pulse-01 — InvoicePulse v3 — Zero-Subscription Overdue Invoice Command Center
 - **Status:** `READY_FOR_MONETIZATION` | **Research Score:** 100/100 | **MVP Score:** 100
@@ -120,4 +120,11 @@
 - **Linked Wing 1 Product:** `saas-sub-trimmer-01` (https://adorable48.gumroad.com/l/ijrfzn)
 - **MP4 File:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-02/yt-short-02.mp4`
 - **Thumbnail:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-02/thumbnail.png`
+- **YouTube URL:** ready_for_upload
+
+## ep-01-mariana-pov — POV: Your Submersible Loses Power at 11,000 Meters Deep #Shorts
+- **Status:** `QA_PASSED_READY_FOR_UPLOAD` | **QA Score:** 100/100 | **Resolution:** 1080x1920 | **Duration:** 54.07s
+- **Linked Wing 1 Product:** `the-deep-chronicle` (https://www.youtube.com/@TheDeepChronicle)
+- **MP4 File:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-01-mariana-pov/ep-01-mariana-pov.mp4`
+- **Thumbnail:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-01-mariana-pov/thumbnail.png`
 - **YouTube URL:** ready_for_upload
