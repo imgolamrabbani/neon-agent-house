@@ -1,0 +1,36 @@
+{
+  "revenue_target_usd": 5.0,
+  "max_products_per_cycle": 3,
+  "queue": [
+    {
+      "niche_id": "invoice-pulse-01",
+      "directive": "Zero-subscription overdue invoice tracker & follow-up command center for solo freelancers ($9 one-time).",
+      "replay_file": "/Volumes/MAC EXTRA/Vibe/Neon/state/v3_run_bundle.json",
+      "version_tag": "v3"
+    },
+    {
+      "niche_id": "scope-shield-01",
+      "directive": "Zero-subscription freelance scope-creep & change-order generator ($9 one-time).",
+      "replay_file": "/Volumes/MAC EXTRA/Vibe/Neon/state/v4_scope_shield_bundle.json",
+      "version_tag": "v4"
+    },
+    {
+      "niche_id": "launch-check-01",
+      "directive": "Zero-subscription pre-launch SEO, broken-link & security-header auditor for indie devs ($9 one-time).",
+      "replay_file": "/Volumes/MAC EXTRA/Vibe/Neon/state/v4_launch_check_bundle.json",
+      "version_tag": "v4"
+    },
+    {
+      "niche_id": "saas-sub-trimmer-01",
+      "directive": "Zero-subscription CSV bank/card statement auditor that flags forgotten recurring SaaS charges for solo founders ($9 one-time).",
+      "replay_file": null,
+      "version_tag": "v4"
+    },
+    {
+      "niche_id": "git-changelog-kit-01",
+      "directive": "Zero-subscription local git log to polished HTML release-notes & customer changelog generator ($9 one-time).",
+      "replay_file": null,
+      "version_tag": "v4"
+    }
+  ]
+}

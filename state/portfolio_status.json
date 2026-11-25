@@ -1,0 +1,25 @@
+{
+  "updated_at": "2026-11-24T21:05:17Z",
+  "version": "v4",
+  "revenue_target_usd": 5.0,
+  "total_verified_products": 3,
+  "verified_niche_ids": [
+    "invoice-pulse-01",
+    "scope-shield-01",
+    "launch-check-01"
+  ],
+  "executed_this_cycle": [],
+  "skipped_already_verified": [
+    "invoice-pulse-01",
+    "scope-shield-01",
+    "launch-check-01"
+  ],
+  "pending_live_api_key": [
+    "saas-sub-trimmer-01",
+    "git-changelog-kit-01"
+  ],
+  "remaining_backlog": [
+    "saas-sub-trimmer-01",
+    "git-changelog-kit-01"
+  ]
+}

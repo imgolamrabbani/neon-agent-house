@@ -1,0 +1,4 @@
+request_id,title,requested_by,channel,baseline_clause,estimated_hours,schedule_shift_days,status
+CR-101,Add Stripe customer billing portal integration,Maya Chen,Slack DM,Static marketing pages only (Sec 2.1),12,5,pending
+CR-102,Custom interactive ROI calculator widget,Maya Chen,Email,Max 3 standard landing sections (Sec 2.3),6,2,pending
+CR-103,Dark/light theme switcher across all 8 pages,Product Lead,Zoom call,Single brand theme included (Sec 3.0),4,2,pending

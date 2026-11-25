@@ -13,6 +13,7 @@ from google.adk.runners import InMemoryRunner
 from google.genai import types
 
 from agent_house.config import DEFAULT_MODEL_ID, get_gemini_api_key
+from agent_house.continuous import run_continuous_sync
 from agent_house.graph import build_agent_house_workflow
 from agent_house.weekly import run_weekly_review
 
@@ -121,10 +122,24 @@ def main(argv: list[str] | None = None) -> int:
 
     sub.add_parser("weekly", help="Run the weekly self-improvement audit and draft ONE prompt proposal.")
 
+    cont_p = sub.add_parser("continuous", help="Run Agent House v4 continuous multi-niche portfolio loop (never idles on 1 product).")
+    cont_p.add_argument("--max-new", type=int, default=3, help="Max new queued niches to execute in this cycle.")
+    cont_p.add_argument("--model", default=DEFAULT_MODEL_ID, help=f"Gemini model ID (default: {DEFAULT_MODEL_ID}).")
+    cont_p.add_argument("--skip-live-urls", action="store_true", help="Skip live HTTP URL checks (offline tests only).")
+
     args = parser.parse_args(argv)
 
     if args.command == "weekly":
         result = run_weekly_review()
+        print(json.dumps(result, indent=2))
+        return 0
+
+    if args.command == "continuous":
+        result = run_continuous_sync(
+            model=args.model,
+            max_new_runs=args.max_new,
+            check_live_urls=not args.skip_live_urls,
+        )
         print(json.dumps(result, indent=2))
         return 0
 

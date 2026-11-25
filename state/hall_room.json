@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "house_name": "Neon Agent House",
   "write_authority": "hall-room-verifier",
-  "updated_at": "2026-11-24T20:48:39Z",
+  "updated_at": "2026-11-24T21:04:43Z",
   "verified_opportunities": [
     {
       "niche_id": "invoice-pulse-01",
@@ -82,6 +82,146 @@
         "dashboard_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/invoice-pulse-01/dashboard.html",
         "zip_path": "/Volumes/MAC EXTRA/Vibe/Neon/dist/InvoicePulse_v3.zip",
         "test_command": "{python} invoice_pulse.py --self-test && {python} invoice_pulse.py --csv sample_invoices.csv --as-of 2026-11-25 --html dashboard.html --report overdue_report.md --outbox outbox",
+        "test_exit_code": 0
+      }
+    },
+    {
+      "niche_id": "scope-shield-01",
+      "title": "ScopeShield \u2014 Zero-Subscription Freelance Change-Order & Scope-Creep Generator",
+      "status": "READY_FOR_MONETIZATION",
+      "buyer_persona": "Fixed-price freelance developers, designers, and boutique agencies",
+      "recurring_pain": "Losing 20%-40% of project margin to casual client 'quick tweak' DMs because drafting formal change orders feels confrontational and proposal suites cost $39-$65/user/mo.",
+      "current_workaround": "Absorbing unpaid extra hours or manually rewriting Word/Google Doc addendums",
+      "urgency_signal": "Immediate unbilled margin loss and launch-blocker delays",
+      "evidence": [
+        {
+          "verbatim_quote": "One pro habit you need is dealing with change orders and part of that has to do with whether you have an easier or more difficult client to please. For example, a difficult client will ask for 'tweak' but if you're a pro, you don't bite.",
+          "source_url": "https://news.ycombinator.com/item?id=48830015",
+          "source_context": "Hacker News, 2026-07-08"
+        },
+        {
+          "verbatim_quote": "On the flip side I've seen many projects go way over budget when a client is actively involved and introduces scope creep that turns into launch blockers.",
+          "source_url": "https://news.ycombinator.com/item?id=46490660",
+          "source_context": "Hacker News, 2026-01-04"
+        },
+        {
+          "verbatim_quote": "This is so true, scope creep is real when the client actively gets involved And when that happens it's better to move the contract to hourly rather having it fixed price",
+          "source_url": "https://news.ycombinator.com/item?id=46491586",
+          "source_context": "Hacker News, 2026-01-04"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Proposify",
+          "live_pricing_url": "https://www.proposify.com/pricing",
+          "verified_price_tiers": "Build $49/mo ($39/user/mo annual), Grow $65/user/mo annual",
+          "main_gap": "Heavy enterprise proposal SaaS priced per seat."
+        },
+        {
+          "name": "Qwilr",
+          "live_pricing_url": "https://www.qwilr.com/pricing/",
+          "verified_price_tiers": "Starter $49/mo ($35/user/mo annual), Growth $55/user/mo (5-user min)",
+          "main_gap": "High recurring cost and 5-seat minimums on growth plans."
+        },
+        {
+          "name": "HelloBonsai",
+          "live_pricing_url": "https://www.hellobonsai.com/pricing",
+          "verified_price_tiers": "Essentials $25/user/mo, Premium $39/user/mo",
+          "main_gap": "Recurring monthly suite lock-in for simple change-order pricing."
+        }
+      ],
+      "recommended_price_point": "$9 one-time Starter Fast-Win",
+      "fixed_stack_cost": "$0/mo",
+      "estimated_mvp_hours": 4,
+      "unit_economics": {
+        "price_usd": 9,
+        "platform_fee_rate": 0.1,
+        "conservative_monthly_buyers": 12,
+        "base_monthly_buyers": 40,
+        "conservative_monthly_net_usd": 97.2,
+        "base_monthly_net_usd": 324.0
+      },
+      "unit_economics_summary": "Conservative: 12 buyers/mo = $97.2/mo net | Base: 40 buyers/mo = $324.0/mo net",
+      "top_distribution_risk": "Standing out among freelance contract templates requires leading with instant dollar-impact HTML/PDF change orders.",
+      "research_score": 100,
+      "verified_at": "2026-11-24T21:04:35Z",
+      "mvp_score": 100,
+      "mvp": {
+        "spec_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/scope-shield-01/build_spec.md",
+        "artifact_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/scope-shield-01/scope_shield.py",
+        "dashboard_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/scope-shield-01/change_order.html",
+        "zip_path": "/Volumes/MAC EXTRA/Vibe/Neon/dist/ScopeShield_v1.zip",
+        "test_command": "{python} scope_shield.py --self-test && {python} scope_shield.py --sow sample_sow.json --changes sample_changes.csv --html change_order.html",
+        "test_exit_code": 0
+      }
+    },
+    {
+      "niche_id": "launch-check-01",
+      "title": "LaunchCheck \u2014 Zero-Subscription Pre-Launch SEO, Link & Security-Header Auditor",
+      "status": "READY_FOR_MONETIZATION",
+      "buyer_persona": "Indie hackers, solo SaaS founders, and small web agencies shipping landing pages",
+      "recurring_pain": "Shipping day-one launch bugs (broken links, missing OG/SEO tags, missing security headers) because enterprise SEO audit suites cost $49-$249/month.",
+      "current_workaround": "Manually viewing page source or paying $99-$139/mo for bloated SEO suites",
+      "urgency_signal": "Day-one launch traffic wasted on broken social cards, SEO tags, or security warnings",
+      "evidence": [
+        {
+          "verbatim_quote": "I built Shipcheck after seeing too many launches where small technical issues caused real problems on day one \u2014 broken links, slow pages, misconfigured SSL, missing security headers, DNS/email setup mistakes, etc.",
+          "source_url": "https://news.ycombinator.com/item?id=47229745",
+          "source_context": "Hacker News, 2026-03-03"
+        },
+        {
+          "verbatim_quote": "I've been building CheckSitePulse, a website auditing tool that crawls sites and reports issues like broken links, spelling mistakes, accessibility problems, SEO issues, missing security headers, and content policy violations.",
+          "source_url": "https://news.ycombinator.com/item?id=49242309",
+          "source_context": "Hacker News, 2026-08-10"
+        },
+        {
+          "verbatim_quote": "The main difference is it bundles a bunch of launch checks in one place like SEO metadata, sitemap/robots, security headers",
+          "source_url": "https://news.ycombinator.com/item?id=47242949",
+          "source_context": "Hacker News, 2026-03-04"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Ahrefs",
+          "live_pricing_url": "https://ahrefs.com/pricing",
+          "verified_price_tiers": "Starter $29/mo, Lite $129/mo, Standard $249/mo",
+          "main_gap": "Expensive monthly subscription overkill for quick pre-launch site checks."
+        },
+        {
+          "name": "Semrush",
+          "live_pricing_url": "https://www.semrush.com/pricing/",
+          "verified_price_tiers": "Pro $139-$199/mo, Guru $249.95-$299/mo",
+          "main_gap": "High monthly enterprise pricing for indie founders launching micro-sites."
+        },
+        {
+          "name": "Moz Pro",
+          "live_pricing_url": "https://moz.com/products/pro/pricing",
+          "verified_price_tiers": "Starter $49/mo, Standard $99/mo ($79/mo annual)",
+          "main_gap": "Recurring monthly cost with cloud-only crawls."
+        }
+      ],
+      "recommended_price_point": "$9 one-time Starter Fast-Win",
+      "fixed_stack_cost": "$0/mo",
+      "estimated_mvp_hours": 4,
+      "unit_economics": {
+        "price_usd": 9,
+        "platform_fee_rate": 0.1,
+        "conservative_monthly_buyers": 15,
+        "base_monthly_buyers": 55,
+        "conservative_monthly_net_usd": 121.5,
+        "base_monthly_net_usd": 445.5
+      },
+      "unit_economics_summary": "Conservative: 15 buyers/mo = $121.5/mo net | Base: 55 buyers/mo = $445.5/mo net",
+      "top_distribution_risk": "Competing with free browser extensions requires emphasizing single-command CI/local HTML audit reports.",
+      "research_score": 100,
+      "verified_at": "2026-11-24T21:04:43Z",
+      "mvp_score": 100,
+      "mvp": {
+        "spec_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/launch-check-01/build_spec.md",
+        "artifact_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/launch-check-01/launch_check.py",
+        "dashboard_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/launch-check-01/audit_report.html",
+        "zip_path": "/Volumes/MAC EXTRA/Vibe/Neon/dist/LaunchCheck_v1.zip",
+        "test_command": "{python} launch_check.py --self-test && {python} launch_check.py --target ../../docs/index.html --html audit_report.html",
         "test_exit_code": 0
       }
     }

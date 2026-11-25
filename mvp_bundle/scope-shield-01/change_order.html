@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ScopeShield Change Order — Northstar SaaS Marketing Site Redesign</title>
+<style>
+  :root { --bg:#0a0f1e; --panel:#131b31; --border:#263459; --text:#edf2ff; --muted:#95a6cb; --cyan:#38bdf8; --amber:#fbbf24; --rose:#fb7185; --emerald:#34d399; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif; background:radial-gradient(circle at top left,#18274c,var(--bg) 55%); color:var(--text); line-height:1.5; }
+  .wrap { max-width:1040px; margin:0 auto; padding:32px 20px 64px; }
+  header { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:14px; border-bottom:1px solid var(--border); padding-bottom:18px; margin-bottom:24px; }
+  h1 { margin:0; font-size:26px; }
+  .sub { color:var(--muted); font-size:13px; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin-bottom:24px; }
+  .kpi { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:18px; }
+  .kpi .lbl { font-size:12px; text-transform:uppercase; color:var(--muted); letter-spacing:0.06em; }
+  .kpi .val { font-size:26px; font-weight:800; margin-top:6px; }
+  .kpi.add .val { color:var(--amber); }
+  .kpi.rev .val { color:var(--emerald); }
+  .kpi.hrs .val { color:var(--cyan); }
+  table { width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--border); border-radius:14px; overflow:hidden; margin-bottom:24px; }
+  th, td { padding:14px 16px; border-bottom:1px solid var(--border); text-align:left; font-size:14px; vertical-align:top; }
+  th { font-size:12px; text-transform:uppercase; color:var(--muted); letter-spacing:0.06em; }
+  .cost { font-weight:700; color:var(--emerald); white-space:nowrap; }
+  .badge { padding:4px 10px; border-radius:999px; font-size:11px; font-weight:700; white-space:nowrap; }
+  .MAJOR_SCOPE_CHANGE { background:rgba(251,113,133,0.18); color:var(--rose); border:1px solid rgba(251,113,133,0.4); }
+  .MODERATE_CHANGE_ORDER { background:rgba(251,191,36,0.16); color:var(--amber); border:1px solid rgba(251,191,36,0.4); }
+  .MINOR_ADDON { background:rgba(56,189,248,0.16); color:var(--cyan); border:1px solid rgba(56,189,248,0.4); }
+  .panel { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:20px; }
+  .actions { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:14px; }
+  .btn { display:inline-flex; align-items:center; padding:10px 16px; border-radius:10px; font-weight:700; font-size:13px; text-decoration:none; cursor:pointer; border:1px solid var(--border); background:#1c2745; color:var(--text); }
+  .btn.primary { background:var(--cyan); color:#051120; border-color:var(--cyan); }
+  pre { white-space:pre-wrap; background:#0b1121; border:1px solid var(--border); border-radius:10px; padding:14px; font-size:12.5px; color:#cbd5e1; margin:0; }
+  @media print { .actions { display:none; } body { background:#fff; color:#111; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>ScopeShield Change Order &mdash; Northstar SaaS Marketing Site Redesign</h1>
+      <div class="sub">Client: Northstar Labs (Maya Chen) &bull; Issued 2026-11-25 &bull; Rate: $120.00/hr</div>
+    </div>
+    <button class="btn" onclick="window.print()">Print / Save PDF</button>
+  </header>
+
+  <section class="kpis">
+    <div class="kpi"><div class="lbl">Signed Baseline SOW</div><div class="val">$4,800.00</div></div>
+    <div class="kpi add"><div class="lbl">Unbilled Creep Captured</div><div class="val">+$2,640.00</div></div>
+    <div class="kpi rev"><div class="lbl">Revised Project Total</div><div class="val">$7,440.00</div></div>
+    <div class="kpi hrs"><div class="lbl">Extra Effort / Delay</div><div class="val">+22h / +9d</div></div>
+  </section>
+
+  <table>
+    <thead><tr><th>ID</th><th>Out-of-Scope Request</th><th>Severity</th><th>Hours</th><th>Shift</th><th>Price Impact</th></tr></thead>
+    <tbody><tr>
+          <td><code>CR-101</code></td>
+          <td><strong>Add Stripe customer billing portal integration</strong><div class="sub">Via Slack DM (Maya Chen) &bull; Outside: Static marketing pages only (Sec 2.1)</div></td>
+          <td><span class="badge MAJOR_SCOPE_CHANGE">MAJOR SCOPE CHANGE</span></td>
+          <td>+12h</td>
+          <td>+5d</td>
+          <td class="cost">+$1,440.00</td>
+        </tr>
+<tr>
+          <td><code>CR-102</code></td>
+          <td><strong>Custom interactive ROI calculator widget</strong><div class="sub">Via Email (Maya Chen) &bull; Outside: Max 3 standard landing sections (Sec 2.3)</div></td>
+          <td><span class="badge MODERATE_CHANGE_ORDER">MODERATE CHANGE ORDER</span></td>
+          <td>+6h</td>
+          <td>+2d</td>
+          <td class="cost">+$720.00</td>
+        </tr>
+<tr>
+          <td><code>CR-103</code></td>
+          <td><strong>Dark/light theme switcher across all 8 pages</strong><div class="sub">Via Zoom call (Product Lead) &bull; Outside: Single brand theme included (Sec 3.0)</div></td>
+          <td><span class="badge MODERATE_CHANGE_ORDER">MODERATE CHANGE ORDER</span></td>
+          <td>+4h</td>
+          <td>+2d</td>
+          <td class="cost">+$480.00</td>
+        </tr></tbody>
+  </table>
+
+  <section class="panel">
+    <div class="actions">
+      <a class="btn primary" href="mailto:maya%40northstar.example?subject=Change%20Order%20Approval%3A%20Northstar%20SaaS%20Marketing%20Site%20Redesign%20%28%2B%242%2C640.00%20/%20%2B9d%29&body=Hi%20Maya%20Chen%2C%0A%0AThanks%20for%20the%20great%20ideas%20on%20Northstar%20SaaS%20Marketing%20Site%20Redesign.%20I%27d%20love%20to%20include%20the%20additions%20below.%20Because%20they%20sit%20outside%20our%20signed%20baseline%20scope%20%28%244%2C800.00%29%2C%20here%20is%20the%20formal%20Change%20Order%20summary%20%282026-11-25%29%3A%0A%0A-%20%5BCR-101%5D%20Add%20Stripe%20customer%20billing%20portal%20integration%3A%20%2B12.0h%20%28%241%2C440.00%2C%20%2B5d%29%20%E2%80%94%20outside%20%27Static%20marketing%20pages%20only%20%28Sec%202.1%29%27%0A-%20%5BCR-102%5D%20Custom%20interactive%20ROI%20calculator%20widget%3A%20%2B6.0h%20%28%24720.00%2C%20%2B2d%29%20%E2%80%94%20outside%20%27Max%203%20standard%20landing%20sections%20%28Sec%202.3%29%27%0A-%20%5BCR-103%5D%20Dark/light%20theme%20switcher%20across%20all%208%20pages%3A%20%2B4.0h%20%28%24480.00%2C%20%2B2d%29%20%E2%80%94%20outside%20%27Single%20brand%20theme%20included%20%28Sec%203.0%29%27%0A%0ATotal%20Additional%20Scope%3A%20%2B22.0%20hours%20%7C%20%2B%242%2C640.00%20%7C%20%2B9%20business%20day%28s%29%0ARevised%20Project%20Total%3A%20%247%2C440.00%0A%0APlease%20reply%20%27APPROVED%27%20to%20lock%20these%20into%20the%20sprint%E2%80%94otherwise%20we%27ll%20stay%20100%25%20on%20the%20original%20scope%20%26%20deadline.%0A%0ABest%2C%0A%5BYour%20Name%5D">Open Approval Email (mailto:)</a>
+      <button class="btn" onclick="navigator.clipboard && navigator.clipboard.writeText(document.getElementById('emailDraft').textContent)">Copy Approval Email</button>
+    </div>
+    <pre id="emailDraft">To: maya@northstar.example
+Subject: Change Order Approval: Northstar SaaS Marketing Site Redesign (+$2,640.00 / +9d)
+
+Hi Maya Chen,
+
+Thanks for the great ideas on Northstar SaaS Marketing Site Redesign. I&#x27;d love to include the additions below. Because they sit outside our signed baseline scope ($4,800.00), here is the formal Change Order summary (2026-11-25):
+
+- [CR-101] Add Stripe customer billing portal integration: +12.0h ($1,440.00, +5d) — outside &#x27;Static marketing pages only (Sec 2.1)&#x27;
+- [CR-102] Custom interactive ROI calculator widget: +6.0h ($720.00, +2d) — outside &#x27;Max 3 standard landing sections (Sec 2.3)&#x27;
+- [CR-103] Dark/light theme switcher across all 8 pages: +4.0h ($480.00, +2d) — outside &#x27;Single brand theme included (Sec 3.0)&#x27;
+
+Total Additional Scope: +22.0 hours | +$2,640.00 | +9 business day(s)
+Revised Project Total: $7,440.00
+
+Please reply &#x27;APPROVED&#x27; to lock these into the sprint—otherwise we&#x27;ll stay 100% on the original scope &amp; deadline.
+
+Best,
+[Your Name]</pre>
+  </section>
+</div>
+</body>
+</html>

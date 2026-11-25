@@ -1,0 +1,80 @@
+{
+  "directive": "Build a $0-stack pre-launch SEO, broken-link & security-header auditor for indie devs priced $9 one-time.",
+  "pain_point_scout_rounds": [
+    {
+      "candidates": [
+        {
+          "niche_id": "launch-check-01",
+          "title": "LaunchCheck — Zero-Subscription Pre-Launch SEO, Link & Security-Header Auditor",
+          "buyer_persona": "Indie hackers, solo SaaS founders, and small web agencies shipping landing pages",
+          "recurring_pain": "Shipping day-one launch bugs (broken links, missing OG/SEO tags, missing security headers) because enterprise SEO audit suites cost $49-$249/month.",
+          "current_workaround": "Manually viewing page source or paying $99-$139/mo for bloated SEO suites",
+          "urgency_signal": "Day-one launch traffic wasted on broken social cards, SEO tags, or security warnings",
+          "evidence": [
+            {
+              "verbatim_quote": "I built Shipcheck after seeing too many launches where small technical issues caused real problems on day one — broken links, slow pages, misconfigured SSL, missing security headers, DNS/email setup mistakes, etc.",
+              "source_url": "https://news.ycombinator.com/item?id=47229745",
+              "source_context": "Hacker News, 2026-03-03"
+            },
+            {
+              "verbatim_quote": "I've been building CheckSitePulse, a website auditing tool that crawls sites and reports issues like broken links, spelling mistakes, accessibility problems, SEO issues, missing security headers, and content policy violations.",
+              "source_url": "https://news.ycombinator.com/item?id=49242309",
+              "source_context": "Hacker News, 2026-08-10"
+            },
+            {
+              "verbatim_quote": "The main difference is it bundles a bunch of launch checks in one place like SEO metadata, sitemap/robots, security headers",
+              "source_url": "https://news.ycombinator.com/item?id=47242949",
+              "source_context": "Hacker News, 2026-03-04"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "market_roi_analyst_rounds": [
+    {
+      "competitors": [
+        {
+          "name": "Ahrefs",
+          "live_pricing_url": "https://ahrefs.com/pricing",
+          "verified_price_tiers": "Starter $29/mo, Lite $129/mo, Standard $249/mo",
+          "main_gap": "Expensive monthly subscription overkill for quick pre-launch site checks."
+        },
+        {
+          "name": "Semrush",
+          "live_pricing_url": "https://www.semrush.com/pricing/",
+          "verified_price_tiers": "Pro $139-$199/mo, Guru $249.95-$299/mo",
+          "main_gap": "High monthly enterprise pricing for indie founders launching micro-sites."
+        },
+        {
+          "name": "Moz Pro",
+          "live_pricing_url": "https://moz.com/products/pro/pricing",
+          "verified_price_tiers": "Starter $49/mo, Standard $99/mo ($79/mo annual)",
+          "main_gap": "Recurring monthly cost with cloud-only crawls."
+        }
+      ],
+      "recommended_price_point": "$9 one-time Starter Fast-Win",
+      "fixed_monthly_cost_usd": 0,
+      "estimated_mvp_hours": 4,
+      "unit_economics": {
+        "price_usd": 9,
+        "platform_fee_rate": 0.10,
+        "conservative_monthly_buyers": 15,
+        "base_monthly_buyers": 55,
+        "conservative_monthly_net_usd": 121.5,
+        "base_monthly_net_usd": 445.5
+      },
+      "top_distribution_risk": "Competing with free browser extensions requires emphasizing single-command CI/local HTML audit reports."
+    }
+  ],
+  "mvp_builder_rounds": [
+    {
+      "niche_id": "launch-check-01",
+      "spec_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/launch-check-01/build_spec.md",
+      "artifact_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/launch-check-01/launch_check.py",
+      "dashboard_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/launch-check-01/audit_report.html",
+      "zip_path": "/Volumes/MAC EXTRA/Vibe/Neon/dist/LaunchCheck_v1.zip",
+      "test_command": "{python} launch_check.py --self-test && {python} launch_check.py --target ../../docs/index.html --html audit_report.html"
+    }
+  ]
+}

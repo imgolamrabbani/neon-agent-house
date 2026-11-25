@@ -1,0 +1,80 @@
+{
+  "directive": "Build a $0-stack freelance scope-creep & change-order toolkit priced $9 one-time.",
+  "pain_point_scout_rounds": [
+    {
+      "candidates": [
+        {
+          "niche_id": "scope-shield-01",
+          "title": "ScopeShield — Zero-Subscription Freelance Change-Order & Scope-Creep Generator",
+          "buyer_persona": "Fixed-price freelance developers, designers, and boutique agencies",
+          "recurring_pain": "Losing 20%-40% of project margin to casual client 'quick tweak' DMs because drafting formal change orders feels confrontational and proposal suites cost $39-$65/user/mo.",
+          "current_workaround": "Absorbing unpaid extra hours or manually rewriting Word/Google Doc addendums",
+          "urgency_signal": "Immediate unbilled margin loss and launch-blocker delays",
+          "evidence": [
+            {
+              "verbatim_quote": "One pro habit you need is dealing with change orders and part of that has to do with whether you have an easier or more difficult client to please. For example, a difficult client will ask for 'tweak' but if you're a pro, you don't bite.",
+              "source_url": "https://news.ycombinator.com/item?id=48830015",
+              "source_context": "Hacker News, 2026-07-08"
+            },
+            {
+              "verbatim_quote": "On the flip side I've seen many projects go way over budget when a client is actively involved and introduces scope creep that turns into launch blockers.",
+              "source_url": "https://news.ycombinator.com/item?id=46490660",
+              "source_context": "Hacker News, 2026-01-04"
+            },
+            {
+              "verbatim_quote": "This is so true, scope creep is real when the client actively gets involved And when that happens it's better to move the contract to hourly rather having it fixed price",
+              "source_url": "https://news.ycombinator.com/item?id=46491586",
+              "source_context": "Hacker News, 2026-01-04"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "market_roi_analyst_rounds": [
+    {
+      "competitors": [
+        {
+          "name": "Proposify",
+          "live_pricing_url": "https://www.proposify.com/pricing",
+          "verified_price_tiers": "Build $49/mo ($39/user/mo annual), Grow $65/user/mo annual",
+          "main_gap": "Heavy enterprise proposal SaaS priced per seat."
+        },
+        {
+          "name": "Qwilr",
+          "live_pricing_url": "https://www.qwilr.com/pricing/",
+          "verified_price_tiers": "Starter $49/mo ($35/user/mo annual), Growth $55/user/mo (5-user min)",
+          "main_gap": "High recurring cost and 5-seat minimums on growth plans."
+        },
+        {
+          "name": "HelloBonsai",
+          "live_pricing_url": "https://www.hellobonsai.com/pricing",
+          "verified_price_tiers": "Essentials $25/user/mo, Premium $39/user/mo",
+          "main_gap": "Recurring monthly suite lock-in for simple change-order pricing."
+        }
+      ],
+      "recommended_price_point": "$9 one-time Starter Fast-Win",
+      "fixed_monthly_cost_usd": 0,
+      "estimated_mvp_hours": 4,
+      "unit_economics": {
+        "price_usd": 9,
+        "platform_fee_rate": 0.10,
+        "conservative_monthly_buyers": 12,
+        "base_monthly_buyers": 40,
+        "conservative_monthly_net_usd": 97.2,
+        "base_monthly_net_usd": 324.0
+      },
+      "top_distribution_risk": "Standing out among freelance contract templates requires leading with instant dollar-impact HTML/PDF change orders."
+    }
+  ],
+  "mvp_builder_rounds": [
+    {
+      "niche_id": "scope-shield-01",
+      "spec_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/scope-shield-01/build_spec.md",
+      "artifact_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/scope-shield-01/scope_shield.py",
+      "dashboard_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/scope-shield-01/change_order.html",
+      "zip_path": "/Volumes/MAC EXTRA/Vibe/Neon/dist/ScopeShield_v1.zip",
+      "test_command": "{python} scope_shield.py --self-test && {python} scope_shield.py --sow sample_sow.json --changes sample_changes.csv --html change_order.html"
+    }
+  ]
+}

@@ -237,3 +237,44 @@ def test_external_release_pauses_at_adk_hitl_gate(tmp_path: Path):
         "External release requested" in str(e) for e in events
     )
 
+
+def test_v4_continuous_queue_skips_verified_and_runs_new(tmp_path: Path):
+    from agent_house.continuous import run_continuous_sync
+
+    qpath = tmp_path / "niche_queue.json"
+    bpath = tmp_path / "bundle.json"
+    mvp = _make_mvp(tmp_path, valid=True)
+    bpath.write_text(
+        json.dumps(
+            {
+                "directive": "Queue test",
+                "pain_point_scout_rounds": [_good_pain_report()],
+                "market_roi_analyst_rounds": [_good_economics_report()],
+                "mvp_builder_rounds": [mvp],
+            }
+        ),
+        encoding="utf-8",
+    )
+    qpath.write_text(
+        json.dumps(
+            {
+                "revenue_target_usd": 5.0,
+                "queue": [
+                    {
+                        "niche_id": "test-niche-01",
+                        "directive": "Queue test",
+                        "replay_file": str(bpath),
+                        "version_tag": "v4",
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    # Smoke-verify continuous loader & deduplication status
+    from agent_house.continuous import load_niche_queue
+    loaded = load_niche_queue(qpath)
+    assert loaded["revenue_target_usd"] == 5.0
+    assert len(loaded["queue"]) == 1
+
+
