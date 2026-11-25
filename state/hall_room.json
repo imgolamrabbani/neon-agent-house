@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "house_name": "Neon Agent House",
   "write_authority": "hall-room-verifier",
-  "updated_at": "2026-11-25T09:27:02Z",
+  "updated_at": "2026-11-25T09:44:33Z",
   "verified_opportunities": [
     {
       "niche_id": "invoice-pulse-01",
@@ -400,7 +400,7 @@
     {
       "short_id": "ep-01-mariana-pov",
       "title": "POV: Your Submersible Loses Power at 11,000 Meters Deep #Shorts",
-      "status": "QA_PASSED_READY_FOR_UPLOAD",
+      "status": "PUBLISHED_YOUTUBE",
       "qa_score": 100,
       "resolution": "1080x1920",
       "duration_sec": 54.07,
@@ -409,8 +409,41 @@
       "cta_url": "https://www.youtube.com/@TheDeepChronicle",
       "video_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-01-mariana-pov/ep-01-mariana-pov.mp4",
       "thumbnail_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-01-mariana-pov/thumbnail.png",
-      "youtube_url": "ready_for_upload",
-      "verified_at": "2026-11-25T09:27:02Z"
+      "youtube_url": "https://youtube.com/shorts/TAup6L0vRgE",
+      "verified_at": "2026-11-25T09:39:42Z",
+      "youtube_video_id": "TAup6L0vRgE"
+    },
+    {
+      "short_id": "ep-02-apollo11-silence",
+      "title": "The 30 Seconds Apollo 11 Almost Crashed on the Moon #Shorts",
+      "status": "SCHEDULED_YOUTUBE",
+      "qa_score": 100,
+      "resolution": "1080x1920",
+      "duration_sec": 53.63,
+      "mean_volume_db": -23.6,
+      "linked_niche_id": "the-deep-chronicle",
+      "cta_url": "https://www.youtube.com/@TheDeepChronicle",
+      "video_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-02-apollo11-silence/ep-02-apollo11-silence.mp4",
+      "thumbnail_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-02-apollo11-silence/thumbnail.png",
+      "verified_at": "2026-11-25T09:43:06Z",
+      "youtube_video_id": "cOAg6vplzzk",
+      "youtube_url": "https://youtube.com/shorts/cOAg6vplzzk"
+    },
+    {
+      "short_id": "ep-03-voyager-edge",
+      "title": "Voyager 1 Is Still Calling Home From 15 Billion Miles Away #Shorts",
+      "status": "SCHEDULED_YOUTUBE",
+      "qa_score": 100,
+      "resolution": "1080x1920",
+      "duration_sec": 56.27,
+      "mean_volume_db": -23.8,
+      "linked_niche_id": "the-deep-chronicle",
+      "cta_url": "https://www.youtube.com/@TheDeepChronicle",
+      "video_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-03-voyager-edge/ep-03-voyager-edge.mp4",
+      "thumbnail_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-03-voyager-edge/thumbnail.png",
+      "verified_at": "2026-11-25T09:44:33Z",
+      "youtube_video_id": "EIkBUDbWLI8",
+      "youtube_url": "https://youtube.com/shorts/EIkBUDbWLI8"
     }
   ]
 }

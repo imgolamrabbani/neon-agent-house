@@ -22,3 +22,4 @@
 - [v5-yt] Rendered & QA-passed 'yt-short-01' (40.73s, 1080x1920, score=100/100).
 - [v5-yt] Rendered & QA-passed 'yt-short-02' (40.3s, 1080x1920, score=100/100).
 - [v5.2-cinema] Launched The Deep Chronicle brand kit + EP-01 Mariana Trench POV (100/100 QA, 100/100 SEO).
+- [v5.3-us-rpm] Published EP-01 live + scheduled US prime-time EP-02 (Apollo 11, 22:00 UTC) & EP-03 (Voyager 1, 16:00 UTC) via YouTube Data API v3.

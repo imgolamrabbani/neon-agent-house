@@ -1,0 +1,75 @@
+{
+  "short_id": "ep-03-voyager-edge",
+  "linked_niche_id": "the-deep-chronicle",
+  "title": "Voyager 1 Is Still Calling Home From 15 Billion Miles Away #Shorts",
+  "description": "Launched by NASA from Florida in 1977, Voyager 1 is now over 15 billion miles away in interstellar space\u2014the farthest human-made object in history. Its radio signal takes nearly 23 hours to reach Earth, and bolted to its hull is the Golden Record built to outlast humanity.\nSubscribe to The Deep Chronicle for daily untold history, abyssal ocean mysteries, and forgotten worlds: https://www.youtube.com/@TheDeepChronicle\n\nChapters:\n0:00 1977 Florida launch of Voyager 1\n0:09 Jupiter & Saturn close flybys\n0:18 Carl Sagan & the Pale Blue Dot photo\n0:30 15 billion miles away in interstellar space\n0:40 The Golden Record time capsule\n\nCrafted with original AI cinema visuals & atmospheric sound design.\n#Shorts #Voyager1 #NASA #Space #Astronomy",
+  "pinned_comment": "If you could put ONE song or message on a new Golden Record for alien civilizations, what would it be? Subscribe for tomorrow's deep-dive: https://www.youtube.com/@TheDeepChronicle",
+  "tags": [
+    "Shorts",
+    "Voyager 1",
+    "NASA",
+    "interstellar space",
+    "Pale Blue Dot",
+    "Carl Sagan",
+    "Golden Record",
+    "deep space mysteries",
+    "space facts",
+    "astronomy documentary",
+    "universe shorts",
+    "US space history",
+    "The Deep Chronicle",
+    "cosmic perspective"
+  ],
+  "hashtags": [
+    "#Shorts",
+    "#Voyager1",
+    "#NASA",
+    "#Space",
+    "#Astronomy"
+  ],
+  "category_id": "27",
+  "default_language": "en",
+  "default_audio_language": "en",
+  "made_for_kids": false,
+  "seo_audit": {
+    "score": 100,
+    "pass": true,
+    "checks": [
+      {
+        "name": "high_ctr_mobile_title",
+        "pass": true,
+        "evidence": "len=66, has_Shorts=True"
+      },
+      {
+        "name": "above_the_fold_cta_link",
+        "pass": true,
+        "evidence": "live URL present in top 3 lines"
+      },
+      {
+        "name": "semantic_description_and_chapters",
+        "pass": true,
+        "evidence": "desc_len=742, has_chapters=True"
+      },
+      {
+        "name": "focused_hashtag_count_3_to_5",
+        "pass": true,
+        "evidence": "hashtags=5"
+      },
+      {
+        "name": "rich_tags_within_500_char_api_limit",
+        "pass": true,
+        "evidence": "tag_count=14, api_chars=230/500"
+      },
+      {
+        "name": "engagement_pinned_comment_ready",
+        "pass": true,
+        "evidence": "CTA link + engagement question present"
+      }
+    ]
+  },
+  "cta_url": "https://www.youtube.com/@TheDeepChronicle",
+  "video_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-03-voyager-edge/ep-03-voyager-edge.mp4",
+  "thumbnail_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-03-voyager-edge/thumbnail.png",
+  "duration_sec": 56.27,
+  "resolution": "1080x1920"
+}

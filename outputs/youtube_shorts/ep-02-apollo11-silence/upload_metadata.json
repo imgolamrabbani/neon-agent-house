@@ -1,0 +1,76 @@
+{
+  "short_id": "ep-02-apollo11-silence",
+  "linked_niche_id": "the-deep-chronicle",
+  "title": "The 30 Seconds Apollo 11 Almost Crashed on the Moon #Shorts",
+  "description": "On July 20, 1969, Apollo 11 flashed an unexpected 1202 computer alarm minutes before touchdown while Neil Armstrong had under 30 seconds of fuel left to dodge a boulder field. Here is the true story of Houston Mission Control and the loneliest man in history orbiting the far side of the Moon.\nSubscribe to The Deep Chronicle for daily untold history, abyssal ocean mysteries, and forgotten worlds: https://www.youtube.com/@TheDeepChronicle\n\nChapters:\n0:00 July 20, 1969 \u2014 Saturn V & Apollo 11\n0:09 The terrifying 1202 guidance computer alarm\n0:18 26-year-old Steve Bales makes the GO call in Houston\n0:27 Neil Armstrong manual landing with 30 seconds of fuel\n0:36 Michael Collins alone behind the dark side of the Moon\n\nCrafted with original AI cinema visuals & atmospheric sound design.\n#Shorts #Apollo11 #NASA #History #Space",
+  "pinned_comment": "If you were in Houston Mission Control with 10 seconds to decide, would you call GO or ABORT? Subscribe for tomorrow's deep-dive: https://www.youtube.com/@TheDeepChronicle",
+  "tags": [
+    "Shorts",
+    "Apollo 11",
+    "NASA history",
+    "Moon landing",
+    "Neil Armstrong",
+    "American history",
+    "space documentary",
+    "Houston Mission Control",
+    "1202 alarm",
+    "Michael Collins",
+    "Saturn V",
+    "untold history",
+    "space mysteries",
+    "The Deep Chronicle",
+    "US history shorts"
+  ],
+  "hashtags": [
+    "#Shorts",
+    "#Apollo11",
+    "#NASA",
+    "#History",
+    "#Space"
+  ],
+  "category_id": "27",
+  "default_language": "en",
+  "default_audio_language": "en",
+  "made_for_kids": false,
+  "seo_audit": {
+    "score": 100,
+    "pass": true,
+    "checks": [
+      {
+        "name": "high_ctr_mobile_title",
+        "pass": true,
+        "evidence": "len=59, has_Shorts=True"
+      },
+      {
+        "name": "above_the_fold_cta_link",
+        "pass": true,
+        "evidence": "live URL present in top 3 lines"
+      },
+      {
+        "name": "semantic_description_and_chapters",
+        "pass": true,
+        "evidence": "desc_len=828, has_chapters=True"
+      },
+      {
+        "name": "focused_hashtag_count_3_to_5",
+        "pass": true,
+        "evidence": "hashtags=5"
+      },
+      {
+        "name": "rich_tags_within_500_char_api_limit",
+        "pass": true,
+        "evidence": "tag_count=15, api_chars=249/500"
+      },
+      {
+        "name": "engagement_pinned_comment_ready",
+        "pass": true,
+        "evidence": "CTA link + engagement question present"
+      }
+    ]
+  },
+  "cta_url": "https://www.youtube.com/@TheDeepChronicle",
+  "video_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-02-apollo11-silence/ep-02-apollo11-silence.mp4",
+  "thumbnail_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-02-apollo11-silence/thumbnail.png",
+  "duration_sec": 53.63,
+  "resolution": "1080x1920"
+}
