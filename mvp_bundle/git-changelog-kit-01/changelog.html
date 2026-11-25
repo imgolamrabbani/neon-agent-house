@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Neon Agent House — Release Notes</title>
+<style>
+  :root { --bg:#080d1a; --panel:#11192e; --border:#233155; --text:#eef3ff; --muted:#96a7cb; --cyan:#38bdf8; --emerald:#34d399; --amber:#fbbf24; --rose:#fb7185; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",sans-serif; background:radial-gradient(circle at top left,#16254a,var(--bg) 55%); color:var(--text); line-height:1.55; }
+  .wrap { max-width:920px; margin:0 auto; padding:36px 20px 64px; }
+  header { border-bottom:1px solid var(--border); padding-bottom:18px; margin-bottom:24px; }
+  .controls { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px; }
+  input { flex:1; min-width:220px; background:var(--panel); border:1px solid var(--border); color:var(--text); padding:10px 14px; border-radius:10px; }
+  .pill { background:var(--panel); color:var(--muted); border:1px solid var(--border); padding:8px 14px; border-radius:999px; cursor:pointer; font-size:12.5px; font-weight:600; }
+  .pill.active { background:var(--cyan); color:#051120; border-color:var(--cyan); }
+  .card { background:var(--panel); border:1px solid var(--border); border-radius:14px; padding:16px 20px; margin-bottom:12px; }
+  .meta { display:flex; flex-wrap:wrap; gap:10px; align-items:center; font-size:12px; color:var(--muted); margin-bottom:6px; }
+  .tag { padding:3px 9px; border-radius:999px; font-weight:700; font-size:11px; background:rgba(56,189,248,0.16); color:var(--cyan); }
+  .sha { font-family:ui-monospace,Menlo,monospace; color:var(--emerald); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1 style="margin:0;font-size:28px;">Neon Agent House &mdash; Product Changelog</h1>
+    <div style="color:var(--muted);font-size:14px;">Generated locally by ChangelogKit v1 &bull; Zero-Subscription Release Notes</div>
+  </header>
+  <div class="controls">
+    <input id="q" type="search" placeholder="Search release notes..." />
+    <button class="pill active" data-cat="ALL">All Updates</button>
+    <button class="pill" data-cat="New Features">New Features</button>
+    <button class="pill" data-cat="Bug Fixes">Bug Fixes</button>
+    <button class="pill" data-cat="Improvements & Maintenance">Maintenance</button>
+  </div>
+  <div id="list"></div>
+</div>
+<script>
+const ITEMS = [{"sha": "d471f20", "date": "2026-11-25", "subject": "Upgrade to Agent House v4 (Continuous Never-Idle Portfolio): 3 live  Gumroad products + 100/100 SEO storefront", "category": "New Features"}, {"sha": "30966b2", "date": "2026-11-25", "subject": "Add verified morning brief with live Gumroad + GitHub Pages URLs", "category": "New Features"}, {"sha": "61d121e", "date": "2026-11-25", "subject": "Launch Neon Agent House v3 (Google ADK 2.15.0) + InvoicePulse v3 ( Gumroad product)", "category": "New Features"}];
+let cat = "ALL";
+function render() {
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const filtered = ITEMS.filter(x => (cat === "ALL" || x.category === cat) && (!q || `${x.subject} ${x.sha} ${x.date}`.toLowerCase().includes(q)));
+  document.getElementById("list").innerHTML = filtered.map(x => `
+    <article class="card">
+      <div class="meta"><span class="tag">${x.category}</span><span>${x.date}</span><span class="sha">${x.sha}</span></div>
+      <div style="font-size:15px;font-weight:600;">${x.subject}</div>
+    </article>
+  `).join("") || "<p style='color:#96a7cb'>No matching commits.</p>";
+}
+document.getElementById("q").addEventListener("input", render);
+document.querySelectorAll(".pill").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".pill").forEach(p => p.classList.remove("active"));
+  b.classList.add("active"); cat = b.dataset.cat; render();
+}));
+render();
+</script>
+</body>
+</html>

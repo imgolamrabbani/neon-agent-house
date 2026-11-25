@@ -1,0 +1,80 @@
+{
+  "directive": "Zero-subscription CSV bank/card statement auditor that flags forgotten recurring SaaS charges and price hikes for solo founders ($9 one-time).",
+  "pain_point_scout_rounds": [
+    {
+      "candidates": [
+        {
+          "niche_id": "saas-sub-trimmer-01",
+          "title": "SubTrim — Zero-Plaid Local CSV Subscription & SaaS Leak Auditor",
+          "buyer_persona": "Privacy-conscious solo founders, developers, and freelancers",
+          "recurring_pain": "Refusing to hand over bank usernames/passwords/MFA to Plaid-connected budgeting apps ($14.99/mo YNAB/Monarch) while silently bleeding cash to forgotten recurring SaaS renewals and price hikes.",
+          "current_workaround": "Manually eyeballing monthly PDF/CSV bank statements or skipping audits entirely",
+          "urgency_signal": "Immediate cash savings plus strong security aversion to sharing bank credentials",
+          "evidence": [
+            {
+              "verbatim_quote": "Plaid needing you to enter your username, password, and MFA for your bank is like genuine lunacy.",
+              "source_url": "https://news.ycombinator.com/item?id=50526710",
+              "source_context": "Hacker News, 2026-11-17"
+            },
+            {
+              "verbatim_quote": "Plaid requires your bank username and password, so they have full read-write access to your account. They can do anything you can do when logged in to the bank's website",
+              "source_url": "https://news.ycombinator.com/item?id=48152652",
+              "source_context": "Hacker News, 2026-05-15"
+            },
+            {
+              "verbatim_quote": "unexpected charges and difficult-to-cancel billing is the game. The best customer is always the one that pays but never uses the service",
+              "source_url": "https://news.ycombinator.com/item?id=45998546",
+              "source_context": "Hacker News, 2025-11-20"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "market_roi_analyst_rounds": [
+    {
+      "competitors": [
+        {
+          "name": "YNAB",
+          "live_pricing_url": "https://www.ynab.com/pricing",
+          "verified_price_tiers": "$14.99/mo or $109/yr",
+          "main_gap": "Requires recurring subscription and cloud bank syncing."
+        },
+        {
+          "name": "Monarch Money",
+          "live_pricing_url": "https://www.monarchmoney.com/pricing",
+          "verified_price_tiers": "$14.99/mo or $99.99/yr (Plus $199.99/yr)",
+          "main_gap": "No free tier and relies on third-party bank credential aggregators."
+        },
+        {
+          "name": "Tiller",
+          "live_pricing_url": "https://www.tillerhq.com/pricing/",
+          "verified_price_tiers": "$79-$99/yr flat annual subscription",
+          "main_gap": "Requires annual renewal and cloud bank-feed connection."
+        }
+      ],
+      "recommended_price_point": "$9 one-time Starter Fast-Win",
+      "fixed_monthly_cost_usd": 0,
+      "estimated_mvp_hours": 3,
+      "unit_economics": {
+        "price_usd": 9,
+        "platform_fee_rate": 0.10,
+        "conservative_monthly_buyers": 15,
+        "base_monthly_buyers": 50,
+        "conservative_monthly_net_usd": 121.5,
+        "base_monthly_net_usd": 405.0
+      },
+      "top_distribution_risk": "Bank CSV column headers vary across banks; clear 3-column mapping instructions reduce buyer friction."
+    }
+  ],
+  "mvp_builder_rounds": [
+    {
+      "niche_id": "saas-sub-trimmer-01",
+      "spec_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/saas-sub-trimmer-01/build_spec.md",
+      "artifact_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/saas-sub-trimmer-01/sub_trim.py",
+      "dashboard_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/saas-sub-trimmer-01/sub_audit.html",
+      "zip_path": "/Volumes/MAC EXTRA/Vibe/Neon/dist/SubTrim_v1.zip",
+      "test_command": "{python} sub_trim.py --self-test && {python} sub_trim.py --csv sample_statement.csv --html sub_audit.html"
+    }
+  ]
+}

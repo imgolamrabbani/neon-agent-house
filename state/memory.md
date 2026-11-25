@@ -16,3 +16,5 @@
 - [v3] Verified 'invoice-pulse-01' (Scout=100, Analyst=100, Builder=100, retries=0).
 - [v4] Verified 'scope-shield-01' (Scout=100, Analyst=100, Builder=100, retries=0).
 - [v4] Verified 'launch-check-01' (Scout=100, Analyst=100, Builder=100, retries=0).
+- [v4] Verified 'saas-sub-trimmer-01' (Scout=100, Analyst=100, Builder=100, retries=0).
+- [v4] Verified 'git-changelog-kit-01' (Scout=100, Analyst=100, Builder=100, retries=0).

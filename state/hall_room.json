@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "house_name": "Neon Agent House",
   "write_authority": "hall-room-verifier",
-  "updated_at": "2026-11-24T21:04:43Z",
+  "updated_at": "2026-11-25T05:25:45Z",
   "verified_opportunities": [
     {
       "niche_id": "invoice-pulse-01",
@@ -222,6 +222,146 @@
         "dashboard_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/launch-check-01/audit_report.html",
         "zip_path": "/Volumes/MAC EXTRA/Vibe/Neon/dist/LaunchCheck_v1.zip",
         "test_command": "{python} launch_check.py --self-test && {python} launch_check.py --target ../../docs/index.html --html audit_report.html",
+        "test_exit_code": 0
+      }
+    },
+    {
+      "niche_id": "saas-sub-trimmer-01",
+      "title": "SubTrim \u2014 Zero-Plaid Local CSV Subscription & SaaS Leak Auditor",
+      "status": "READY_FOR_MONETIZATION",
+      "buyer_persona": "Privacy-conscious solo founders, developers, and freelancers",
+      "recurring_pain": "Refusing to hand over bank usernames/passwords/MFA to Plaid-connected budgeting apps ($14.99/mo YNAB/Monarch) while silently bleeding cash to forgotten recurring SaaS renewals and price hikes.",
+      "current_workaround": "Manually eyeballing monthly PDF/CSV bank statements or skipping audits entirely",
+      "urgency_signal": "Immediate cash savings plus strong security aversion to sharing bank credentials",
+      "evidence": [
+        {
+          "verbatim_quote": "Plaid needing you to enter your username, password, and MFA for your bank is like genuine lunacy.",
+          "source_url": "https://news.ycombinator.com/item?id=50526710",
+          "source_context": "Hacker News, 2026-11-17"
+        },
+        {
+          "verbatim_quote": "Plaid requires your bank username and password, so they have full read-write access to your account. They can do anything you can do when logged in to the bank's website",
+          "source_url": "https://news.ycombinator.com/item?id=48152652",
+          "source_context": "Hacker News, 2026-05-15"
+        },
+        {
+          "verbatim_quote": "unexpected charges and difficult-to-cancel billing is the game. The best customer is always the one that pays but never uses the service",
+          "source_url": "https://news.ycombinator.com/item?id=45998546",
+          "source_context": "Hacker News, 2025-11-20"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "YNAB",
+          "live_pricing_url": "https://www.ynab.com/pricing",
+          "verified_price_tiers": "$14.99/mo or $109/yr",
+          "main_gap": "Requires recurring subscription and cloud bank syncing."
+        },
+        {
+          "name": "Monarch Money",
+          "live_pricing_url": "https://www.monarchmoney.com/pricing",
+          "verified_price_tiers": "$14.99/mo or $99.99/yr (Plus $199.99/yr)",
+          "main_gap": "No free tier and relies on third-party bank credential aggregators."
+        },
+        {
+          "name": "Tiller",
+          "live_pricing_url": "https://www.tillerhq.com/pricing/",
+          "verified_price_tiers": "$79-$99/yr flat annual subscription",
+          "main_gap": "Requires annual renewal and cloud bank-feed connection."
+        }
+      ],
+      "recommended_price_point": "$9 one-time Starter Fast-Win",
+      "fixed_stack_cost": "$0/mo",
+      "estimated_mvp_hours": 3,
+      "unit_economics": {
+        "price_usd": 9,
+        "platform_fee_rate": 0.1,
+        "conservative_monthly_buyers": 15,
+        "base_monthly_buyers": 50,
+        "conservative_monthly_net_usd": 121.5,
+        "base_monthly_net_usd": 405.0
+      },
+      "unit_economics_summary": "Conservative: 15 buyers/mo = $121.5/mo net | Base: 50 buyers/mo = $405.0/mo net",
+      "top_distribution_risk": "Bank CSV column headers vary across banks; clear 3-column mapping instructions reduce buyer friction.",
+      "research_score": 100,
+      "verified_at": "2026-11-25T05:25:39Z",
+      "mvp_score": 100,
+      "mvp": {
+        "spec_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/saas-sub-trimmer-01/build_spec.md",
+        "artifact_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/saas-sub-trimmer-01/sub_trim.py",
+        "dashboard_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/saas-sub-trimmer-01/sub_audit.html",
+        "zip_path": "/Volumes/MAC EXTRA/Vibe/Neon/dist/SubTrim_v1.zip",
+        "test_command": "{python} sub_trim.py --self-test && {python} sub_trim.py --csv sample_statement.csv --html sub_audit.html",
+        "test_exit_code": 0
+      }
+    },
+    {
+      "niche_id": "git-changelog-kit-01",
+      "title": "ChangelogKit \u2014 Zero-Subscription Git to HTML Release Notes Generator",
+      "status": "READY_FOR_MONETIZATION",
+      "buyer_persona": "Indie hackers, solo SaaS builders, and open-source maintainers",
+      "recurring_pain": "Skipping customer release notes because manual writing is tedious and hosted changelog widgets (Canny $79-$99/mo, Beamer $49-$119/mo) charge recurring subscriptions.",
+      "current_workaround": "Leaving GitHub commits raw or manually editing a messy README",
+      "urgency_signal": "Users think the product is abandoned when no public changelog exists",
+      "evidence": [
+        {
+          "verbatim_quote": "Writing changelogs is tedious and usually skipped. I built changelogai.to: connect your GitHub account, select a repo, and AI generates customer-friendly changelogs directly from your commit history.",
+          "source_url": "https://news.ycombinator.com/item?id=46283350",
+          "source_context": "Hacker News, 2025-12-16"
+        },
+        {
+          "verbatim_quote": "Well, to be fair writing documentation is tedious (as are changelogs, and writing code).",
+          "source_url": "https://news.ycombinator.com/item?id=44569605",
+          "source_context": "Hacker News, 2025-07-15"
+        },
+        {
+          "verbatim_quote": "I'm building a changelog system at the moment. It's basically the github_changelog_generator gem, but without overwriting old changelog entries.",
+          "source_url": "https://news.ycombinator.com/item?id=28427023",
+          "source_context": "Hacker News, 2021-09-05"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Canny",
+          "live_pricing_url": "https://canny.io/pricing",
+          "verified_price_tiers": "Pro $79/mo annual ($99/mo monthly), scales to $279-$529/mo",
+          "main_gap": "Expensive per-tracked-user SaaS pricing for solo founders."
+        },
+        {
+          "name": "Beamer",
+          "live_pricing_url": "https://www.getbeamer.com/pricing",
+          "verified_price_tiers": "Starter $49/mo annual ($59/mo monthly), Pro $99/mo, Scale $249/mo",
+          "main_gap": "MAU-metered recurring subscription and paid branding removal."
+        },
+        {
+          "name": "LaunchNotes",
+          "live_pricing_url": "https://www.launchnotes.com/pricing",
+          "verified_price_tiers": "Entry ~$249/mo+ / Enterprise custom annual contracts",
+          "main_gap": "Enterprise product-ops pricing unreachable for indie builders."
+        }
+      ],
+      "recommended_price_point": "$9 one-time Starter Fast-Win",
+      "fixed_stack_cost": "$0/mo",
+      "estimated_mvp_hours": 3,
+      "unit_economics": {
+        "price_usd": 9,
+        "platform_fee_rate": 0.1,
+        "conservative_monthly_buyers": 12,
+        "base_monthly_buyers": 45,
+        "conservative_monthly_net_usd": 97.2,
+        "base_monthly_net_usd": 364.5
+      },
+      "unit_economics_summary": "Conservative: 12 buyers/mo = $97.2/mo net | Base: 45 buyers/mo = $364.5/mo net",
+      "top_distribution_risk": "Devs have free CLI tools like git-cliff; positioning focuses on instant zero-config static dark-mode HTML release pages ready for GitHub Pages.",
+      "research_score": 100,
+      "verified_at": "2026-11-25T05:25:45Z",
+      "mvp_score": 100,
+      "mvp": {
+        "spec_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/git-changelog-kit-01/build_spec.md",
+        "artifact_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/git-changelog-kit-01/changelog_kit.py",
+        "dashboard_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/git-changelog-kit-01/changelog.html",
+        "zip_path": "/Volumes/MAC EXTRA/Vibe/Neon/dist/ChangelogKit_v1.zip",
+        "test_command": "{python} changelog_kit.py --self-test && {python} changelog_kit.py --repo ../.. --name 'Neon Agent House' --md CHANGELOG.md --html changelog.html",
         "test_exit_code": 0
       }
     }

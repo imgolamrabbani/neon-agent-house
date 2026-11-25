@@ -1,6 +1,6 @@
 # Neon Agent House — Shared Hall Room
 
-> **Write Authority:** Exclusively `hall-room-verifier` | **Last Updated:** 2026-11-24T21:04:43Z
+> **Write Authority:** Exclusively `hall-room-verifier` | **Last Updated:** 2026-11-25T05:25:45Z
 
 ## invoice-pulse-01 — InvoicePulse v3 — Zero-Subscription Overdue Invoice Command Center
 - **Status:** `READY_FOR_MONETIZATION` | **Research Score:** 100/100 | **MVP Score:** 100
@@ -63,3 +63,43 @@
   - Spec: `/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/launch-check-01/build_spec.md`
   - Runnable Artifact: `/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/launch-check-01/launch_check.py`
   - Test Command: `{python} launch_check.py --self-test && {python} launch_check.py --target ../../docs/index.html --html audit_report.html` (exit=0)
+
+## saas-sub-trimmer-01 — SubTrim — Zero-Plaid Local CSV Subscription & SaaS Leak Auditor
+- **Status:** `READY_FOR_MONETIZATION` | **Research Score:** 100/100 | **MVP Score:** 100
+- **Buyer Persona:** Privacy-conscious solo founders, developers, and freelancers
+- **Recurring Pain:** Refusing to hand over bank usernames/passwords/MFA to Plaid-connected budgeting apps ($14.99/mo YNAB/Monarch) while silently bleeding cash to forgotten recurring SaaS renewals and price hikes.
+- **Recommended Offer:** $9 one-time Starter Fast-Win | **Fixed Stack Cost:** $0/mo
+- **Unit Economics:** Conservative: 15 buyers/mo = $121.5/mo net | Base: 50 buyers/mo = $405.0/mo net
+- **Top Risk:** Bank CSV column headers vary across banks; clear 3-column mapping instructions reduce buyer friction.
+- **Verified Primary Evidence:**
+  - "Plaid needing you to enter your username, password, and MFA for your bank is like genuine lunacy." — https://news.ycombinator.com/item?id=50526710 (Hacker News, 2026-11-17)
+  - "Plaid requires your bank username and password, so they have full read-write access to your account. They can do anything you can do when logged in to the bank's website" — https://news.ycombinator.com/item?id=48152652 (Hacker News, 2026-05-15)
+  - "unexpected charges and difficult-to-cancel billing is the game. The best customer is always the one that pays but never uses the service" — https://news.ycombinator.com/item?id=45998546 (Hacker News, 2025-11-20)
+- **Verified Competitors:**
+  - **YNAB**: $14.99/mo or $109/yr (https://www.ynab.com/pricing) — Gap: Requires recurring subscription and cloud bank syncing.
+  - **Monarch Money**: $14.99/mo or $99.99/yr (Plus $199.99/yr) (https://www.monarchmoney.com/pricing) — Gap: No free tier and relies on third-party bank credential aggregators.
+  - **Tiller**: $79-$99/yr flat annual subscription (https://www.tillerhq.com/pricing/) — Gap: Requires annual renewal and cloud bank-feed connection.
+- **Verified MVP Artifact:**
+  - Spec: `/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/saas-sub-trimmer-01/build_spec.md`
+  - Runnable Artifact: `/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/saas-sub-trimmer-01/sub_trim.py`
+  - Test Command: `{python} sub_trim.py --self-test && {python} sub_trim.py --csv sample_statement.csv --html sub_audit.html` (exit=0)
+
+## git-changelog-kit-01 — ChangelogKit — Zero-Subscription Git to HTML Release Notes Generator
+- **Status:** `READY_FOR_MONETIZATION` | **Research Score:** 100/100 | **MVP Score:** 100
+- **Buyer Persona:** Indie hackers, solo SaaS builders, and open-source maintainers
+- **Recurring Pain:** Skipping customer release notes because manual writing is tedious and hosted changelog widgets (Canny $79-$99/mo, Beamer $49-$119/mo) charge recurring subscriptions.
+- **Recommended Offer:** $9 one-time Starter Fast-Win | **Fixed Stack Cost:** $0/mo
+- **Unit Economics:** Conservative: 12 buyers/mo = $97.2/mo net | Base: 45 buyers/mo = $364.5/mo net
+- **Top Risk:** Devs have free CLI tools like git-cliff; positioning focuses on instant zero-config static dark-mode HTML release pages ready for GitHub Pages.
+- **Verified Primary Evidence:**
+  - "Writing changelogs is tedious and usually skipped. I built changelogai.to: connect your GitHub account, select a repo, and AI generates customer-friendly changelogs directly from your commit history." — https://news.ycombinator.com/item?id=46283350 (Hacker News, 2025-12-16)
+  - "Well, to be fair writing documentation is tedious (as are changelogs, and writing code)." — https://news.ycombinator.com/item?id=44569605 (Hacker News, 2025-07-15)
+  - "I'm building a changelog system at the moment. It's basically the github_changelog_generator gem, but without overwriting old changelog entries." — https://news.ycombinator.com/item?id=28427023 (Hacker News, 2021-09-05)
+- **Verified Competitors:**
+  - **Canny**: Pro $79/mo annual ($99/mo monthly), scales to $279-$529/mo (https://canny.io/pricing) — Gap: Expensive per-tracked-user SaaS pricing for solo founders.
+  - **Beamer**: Starter $49/mo annual ($59/mo monthly), Pro $99/mo, Scale $249/mo (https://www.getbeamer.com/pricing) — Gap: MAU-metered recurring subscription and paid branding removal.
+  - **LaunchNotes**: Entry ~$249/mo+ / Enterprise custom annual contracts (https://www.launchnotes.com/pricing) — Gap: Enterprise product-ops pricing unreachable for indie builders.
+- **Verified MVP Artifact:**
+  - Spec: `/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/git-changelog-kit-01/build_spec.md`
+  - Runnable Artifact: `/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/git-changelog-kit-01/changelog_kit.py`
+  - Test Command: `{python} changelog_kit.py --self-test && {python} changelog_kit.py --repo ../.. --name 'Neon Agent House' --md CHANGELOG.md --html changelog.html` (exit=0)

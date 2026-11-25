@@ -1,6 +1,6 @@
 {
   "revenue_target_usd": 5.0,
-  "max_products_per_cycle": 3,
+  "max_products_per_cycle": 5,
   "queue": [
     {
       "niche_id": "invoice-pulse-01",
@@ -22,14 +22,14 @@
     },
     {
       "niche_id": "saas-sub-trimmer-01",
-      "directive": "Zero-subscription CSV bank/card statement auditor that flags forgotten recurring SaaS charges for solo founders ($9 one-time).",
-      "replay_file": null,
+      "directive": "Zero-subscription CSV bank/card statement auditor that flags forgotten recurring SaaS charges and price hikes ($9 one-time).",
+      "replay_file": "/Volumes/MAC EXTRA/Vibe/Neon/state/v4_sub_trim_bundle.json",
       "version_tag": "v4"
     },
     {
       "niche_id": "git-changelog-kit-01",
       "directive": "Zero-subscription local git log to polished HTML release-notes & customer changelog generator ($9 one-time).",
-      "replay_file": null,
+      "replay_file": "/Volumes/MAC EXTRA/Vibe/Neon/state/v4_changelog_kit_bundle.json",
       "version_tag": "v4"
     }
   ]

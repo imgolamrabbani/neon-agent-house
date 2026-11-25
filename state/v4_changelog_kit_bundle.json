@@ -1,0 +1,80 @@
+{
+  "directive": "Zero-subscription local git log to polished HTML release-notes & customer changelog generator ($9 one-time).",
+  "pain_point_scout_rounds": [
+    {
+      "candidates": [
+        {
+          "niche_id": "git-changelog-kit-01",
+          "title": "ChangelogKit — Zero-Subscription Git to HTML Release Notes Generator",
+          "buyer_persona": "Indie hackers, solo SaaS builders, and open-source maintainers",
+          "recurring_pain": "Skipping customer release notes because manual writing is tedious and hosted changelog widgets (Canny $79-$99/mo, Beamer $49-$119/mo) charge recurring subscriptions.",
+          "current_workaround": "Leaving GitHub commits raw or manually editing a messy README",
+          "urgency_signal": "Users think the product is abandoned when no public changelog exists",
+          "evidence": [
+            {
+              "verbatim_quote": "Writing changelogs is tedious and usually skipped. I built changelogai.to: connect your GitHub account, select a repo, and AI generates customer-friendly changelogs directly from your commit history.",
+              "source_url": "https://news.ycombinator.com/item?id=46283350",
+              "source_context": "Hacker News, 2025-12-16"
+            },
+            {
+              "verbatim_quote": "Well, to be fair writing documentation is tedious (as are changelogs, and writing code).",
+              "source_url": "https://news.ycombinator.com/item?id=44569605",
+              "source_context": "Hacker News, 2025-07-15"
+            },
+            {
+              "verbatim_quote": "I'm building a changelog system at the moment. It's basically the github_changelog_generator gem, but without overwriting old changelog entries.",
+              "source_url": "https://news.ycombinator.com/item?id=28427023",
+              "source_context": "Hacker News, 2021-09-05"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "market_roi_analyst_rounds": [
+    {
+      "competitors": [
+        {
+          "name": "Canny",
+          "live_pricing_url": "https://canny.io/pricing",
+          "verified_price_tiers": "Pro $79/mo annual ($99/mo monthly), scales to $279-$529/mo",
+          "main_gap": "Expensive per-tracked-user SaaS pricing for solo founders."
+        },
+        {
+          "name": "Beamer",
+          "live_pricing_url": "https://www.getbeamer.com/pricing",
+          "verified_price_tiers": "Starter $49/mo annual ($59/mo monthly), Pro $99/mo, Scale $249/mo",
+          "main_gap": "MAU-metered recurring subscription and paid branding removal."
+        },
+        {
+          "name": "LaunchNotes",
+          "live_pricing_url": "https://www.launchnotes.com/pricing",
+          "verified_price_tiers": "Entry ~$249/mo+ / Enterprise custom annual contracts",
+          "main_gap": "Enterprise product-ops pricing unreachable for indie builders."
+        }
+      ],
+      "recommended_price_point": "$9 one-time Starter Fast-Win",
+      "fixed_monthly_cost_usd": 0,
+      "estimated_mvp_hours": 3,
+      "unit_economics": {
+        "price_usd": 9,
+        "platform_fee_rate": 0.10,
+        "conservative_monthly_buyers": 12,
+        "base_monthly_buyers": 45,
+        "conservative_monthly_net_usd": 97.2,
+        "base_monthly_net_usd": 364.5
+      },
+      "top_distribution_risk": "Devs have free CLI tools like git-cliff; positioning focuses on instant zero-config static dark-mode HTML release pages ready for GitHub Pages."
+    }
+  ],
+  "mvp_builder_rounds": [
+    {
+      "niche_id": "git-changelog-kit-01",
+      "spec_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/git-changelog-kit-01/build_spec.md",
+      "artifact_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/git-changelog-kit-01/changelog_kit.py",
+      "dashboard_path": "/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/git-changelog-kit-01/changelog.html",
+      "zip_path": "/Volumes/MAC EXTRA/Vibe/Neon/dist/ChangelogKit_v1.zip",
+      "test_command": "{python} changelog_kit.py --self-test && {python} changelog_kit.py --repo ../.. --name 'Neon Agent House' --md CHANGELOG.md --html changelog.html"
+    }
+  ]
+}
