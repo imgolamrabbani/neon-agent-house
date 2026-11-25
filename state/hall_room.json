@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "house_name": "Neon Agent House",
   "write_authority": "hall-room-verifier",
-  "updated_at": "2026-11-25T09:44:33Z",
+  "updated_at": "2026-11-25T10:06:45Z",
   "verified_opportunities": [
     {
       "niche_id": "invoice-pulse-01",
@@ -444,6 +444,22 @@
       "verified_at": "2026-11-25T09:44:33Z",
       "youtube_video_id": "EIkBUDbWLI8",
       "youtube_url": "https://youtube.com/shorts/EIkBUDbWLI8"
+    },
+    {
+      "short_id": "ep-04-blackhole-pov",
+      "title": "What Happens 1 Second After You Fall Into a Black Hole #Shorts",
+      "status": "PUBLISHED_YOUTUBE",
+      "qa_score": 100,
+      "resolution": "1080x1920",
+      "duration_sec": 50.5,
+      "mean_volume_db": -23.5,
+      "linked_niche_id": "the-deep-chronicle",
+      "cta_url": "https://www.youtube.com/@TheDeepChronicle",
+      "video_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-04-blackhole-pov/ep-04-blackhole-pov.mp4",
+      "thumbnail_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-04-blackhole-pov/thumbnail.png",
+      "verified_at": "2026-11-25T10:06:45Z",
+      "youtube_video_id": "tzQoXANXVTw",
+      "youtube_url": "https://youtube.com/shorts/tzQoXANXVTw"
     }
   ]
 }

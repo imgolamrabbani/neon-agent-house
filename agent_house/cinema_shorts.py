@@ -29,6 +29,13 @@ from agent_house.youtube_tools import FONT_BOLD_CANDIDATES, _probe_duration, ver
 
 CINEMA_OUT_DIR = ROOT_DIR / "outputs" / "youtube_shorts"
 ELEVENLABS_ENV_FILE = Path.home() / ".config" / "neon-agent-house" / "elevenlabs.env"
+MLX_AUDIO_PYTHON = Path(
+    os.environ.get(
+        "KOKORO_MLX_PYTHON",
+        str(Path.home() / "mcp-servers" / "mlx-audio" / ".venv" / "bin" / "python"),
+    )
+)
+DEFAULT_KOKORO_VOICE = os.environ.get("KOKORO_VOICE", "am_fenrir")
 # Brian (deep, resonant American documentary narrator on ElevenLabs)
 DEFAULT_ELEVENLABS_VOICE_ID = os.environ.get("ELEVENLABS_VOICE_ID", "nPczCjzI2devNBz1zQrb")
 DEFAULT_ELEVENLABS_MODEL = os.environ.get("ELEVENLABS_MODEL_ID", "eleven_multilingual_v2")
@@ -342,6 +349,46 @@ def build_cinema_seo(
     return seo
 
 
+def _synthesize_batch_kokoro_mlx(
+    scenes: list[dict[str, Any]],
+    tmp_dir: Path,
+    voice: str = DEFAULT_KOKORO_VOICE,
+) -> list[Path] | None:
+    """Batch-synthesize all scenes in ONE Apple Silicon GPU Kokoro-82M load ($0, human prosody)."""
+    if not MLX_AUDIO_PYTHON.is_file():
+        return None
+    raw_paths = [tmp_dir / f"kokoro_raw_{i}.wav" for i in range(len(scenes))]
+    jobs_file = tmp_dir / "kokoro_jobs.json"
+    jobs_file.write_text(
+        json.dumps(
+            {
+                "model_id": "mlx-community/Kokoro-82M-bf16",
+                "voice": voice,
+                "speed": 0.96,
+                "lang_code": "a",
+                "items": [
+                    {"text": sc["narration"], "out_wav": str(raw_paths[i])}
+                    for i, sc in enumerate(scenes)
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+    script_path = Path(__file__).resolve().parent / "kokoro_voice.py"
+    try:
+        proc = subprocess.run(
+            [str(MLX_AUDIO_PYTHON), str(script_path), str(jobs_file)],
+            capture_output=True,
+            text=True,
+            timeout=120,
+        )
+        if proc.returncode != 0 or not all(p.is_file() and p.stat().st_size > 2000 for p in raw_paths):
+            return None
+        return raw_paths
+    except Exception:
+        return None
+
+
 def render_cinema_short(
     *,
     short_id: str,
@@ -368,19 +415,51 @@ def render_cinema_short(
         tmp_dir = Path(tmp)
         wavs: list[Path] = []
         durations: list[float] = []
-
         voice_engines: list[str] = []
-        for idx, sc in enumerate(scenes):
-            raw_w = tmp_dir / f"v_{idx}.wav"
-            _, eng = _synthesize_dramatic_voice(sc["narration"], raw_w)
-            voice_engines.append(eng)
-            pad_w = tmp_dir / f"vp_{idx}.wav"
-            subprocess.run(
-                ["ffmpeg", "-y", "-v", "error", "-i", str(raw_w), "-af", "apad=pad_dur=0.22", "-ar", "44100", "-ac", "2", str(pad_w)],
-                check=True,
-            )
-            wavs.append(pad_w)
-            durations.append(_probe_duration(pad_w))
+
+        # Prefer local Apple Silicon Kokoro-82M-bf16 (human documentary narrator, $0) unless ElevenLabs succeeds
+        kokoro_raws = None
+        if not _get_elevenlabs_api_key():
+            kokoro_raws = _synthesize_batch_kokoro_mlx(scenes, tmp_dir)
+
+        vocal_eq = "highpass=f=75,equalizer=f=170:t=q:w=1.2:g=2.8,equalizer=f=3400:t=q:w=1.5:g=-1.5,acompressor=threshold=-18dB:ratio=2.5:attack=10:release=120,apad=pad_dur=0.22"
+
+        if kokoro_raws is not None:
+            for idx, raw_k in enumerate(kokoro_raws):
+                pad_w = tmp_dir / f"vp_{idx}.wav"
+                subprocess.run(
+                    ["ffmpeg", "-y", "-v", "error", "-i", str(raw_k), "-af", vocal_eq, "-ar", "44100", "-ac", "2", str(pad_w)],
+                    check=True,
+                )
+                wavs.append(pad_w)
+                durations.append(_probe_duration(pad_w))
+                voice_engines.append(f"kokoro_mlx:{DEFAULT_KOKORO_VOICE}")
+        else:
+            for idx, sc in enumerate(scenes):
+                raw_w = tmp_dir / f"v_{idx}.wav"
+                _, eng = _synthesize_dramatic_voice(sc["narration"], raw_w)
+                if eng != "elevenlabs" and idx == 0:
+                    # ElevenLabs key invalid/unavailable — immediately switch full batch to Kokoro-82M human voice!
+                    kokoro_fallback = _synthesize_batch_kokoro_mlx(scenes, tmp_dir)
+                    if kokoro_fallback is not None:
+                        for k_idx, raw_k in enumerate(kokoro_fallback):
+                            pad_w = tmp_dir / f"vp_{k_idx}.wav"
+                            subprocess.run(
+                                ["ffmpeg", "-y", "-v", "error", "-i", str(raw_k), "-af", vocal_eq, "-ar", "44100", "-ac", "2", str(pad_w)],
+                                check=True,
+                            )
+                            wavs.append(pad_w)
+                            durations.append(_probe_duration(pad_w))
+                            voice_engines.append(f"kokoro_mlx:{DEFAULT_KOKORO_VOICE}")
+                        break
+                voice_engines.append(eng)
+                pad_w = tmp_dir / f"vp_{idx}.wav"
+                subprocess.run(
+                    ["ffmpeg", "-y", "-v", "error", "-i", str(raw_w), "-af", "apad=pad_dur=0.22", "-ar", "44100", "-ac", "2", str(pad_w)],
+                    check=True,
+                )
+                wavs.append(pad_w)
+                durations.append(_probe_duration(pad_w))
 
         total_dur = sum(durations)
         concat_txt = tmp_dir / "concat.txt"

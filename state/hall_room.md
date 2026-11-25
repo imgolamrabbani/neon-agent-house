@@ -1,6 +1,6 @@
 # Neon Agent House — Shared Hall Room
 
-> **Write Authority:** Exclusively `hall-room-verifier` | **Last Updated:** 2026-11-25T09:44:33Z
+> **Write Authority:** Exclusively `hall-room-verifier` | **Last Updated:** 2026-11-25T10:06:45Z
 
 ## invoice-pulse-01 — InvoicePulse v3 — Zero-Subscription Overdue Invoice Command Center
 - **Status:** `READY_FOR_MONETIZATION` | **Research Score:** 100/100 | **MVP Score:** 100
@@ -142,3 +142,10 @@
 - **MP4 File:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-03-voyager-edge/ep-03-voyager-edge.mp4`
 - **Thumbnail:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-03-voyager-edge/thumbnail.png`
 - **YouTube URL:** https://youtube.com/shorts/EIkBUDbWLI8
+
+## ep-04-blackhole-pov — What Happens 1 Second After You Fall Into a Black Hole #Shorts
+- **Status:** `PUBLISHED_YOUTUBE` | **QA Score:** 100/100 | **Resolution:** 1080x1920 | **Duration:** 50.5s
+- **Linked Wing 1 Product:** `the-deep-chronicle` (https://www.youtube.com/@TheDeepChronicle)
+- **MP4 File:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-04-blackhole-pov/ep-04-blackhole-pov.mp4`
+- **Thumbnail:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-04-blackhole-pov/thumbnail.png`
+- **YouTube URL:** https://youtube.com/shorts/tzQoXANXVTw
