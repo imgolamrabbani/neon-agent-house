@@ -1,0 +1,90 @@
+{
+  "short_id": "yt-short-01",
+  "linked_niche_id": "invoice-pulse-01",
+  "title": "STOP Paying $59/mo Just to Chase Late Invoices #Shorts",
+  "hook_badge": "STOP PAYING $59/MO",
+  "accent_hex": "#38bdf8",
+  "scenes": [
+    {
+      "kind": "price_shock",
+      "badge": "SAAS TRAP ALERT",
+      "headline": "$59/MO JUST TO SEND REMINDERS?!",
+      "big_num": "$708 / YEAR",
+      "sub": "HoneyBook & Dubsado charge $35-$59 every single month",
+      "narration": "Stop paying fifty nine dollars every month to bloated C R M suites just to chase late client invoices."
+    },
+    {
+      "kind": "pain_quote",
+      "badge": "THE REAL PAIN",
+      "headline": "SILENT AP LEAKS COST THOUSANDS",
+      "big_num": "4% - 6.9% FEE",
+      "sub": "Invoicing apps tack on extra card fees while late invoices slip through the cracks",
+      "narration": "Freelancers either waste hours writing awkward check-in emails, or lose six percent in extra invoicing app markups."
+    },
+    {
+      "kind": "terminal",
+      "badge": "1-FILE PYTHON FIX",
+      "headline": "ZERO PIP INSTALLS. 100% LOCAL.",
+      "cmd": "python3 invoice_pulse.py --csv my.csv --html dash.html",
+      "sub": "Runs offline on Mac, Windows, and Linux with Python standard library",
+      "narration": "So I replaced the whole subscription with one local Python script. Drop your unpaid invoices in a plain C S V and run one command."
+    },
+    {
+      "kind": "kpi_demo",
+      "badge": "INSTANT DASHBOARD",
+      "headline": "AUTO LATE FEES + 1-CLICK EMAILS",
+      "metrics": [
+        [
+          "CASH AT RISK",
+          "$9,608.20",
+          "#fb7185"
+        ],
+        [
+          "ACCRUED FEES",
+          "$108.20",
+          "#fbbf24"
+        ],
+        [
+          "ESCALATIONS",
+          "DAY 3 / 7 / 14 / 30",
+          "#38bdf8"
+        ]
+      ],
+      "sub": "Generates dark-mode dashboard with 1-click mailto drafts and your own Stripe links",
+      "narration": "It builds a private dark-mode cashflow dashboard, calculates prorated late fees automatically, and drafts polite Day three to Day thirty escalation emails."
+    },
+    {
+      "kind": "compare",
+      "badge": "DO THE MATH",
+      "left_label": "MONTHLY CRM",
+      "left_val": "$708 / yr",
+      "right_label": "INVOICEPULSE",
+      "right_val": "$9 ONCE",
+      "sub": "Zero monthly fees. Your client data never leaves your laptop.",
+      "narration": "Seven hundred dollars a year for cloud lock-in, versus nine dollars once and you own the source code forever."
+    },
+    {
+      "kind": "cta",
+      "badge": "LINK IN PINNED COMMENT",
+      "headline": "GET ALL 5 LOCAL TOOLS FOR $19",
+      "big_num": "NO SUBSCRIPTIONS",
+      "sub": "InvoicePulse ($9) or grab the 5-in-1 Solo Builder Bundle ($19)",
+      "narration": "Grab InvoicePulse for nine bucks, or all five local solo-builder tools for nineteen in the pinned comment."
+    }
+  ],
+  "cta_url": "https://adorable48.gumroad.com/l/zcnhpu",
+  "bundle_url": "https://adorable48.gumroad.com/l/cxsyhr",
+  "storefront_url": "https://imgolamrabbani.github.io/neon-agent-house/",
+  "inspired_by_outlier": "Automate with Python \u2013 Full Course for Beginners",
+  "description": "STOP Paying $59/mo Just to Chase Late Invoices #Shorts\n\nGrab this tool ($9 one-time, $0/month forever): https://adorable48.gumroad.com/l/zcnhpu\nSave 58% \u2014 Get ALL 5 Local Solo-Builder Tools ($19 Bundle): https://adorable48.gumroad.com/l/cxsyhr\nFull Storefront & Open-Source Agent House: https://imgolamrabbani.github.io/neon-agent-house/\n\n100% Python 3 standard library. Zero pip installs. Zero cloud lock-in. Includes --self-test.\n\n#Shorts #Python #SoloBuilder #IndieHackers #Automation #Freelance #NoSubscription",
+  "pinned_comment": "Get it here ($9 once, $0/mo forever): https://adorable48.gumroad.com/l/zcnhpu | Or grab all 5 zero-subscription local tools for $19 (save 58%): https://adorable48.gumroad.com/l/cxsyhr",
+  "tags": [
+    "Shorts",
+    "Python",
+    "Automation",
+    "SoloBuilder",
+    "IndieHackers",
+    "Freelance",
+    "SaaS"
+  ]
+}

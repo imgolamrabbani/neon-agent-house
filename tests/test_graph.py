@@ -278,3 +278,33 @@ def test_v4_continuous_queue_skips_verified_and_runs_new(tmp_path: Path):
     assert len(loaded["queue"]) == 1
 
 
+def test_wing2_hall_room_shorts_authority_and_blueprint(tmp_path: Path):
+    from agent_house.hall_room import promote_verified_short
+    from agent_house.youtube_tools import build_short_blueprint
+
+    with pytest.raises(HallRoomAccessError):
+        promote_verified_short(
+            caller="yt-shorts-producer",
+            entry={"short_id": "yt-test"},
+            json_path=tmp_path / "hr.json",
+            md_path=tmp_path / "hr.md",
+        )
+
+    bp = build_short_blueprint(
+        short_id="yt-test-01",
+        niche_id="invoice-pulse-01",
+        opportunity={"title": "InvoicePulse"},
+        trends={"top_outliers": [{"title": "STOP Paying $200/m"}]},
+    )
+    assert "#Shorts" in bp["title"]
+    assert len(bp["scenes"]) >= 4
+    board = promote_verified_short(
+        caller="yt-video-verifier",
+        entry={"short_id": "yt-test-01", "title": bp["title"], "qa_score": 100},
+        json_path=tmp_path / "hr.json",
+        md_path=tmp_path / "hr.md",
+    )
+    assert len(board["verified_youtube_shorts"]) == 1
+
+
+

@@ -1,0 +1,90 @@
+{
+  "short_id": "yt-short-02",
+  "linked_niche_id": "saas-sub-trimmer-01",
+  "title": "Why Giving Plaid Your Bank Password Is Insane (Local CSV Fix) #Shorts",
+  "hook_badge": "ZERO BANK LOGINS",
+  "accent_hex": "#34d399",
+  "scenes": [
+    {
+      "kind": "price_shock",
+      "badge": "PRIVACY WARNING",
+      "headline": "GIVING APPS YOUR BANK PASSWORD?!",
+      "big_num": "$14.99 / MO",
+      "sub": "Budget apps want your bank login AND a recurring subscription",
+      "narration": "Why are budgeting apps charging fifteen dollars a month and still asking for your actual bank username and password?"
+    },
+    {
+      "kind": "pain_quote",
+      "badge": "HIDDEN SAAS BLEED",
+      "headline": "SILENT PRICE HIKES EVERY MONTH",
+      "big_num": "$1,747 / YR",
+      "sub": "Forgotten trials and quiet $36-to-$59 jumps drain solo builders silently",
+      "narration": "Meanwhile forgotten S a a S renewals and silent price hikes quietly drain over a thousand dollars from your card every year."
+    },
+    {
+      "kind": "terminal",
+      "badge": "ZERO-PLAID FIX",
+      "headline": "1 LOCAL PYTHON FILE. OFFLINE CSV.",
+      "cmd": "python3 sub_trim.py --csv statement.csv --html audit.html",
+      "sub": "No bank credentials. No cloud sync. Zero pip installs.",
+      "narration": "SubTrim solves it completely offline. Export a normal bank C S V, run one Python command, and never share a single password."
+    },
+    {
+      "kind": "kpi_demo",
+      "badge": "INSTANT LEAK AUDIT",
+      "headline": "FLAGS HIKES & DUPLICATES FAST",
+      "metrics": [
+        [
+          "ANNUAL BURN",
+          "$1,747.10/yr",
+          "#fb7185"
+        ],
+        [
+          "PRICE HIKE",
+          "+63.9% ALERT",
+          "#fbbf24"
+        ],
+        [
+          "PRIVACY",
+          "100% OFFLINE",
+          "#34d399"
+        ]
+      ],
+      "sub": "Interactive dark-mode dashboard with 1-click Mark-to-Cancel savings math",
+      "narration": "In two seconds it catches every recurring merchant, flags surprise price jumps in red, and tallies your exact annual savings as you click cancel."
+    },
+    {
+      "kind": "compare",
+      "badge": "NO MORE RENTING",
+      "left_label": "BUDGET SAAS",
+      "left_val": "$180/yr + Plaid",
+      "right_label": "SUBTRIM",
+      "right_val": "$9 ONCE",
+      "sub": "Your bank statement never leaves your hard drive.",
+      "narration": "Stop paying a subscription to cancel subscriptions. Pay nine dollars once and audit your statements privately forever."
+    },
+    {
+      "kind": "cta",
+      "badge": "LINK IN PINNED COMMENT",
+      "headline": "SUBTRIM ($9) OR ALL 5 TOOLS ($19)",
+      "big_num": "100% LOCAL CODE",
+      "sub": "Link in pinned comment & description \u2014 includes --self-test",
+      "narration": "Link to SubTrim and the five-tool solo builder bundle is right in the pinned comment."
+    }
+  ],
+  "cta_url": "https://adorable48.gumroad.com/l/ijrfzn",
+  "bundle_url": "https://adorable48.gumroad.com/l/cxsyhr",
+  "storefront_url": "https://imgolamrabbani.github.io/neon-agent-house/",
+  "inspired_by_outlier": "Automate with Python \u2013 Full Course for Beginners",
+  "description": "Why Giving Plaid Your Bank Password Is Insane (Local CSV Fix) #Shorts\n\nGrab this tool ($9 one-time, $0/month forever): https://adorable48.gumroad.com/l/ijrfzn\nSave 58% \u2014 Get ALL 5 Local Solo-Builder Tools ($19 Bundle): https://adorable48.gumroad.com/l/cxsyhr\nFull Storefront & Open-Source Agent House: https://imgolamrabbani.github.io/neon-agent-house/\n\n100% Python 3 standard library. Zero pip installs. Zero cloud lock-in. Includes --self-test.\n\n#Shorts #Python #SoloBuilder #IndieHackers #Automation #Freelance #NoSubscription",
+  "pinned_comment": "Get it here ($9 once, $0/mo forever): https://adorable48.gumroad.com/l/ijrfzn | Or grab all 5 zero-subscription local tools for $19 (save 58%): https://adorable48.gumroad.com/l/cxsyhr",
+  "tags": [
+    "Shorts",
+    "Python",
+    "Automation",
+    "SoloBuilder",
+    "IndieHackers",
+    "Freelance",
+    "SaaS"
+  ]
+}

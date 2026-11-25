@@ -16,6 +16,7 @@ from agent_house.config import DEFAULT_MODEL_ID, get_gemini_api_key
 from agent_house.continuous import run_continuous_sync
 from agent_house.graph import build_agent_house_workflow
 from agent_house.weekly import run_weekly_review
+from agent_house.youtube_graph import run_youtube_wing_sync
 
 
 def _make_replay_providers(replay_data: dict[str, Any]):
@@ -127,6 +128,11 @@ def main(argv: list[str] | None = None) -> int:
     cont_p.add_argument("--model", default=DEFAULT_MODEL_ID, help=f"Gemini model ID (default: {DEFAULT_MODEL_ID}).")
     cont_p.add_argument("--skip-live-urls", action="store_true", help="Skip live HTTP URL checks (offline tests only).")
 
+    yt_p = sub.add_parser("youtube", help="Run Wing 2 YouTube Automation House (doomscroll -> render 1080x1920 Short -> ffprobe QA -> Hall Room).")
+    yt_p.add_argument("--niche-id", default="invoice-pulse-01", help="Hall Room niche_id to turn into a YouTube Short.")
+    yt_p.add_argument("--short-id", default=None, help="Optional output short_id.")
+    yt_p.add_argument("--skip-live-doomscroll", action="store_true", help="Reuse cached state/yt_trends.json instead of querying YouTube.")
+
     args = parser.parse_args(argv)
 
     if args.command == "weekly":
@@ -141,6 +147,15 @@ def main(argv: list[str] | None = None) -> int:
             check_live_urls=not args.skip_live_urls,
         )
         print(json.dumps(result, indent=2))
+        return 0
+
+    if args.command == "youtube":
+        events = run_youtube_wing_sync(
+            niche_id=args.niche_id,
+            short_id=args.short_id,
+            skip_live_doomscroll=args.skip_live_doomscroll,
+        )
+        print(json.dumps(events, indent=2, default=str))
         return 0
 
     if args.replay_file is None and not get_gemini_api_key():

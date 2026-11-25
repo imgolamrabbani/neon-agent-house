@@ -1,6 +1,6 @@
 # Neon Agent House — Shared Hall Room
 
-> **Write Authority:** Exclusively `hall-room-verifier` | **Last Updated:** 2026-11-25T05:25:45Z
+> **Write Authority:** Exclusively `hall-room-verifier` | **Last Updated:** 2026-11-25T09:08:35Z
 
 ## invoice-pulse-01 — InvoicePulse v3 — Zero-Subscription Overdue Invoice Command Center
 - **Status:** `READY_FOR_MONETIZATION` | **Research Score:** 100/100 | **MVP Score:** 100
@@ -103,3 +103,21 @@
   - Spec: `/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/git-changelog-kit-01/build_spec.md`
   - Runnable Artifact: `/Volumes/MAC EXTRA/Vibe/Neon/mvp_bundle/git-changelog-kit-01/changelog_kit.py`
   - Test Command: `{python} changelog_kit.py --self-test && {python} changelog_kit.py --repo ../.. --name 'Neon Agent House' --md CHANGELOG.md --html changelog.html` (exit=0)
+
+---
+
+# Wing 2 — Verified YouTube Shorts (`yt-video-verifier`)
+
+## yt-short-01 — STOP Paying $59/mo Just to Chase Late Invoices #Shorts
+- **Status:** `QA_PASSED_READY_FOR_UPLOAD` | **QA Score:** 100/100 | **Resolution:** 1080x1920 | **Duration:** 40.73s
+- **Linked Wing 1 Product:** `invoice-pulse-01` (https://adorable48.gumroad.com/l/zcnhpu)
+- **MP4 File:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-01/yt-short-01.mp4`
+- **Thumbnail:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-01/thumbnail.png`
+- **YouTube URL:** ready_for_upload
+
+## yt-short-02 — Why Giving Plaid Your Bank Password Is Insane (Local CSV Fix) #Shorts
+- **Status:** `QA_PASSED_READY_FOR_UPLOAD` | **QA Score:** 100/100 | **Resolution:** 1080x1920 | **Duration:** 40.3s
+- **Linked Wing 1 Product:** `saas-sub-trimmer-01` (https://adorable48.gumroad.com/l/ijrfzn)
+- **MP4 File:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-02/yt-short-02.mp4`
+- **Thumbnail:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-02/thumbnail.png`
+- **YouTube URL:** ready_for_upload

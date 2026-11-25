@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "2.0.0",
   "house_name": "Neon Agent House",
   "write_authority": "hall-room-verifier",
-  "updated_at": "2026-11-25T05:25:45Z",
+  "updated_at": "2026-11-25T09:08:35Z",
   "verified_opportunities": [
     {
       "niche_id": "invoice-pulse-01",
@@ -364,6 +364,38 @@
         "test_command": "{python} changelog_kit.py --self-test && {python} changelog_kit.py --repo ../.. --name 'Neon Agent House' --md CHANGELOG.md --html changelog.html",
         "test_exit_code": 0
       }
+    }
+  ],
+  "verified_youtube_shorts": [
+    {
+      "short_id": "yt-short-01",
+      "title": "STOP Paying $59/mo Just to Chase Late Invoices #Shorts",
+      "status": "QA_PASSED_READY_FOR_UPLOAD",
+      "qa_score": 100,
+      "resolution": "1080x1920",
+      "duration_sec": 40.73,
+      "mean_volume_db": -23.6,
+      "linked_niche_id": "invoice-pulse-01",
+      "cta_url": "https://adorable48.gumroad.com/l/zcnhpu",
+      "video_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-01/yt-short-01.mp4",
+      "thumbnail_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-01/thumbnail.png",
+      "youtube_url": "ready_for_upload",
+      "verified_at": "2026-11-25T09:08:04Z"
+    },
+    {
+      "short_id": "yt-short-02",
+      "title": "Why Giving Plaid Your Bank Password Is Insane (Local CSV Fix) #Shorts",
+      "status": "QA_PASSED_READY_FOR_UPLOAD",
+      "qa_score": 100,
+      "resolution": "1080x1920",
+      "duration_sec": 40.3,
+      "mean_volume_db": -23.5,
+      "linked_niche_id": "saas-sub-trimmer-01",
+      "cta_url": "https://adorable48.gumroad.com/l/ijrfzn",
+      "video_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-02/yt-short-02.mp4",
+      "thumbnail_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/yt-short-02/thumbnail.png",
+      "youtube_url": "ready_for_upload",
+      "verified_at": "2026-11-25T09:08:35Z"
     }
   ]
 }

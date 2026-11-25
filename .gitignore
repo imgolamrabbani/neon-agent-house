@@ -6,3 +6,5 @@ __pycache__/
 .DS_Store
 .env
 mvp_bundle/*/outbox/
+outputs/youtube_shorts/*/*.mp4
+outputs/youtube_shorts/*/qa_frame_*.png

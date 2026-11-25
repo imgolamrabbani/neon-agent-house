@@ -18,3 +18,5 @@
 - [v4] Verified 'launch-check-01' (Scout=100, Analyst=100, Builder=100, retries=0).
 - [v4] Verified 'saas-sub-trimmer-01' (Scout=100, Analyst=100, Builder=100, retries=0).
 - [v4] Verified 'git-changelog-kit-01' (Scout=100, Analyst=100, Builder=100, retries=0).
+- [v5-yt] Rendered & QA-passed 'yt-short-01' (40.73s, 1080x1920, score=100/100).
+- [v5-yt] Rendered & QA-passed 'yt-short-02' (40.3s, 1080x1920, score=100/100).

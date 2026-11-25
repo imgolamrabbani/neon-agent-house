@@ -22,6 +22,7 @@ from agent_house.config import (
 )
 
 HALL_ROOM_WRITER = "hall-room-verifier"
+ALLOWED_HALL_ROOM_WRITERS = {"hall-room-verifier", "yt-video-verifier"}
 MAX_MEMORY_BULLETS = 30
 
 
@@ -49,11 +50,12 @@ def _atomic_write(path: Path, content: str) -> None:
 def load_hall_room(json_path: Path = HALL_ROOM_JSON) -> dict[str, Any]:
     if not json_path.exists():
         return {
-            "schema_version": "1.0.0",
-            "house_name": "Neon Agent House",
-            "write_authority": HALL_ROOM_WRITER,
+            "schema_version": "2.0.0",
+            "house_name": "Neon Agent House (Multi-Wing)",
+            "write_authority": sorted(ALLOWED_HALL_ROOM_WRITERS),
             "updated_at": _utc_now(),
             "verified_opportunities": [],
+            "verified_youtube_shorts": [],
         }
     return json.loads(json_path.read_text(encoding="utf-8"))
 
@@ -103,7 +105,61 @@ def render_hall_room_markdown(board: dict[str, Any]) -> str:
                 ]
             )
         lines.append("")
+
+    shorts = board.get("verified_youtube_shorts", [])
+    if shorts:
+        lines.extend(["---", "", "# Wing 2 — Verified YouTube Shorts (`yt-video-verifier`)", ""])
+        for sh in shorts:
+            lines.extend(
+                [
+                    f"## {sh.get('short_id', 'short')} — {sh.get('title', 'Untitled Short')}",
+                    f"- **Status:** `{sh.get('status', 'QA_PASSED')}` | **QA Score:** {sh.get('qa_score', 0)}/100 | **Resolution:** {sh.get('resolution', '1080x1920')} | **Duration:** {sh.get('duration_sec', 0)}s",
+                    f"- **Linked Wing 1 Product:** `{sh.get('linked_niche_id', '')}` ({sh.get('cta_url', '')})",
+                    f"- **MP4 File:** `{sh.get('video_path', '')}`",
+                    f"- **Thumbnail:** `{sh.get('thumbnail_path', '')}`",
+                    f"- **YouTube URL:** {sh.get('youtube_url', 'ready_for_upload')}",
+                    "",
+                ]
+            )
     return "\n".join(lines).strip() + "\n"
+
+
+def promote_verified_short(
+    *,
+    caller: str,
+    entry: dict[str, Any],
+    json_path: Path = HALL_ROOM_JSON,
+    md_path: Path = HALL_ROOM_MD,
+) -> dict[str, Any]:
+    """Atomically upsert a QA-verified YouTube Short into hall_room.json & hall_room.md."""
+    if caller not in ALLOWED_HALL_ROOM_WRITERS:
+        raise HallRoomAccessError(
+            f"Access denied: '{caller}' cannot write to Hall Room. Authorized: {sorted(ALLOWED_HALL_ROOM_WRITERS)}."
+        )
+    if not entry.get("short_id"):
+        raise ValueError("Verified YouTube Short entry requires 'short_id'.")
+
+    board = load_hall_room(json_path)
+    board["schema_version"] = "2.0.0"
+    board["updated_at"] = _utc_now()
+    entry_copy = dict(entry)
+    entry_copy["verified_at"] = board["updated_at"]
+
+    shorts = board.setdefault("verified_youtube_shorts", [])
+    replaced = False
+    for idx, existing in enumerate(shorts):
+        if existing.get("short_id") == entry_copy["short_id"]:
+            merged = dict(existing)
+            merged.update(entry_copy)
+            shorts[idx] = merged
+            replaced = True
+            break
+    if not replaced:
+        shorts.append(entry_copy)
+
+    _atomic_write(json_path, json.dumps(board, indent=2) + "\n")
+    _atomic_write(md_path, render_hall_room_markdown(board))
+    return board
 
 
 def promote_verified_entry(
