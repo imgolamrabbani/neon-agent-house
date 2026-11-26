@@ -33,6 +33,14 @@
   h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.08; letter-spacing: -0.03em; margin: 0 0 18px; }
   .lead { font-size: 18px; color: var(--muted); max-width: 740px; margin: 0 0 36px; }
   .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; margin-bottom: 52px; }
+  .bundle-banner {
+    background: linear-gradient(135deg, rgba(56,189,248,0.16), rgba(52,211,153,0.12));
+    border: 1px solid rgba(56,189,248,0.45); border-radius: 20px; padding: 26px 28px;
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px;
+    margin-bottom: 34px;
+  }
+  .bundle-banner h2 { margin: 0 0 6px; font-size: 24px; }
+  .bundle-banner p { margin: 0; color: var(--muted); font-size: 14.5px; max-width: 640px; }
   .pcard {
     background: var(--card); border: 1px solid var(--border); border-radius: 22px; padding: 28px;
     display: flex; flex-direction: column; justify-content: space-between;
@@ -77,6 +85,14 @@
     No Electron RAM hogs, no cloud uploads, and no monthly subscriptions.
     Every app compiles directly to a stripped native ARM64 Swift/AppKit binary (&lt;400 KB) distributed as a drag-and-drop macOS <code>.dmg</code> with offline hardware-bound Gumroad License Key activation.
   </p>
+
+  <section class="bundle-banner">
+    <div>
+      <h2>Mac Power User Bundle &mdash; $12 One-Time (Save 25%)</h2>
+      <p>Get both <strong>PortPilot</strong> ($9) and <strong>SnapShrink</strong> ($7) together &mdash; both compiled Apple Silicon <code>.dmg</code> installers and both Gumroad License Keys included automatically.</p>
+    </div>
+    <a class="btn mint" href="https://adorable48.gumroad.com/l/mac-power-bundle" target="_blank" rel="noopener">Get Both Apps &mdash; $12 &rarr;</a>
+  </section>
 
   <section class="products">
     <article class="pcard">

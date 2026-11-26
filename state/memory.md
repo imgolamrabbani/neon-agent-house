@@ -4,9 +4,8 @@
 
 ## Operating Constraints
 - 100% free stack only ($0/month fixed hosting/API/tool cost; Antigravity Pro + local Python + GitHub Free).
-- Once the user issues a final command, run the full internal pipeline with zero mid-run interruptions; pause only before unapproved external release or weekly prompt changes.
-- Standing user directive (ALWAYS ALLOWED): Never ask permission before uploading QA-verified YouTube Shorts via YouTube Data API v3 (`auto_upload=True` default once OAuth token is present).
-- GOD DIRECTIVE (Wing 1 Gumroad Rule): NO MORE raw source-code selling on Gumroad. Ship compiled, stripped native macOS desktop/menu-bar `.app` + `.dmg` tools (Swift/AppKit/SwiftUI compiled ARM64 Mach-O with obfuscated internal strings + Gumroad License Key activation + glossy App Store-grade icon).
+- Standing user directive (FULL AUTONOMY — ALWAYS ALLOWED): Never ask permission in chat before building, publishing, bundling, unpublishing legacy listings, or uploading QA-verified YouTube Shorts via API (`auto_upload=True` default). Prefer official APIs and zero-upload workflows to avoid IDE browser file-upload prompts.
+- GOD DIRECTIVE (Wing 1 Gumroad Rule): NO MORE raw source-code selling on Gumroad. Ship compiled, stripped native macOS desktop/menu-bar `.app` + `.dmg` tools (Swift/AppKit/SwiftUI compiled ARM64 Mach-O with obfuscated internal strings + Gumroad License Key activation + glossy App Store-grade icon). Keep `tools/` and `dist/` gitignored so source code never leaks to public GitHub.
 - Zero fabricated URLs, quotes, prices, or untested code stubs.
 
 ## Excluded / Saturated Niches
