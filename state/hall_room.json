@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "house_name": "Neon Agent House",
   "write_authority": "hall-room-verifier",
-  "updated_at": "2026-11-26T06:58:45Z",
+  "updated_at": "2026-11-26T09:12:14Z",
   "verified_opportunities": [
     {
       "niche_id": "portpilot-macos-01",
@@ -556,6 +556,25 @@
       "verified_at": "2026-11-25T10:06:45Z",
       "youtube_video_id": "tzQoXANXVTw",
       "youtube_url": "https://youtube.com/shorts/tzQoXANXVTw"
+    },
+    {
+      "short_id": "ep-05-alcatraz-escape",
+      "title": "How 3 Men Escaped Alcatraz With Spoons & Raincoats #Shorts",
+      "status": "SCHEDULED_YOUTUBE",
+      "qa_score": 100,
+      "seo_score": 100,
+      "resolution": "1080x1920",
+      "duration_sec": 44.53,
+      "mean_volume_db": -23.5,
+      "voice_engine": "kokoro_mlx:am_fenrir",
+      "linked_niche_id": "the-deep-chronicle",
+      "cta_url": "https://www.youtube.com/@TheDeepChronicle",
+      "video_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-05-alcatraz-escape/ep-05-alcatraz-escape.mp4",
+      "thumbnail_path": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-05-alcatraz-escape/thumbnail.png",
+      "youtube_video_id": "dF1bOlu89FA",
+      "youtube_url": "https://youtube.com/shorts/dF1bOlu89FA",
+      "publish_at": "2026-11-26T22:00:00Z",
+      "verified_at": "2026-11-26T09:12:14Z"
     }
   ]
 }

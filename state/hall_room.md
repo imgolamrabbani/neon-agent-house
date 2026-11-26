@@ -1,6 +1,6 @@
 # Neon Agent House — Shared Hall Room
 
-> **Write Authority:** Exclusively `hall-room-verifier` | **Last Updated:** 2026-11-26T06:58:45Z
+> **Write Authority:** Exclusively `hall-room-verifier` | **Last Updated:** 2026-11-26T09:12:14Z
 
 ## portpilot-macos-01 — PortPilot — Compiled Native macOS Menu-Bar Localhost Port Radar & 1-Click Process Killer
 - **Status:** `PUBLISHED_GUMROAD_NATIVE_TOOL` | **Research Score:** 100/100 | **MVP Score:** 100
@@ -181,3 +181,10 @@
 - **MP4 File:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-04-blackhole-pov/ep-04-blackhole-pov.mp4`
 - **Thumbnail:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-04-blackhole-pov/thumbnail.png`
 - **YouTube URL:** https://youtube.com/shorts/tzQoXANXVTw
+
+## ep-05-alcatraz-escape — How 3 Men Escaped Alcatraz With Spoons & Raincoats #Shorts
+- **Status:** `SCHEDULED_YOUTUBE` | **QA Score:** 100/100 | **Resolution:** 1080x1920 | **Duration:** 44.53s
+- **Linked Wing 1 Product:** `the-deep-chronicle` (https://www.youtube.com/@TheDeepChronicle)
+- **MP4 File:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-05-alcatraz-escape/ep-05-alcatraz-escape.mp4`
+- **Thumbnail:** `/Volumes/MAC EXTRA/Vibe/Neon/outputs/youtube_shorts/ep-05-alcatraz-escape/thumbnail.png`
+- **YouTube URL:** https://youtube.com/shorts/dF1bOlu89FA

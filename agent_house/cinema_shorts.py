@@ -496,8 +496,8 @@ def render_cinema_short(
         thumb_final = _draw_cinema_overlays(
             thumb_frame,
             vignette,
-            scene_label=scenes[0].get("label", "11,000 METERS DEEP"),
-            narration="POWER LOST AT 11,000M",
+            scene_label=scenes[0].get("label", "THE DEEP CHRONICLE"),
+            narration=seo.get("thumbnail_text") or scenes[0].get("label", "THE DEEP CHRONICLE"),
             progress_scene=0.5,
             progress_global=0.5,
             fonts=fonts,
