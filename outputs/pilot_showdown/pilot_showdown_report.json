@@ -1,0 +1,38 @@
+{
+  "cat1_explainer": {
+    "file": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/pilot_showdown/01_visual_explainer_pilot.mp4",
+    "size_mb": 10.78,
+    "resolution": "1080x1920",
+    "duration_sec": 28.43,
+    "motion_energy": 5.06,
+    "static_frame_ratio": 0.009,
+    "mean_volume_db": -16.7
+  },
+  "cat2_dark_history": {
+    "file": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/pilot_showdown/02_dark_history_map_pilot.mp4",
+    "size_mb": 10.78,
+    "resolution": "1080x1920",
+    "duration_sec": 35.67,
+    "motion_energy": 8.9,
+    "static_frame_ratio": 0.268,
+    "mean_volume_db": -16.8
+  },
+  "cat3_dark_psychology": {
+    "file": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/pilot_showdown/03_dark_psychology_pilot.mp4",
+    "size_mb": 4.54,
+    "resolution": "1080x1920",
+    "duration_sec": 25.27,
+    "motion_energy": 7.9,
+    "static_frame_ratio": 0.4,
+    "mean_volume_db": -16.4
+  },
+  "cat4_scale_comparison": {
+    "file": "/Volumes/MAC EXTRA/Vibe/Neon/outputs/pilot_showdown/04_scale_comparison_pilot.mp4",
+    "size_mb": 23.46,
+    "resolution": "1080x1920",
+    "duration_sec": 42.0,
+    "motion_energy": 18.99,
+    "static_frame_ratio": 0.0,
+    "mean_volume_db": -17.3
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "total_videos_analyzed": 100,
+  "categories": {
+    "cat1_visual_explainer": {
+      "label": "3D / Animated Visual Science & Mechanism Explainers",
+      "count": 25,
+      "median_views": 3600000,
+      "max_views": 10000000,
+      "median_duration_sec": 38.82,
+      "median_cuts_per_minute": 4.8,
+      "median_avg_shot_sec": 10.02,
+      "median_first_cut_sec": 10.48,
+      "median_motion_energy": 24.94,
+      "median_static_ratio": 0.0,
+      "median_volume_db": -16.6,
+      "median_silence_ratio": 0.0,
+      "median_brightness": 99.7,
+      "median_saturation": 0.338,
+      "top_hooks": [
+        {
+          "id": "ZQnJl6rQs50",
+          "title": "The Potter And The Mug \ud83e\udd14 (fable)",
+          "view_count": 10000000,
+          "duration_sec": 55.15,
+          "wpm": 156.7,
+          "hook_first_3_5s": "The teacher handed them the special clay and told them",
+          "full_transcript": "The teacher handed them the special clay and told them to make a coffee mug out of it. One boy got to work, but his clay crumbled and broke. And soon he only had a few ounces left. He thought about adding in some basic clay. The teacher wouldn't notice, but he decided to keep working with it, making a tiny mug out of only the special clay. The next day everyone else had full-sized mugs. They all laughed at his tiny one. The teacher examined them, expressionless, until he reached the boy. Then he smiled and gave him an A. He see the teacher had dried out the clay on purpose, leaving just a tiny, usable amount for each. Every other student had "
+        },
+        {
+          "id": "ofLgYMeZIEQ",
+          "title": "Weird Gadgets That Got Patented \ud83e\udd2f",
+          "view_count": 8400000,
+          "duration_sec": 47.62,
+          "wpm": 177.7,
+          "hook_first_3_5s": "He would fix the mask over his mouth, and the metal bars",
+          "full_transcript": "He would fix the mask over his mouth, and the metal bars would prevent him from snacking on food as he cooked it. It also stopped him from smoking and could only be unlocked by whoever had the key. Another inventor made a leash that snapped into an umbrella. This was so your dog could walk under the dome and stay dry in the rain while used to their soaking wet, holding it over them like their butler. And if you jumped into this bathtub, you would be offered up to the neck by a waterproof cloth. As a special frame, let you rock the entire thing back and forth on springs. Splashing the water on your body while you barely had to do anything. Now"
+        },
+        {
+          "id": "4_lgpy787Lc",
+          "title": "Rat Chews Off Hibernating Tortoise\u2019s Legs \ud83d\ude1f",
+          "view_count": 7800000,
+          "duration_sec": 29.56,
+          "wpm": 184.7,
+          "hook_first_3_5s": "The rat bit into the tortoise's leg, but since she was hibernating,",
+          "full_transcript": "The rat bit into the tortoise's leg, but since she was hibernating, she was too sleepy to escape, giving the rat enough time to eat through both her front legs. He had to be removed, but now every time she tried to move, she would just scrape against the ground. Her owner went to a nearby shop and asked for the wheels from a model airplane, then he glued them to her shell, helping her up for the first time since the accident, giving her the freedom to move around again."
+        }
+      ]
+    },
+    "cat2_dark_history": {
+      "label": "Fast-Cut Dark History & Unsolved Mystery Documentaries",
+      "count": 25,
+      "median_views": 344000,
+      "max_views": 3000000,
+      "median_duration_sec": 53.38,
+      "median_cuts_per_minute": 1.0,
+      "median_avg_shot_sec": 29.55,
+      "median_first_cut_sec": 39.08,
+      "median_motion_energy": 9.94,
+      "median_static_ratio": 0.126,
+      "median_volume_db": -18.8,
+      "median_silence_ratio": 0.0,
+      "median_brightness": 91.4,
+      "median_saturation": 0.357,
+      "top_hooks": [
+        {
+          "id": "V15wrmD5VFs",
+          "title": "What Happens When You Are Shot",
+          "view_count": 3000000,
+          "duration_sec": 29.02,
+          "wpm": 159.2,
+          "hook_first_3_5s": "When you're shot, the bullet first creates a",
+          "full_transcript": "When you're shot, the bullet first creates a cavity, pushing a side tissue and tearing through skin, muscle, and organs. Sometimes the bullet travels cleanly through your body, but sometimes it can ricochet around inside, causing even more damage, especially if it hits something like bone. Smaller bullets will often stay intact, but larger ones will sometimes break apart, sending fragments and multiple directions that cause even more damage, often rupturing blood vessels leading to intense bleeding."
+        },
+        {
+          "id": "-A9HtnjeOsg",
+          "title": "How Skydiving Changed Will Smith's Life!",
+          "view_count": 2400000,
+          "duration_sec": 56.75,
+          "wpm": 248.5,
+          "hook_first_3_5s": "Will Smith goes on Oprah and he talks about his experience skydiving.",
+          "full_transcript": "Will Smith goes on Oprah and he talks about his experience skydiving. It's this unbelievable monologue. My buddies with Riko Scott happened tomorrow. And it was like, oh yeah, that would be so crazy. You'll go skydiving tomorrow. But he's like, we're not going to really do that. And then the next morning we get up and he's like, yeah, let's feel good breakfast guy. So like, no, no, we're going to go skydiving. Let's go skydiving and he's like, wait, we're really doing that. Now like, yeah, and he's like, oh my god, I don't want to go skydiving. Although we're just saying it. He'd last night. And he winds up going with his buddies to the airfi"
+        },
+        {
+          "id": "oWJaVXdNcvM",
+          "title": "How Taiwan Manages with Low Military Spending",
+          "view_count": 1800000,
+          "duration_sec": 52.06,
+          "wpm": 213.2,
+          "hook_first_3_5s": "Why is Taiwan's military spending so low and how does it manage",
+          "full_transcript": "Why is Taiwan's military spending so low and how does it manage its defense? Taiwan's a country that needs to be on constant military alert due to the constant threat of an invasion from China. Despite this, its military spending usually hovers around 2% of its GDP, much lower than other nations. This is partially by necessity, but they manage to make it work. Part of the issue is that Taiwan is fairly isolated internationally, due to China's aggressive diplomacy and its inability to gain a formal seat in the UN. That means many countries are hesitant to form a formal defense pact with Taiwan, with one big exception, the US. Taiwan's small la"
+        }
+      ]
+    },
+    "cat3_psychology_mind": {
+      "label": "Dark Psychology & Human Behavior Kinetic Stories",
+      "count": 25,
+      "median_views": 84000,
+      "max_views": 9700000,
+      "median_duration_sec": 56.1,
+      "median_cuts_per_minute": 9.2,
+      "median_avg_shot_sec": 5.76,
+      "median_first_cut_sec": 3.92,
+      "median_motion_energy": 13.14,
+      "median_static_ratio": 0.126,
+      "median_volume_db": -20.5,
+      "median_silence_ratio": 0.007,
+      "median_brightness": 103.8,
+      "median_saturation": 0.409,
+      "top_hooks": [
+        {
+          "id": "t_29o-TGIh0",
+          "title": "How To Deal With Insults",
+          "view_count": 9700000,
+          "duration_sec": 44.7,
+          "wpm": 245.6,
+          "hook_first_3_5s": "First of all, you smell good, which is surprising.",
+          "full_transcript": "First of all, you smell good, which is surprising. Why is that? I don't know. I just wouldn't think of you. I'm guy who would have a nice cent on. Pretty strange start to an interview. Jimmy tries to get a laugh with a back end of compliment. Jonah doesn't like it, so watch out he responds. I'm in a really work hard to not take that as a shot. No, that means like, because I think you smell nice. No, but I don't, I don't have to. I don't know. Let's go back to it. Okay, let's go back to it. Jonah calmly and kindly calls out that he doesn't like Jimmy's comment. Then when Jimmy starts to get uncomfortable and walk back his insult, Jonah fakes l"
+        },
+        {
+          "id": "jZGcVDtKTSI",
+          "title": "How To Deal With Insults",
+          "view_count": 5400000,
+          "duration_sec": 56.96,
+          "wpm": 217.0,
+          "hook_first_3_5s": "When someone insults you, sometimes the most charismatic thing you can do is show",
+          "full_transcript": "When someone insults you, sometimes the most charismatic thing you can do is show that it doesn't affect you. One way you can do this is by answering rubertorical questions literally. You have the net of it that you're lazy, that you've read six books in your life. I've read six. Six. What kind of a woman would be attracted to you, do you think? Well, I have a lot of money. I don't know. You can also show you're unaffected by simply laughing at the insult. This shows your confidence hasn't been shaken at all by what they've said. During our sex scene, I felt your dick rubbing into the... There's another way to crush an insult that can make a "
+        },
+        {
+          "id": "s7bIwBjAnKY",
+          "title": "How To Turn Awkwardness Into Confidence",
+          "view_count": 2200000,
+          "duration_sec": 59.79,
+          "wpm": 237.8,
+          "hook_first_3_5s": "There's like this one picture with this girl is like, just about to catch this football in behind",
+          "full_transcript": "There's like this one picture with this girl is like, just about to catch this football in behind her. I'm like, layered nostrils red face. I'm like, mid-air, look, oh! And at one point, she screamed, get her away from me. You can take embarrassing moments from your past and turn them into fun funny stories that make you look charismatic and confident today. To start, make sure you smile and speak in a strong voice, like this clip of Tom Holland. Jake asked me if I wanted to go to the gym. Start working out. You know, we're doing ab exercises and leg exercises. And then he tells him, he goes, ah, Tom, do you want to pop on the treadmill warm "
+        }
+      ]
+    },
+    "cat4_scale_comparison": {
+      "label": "Visual Scale, Ranking & Animated Data Comparisons",
+      "count": 25,
+      "median_views": 39000,
+      "max_views": 1800000,
+      "median_duration_sec": 47.93,
+      "median_cuts_per_minute": 0.0,
+      "median_avg_shot_sec": 47.9,
+      "median_first_cut_sec": 47.9,
+      "median_motion_energy": 26.77,
+      "median_static_ratio": 0.016,
+      "median_volume_db": -20.5,
+      "median_silence_ratio": 0.0,
+      "median_brightness": 71.1,
+      "median_saturation": 0.183,
+      "top_hooks": [
+        {
+          "id": "c9J_Zn9CCg8",
+          "title": "How Rare Are You???",
+          "view_count": 788000,
+          "duration_sec": 47.9,
+          "wpm": 23.8,
+          "hook_first_3_5s": "If you have any special traits, watch this to see how rare you are.",
+          "full_transcript": "If you have any special traits, watch this to see how rare you are. Full video on Watch Down."
+        },
+        {
+          "id": "_g-ldbuz0pc",
+          "title": "What if you were immortal?",
+          "view_count": 91000,
+          "duration_sec": 47.69,
+          "wpm": 22.6,
+          "hook_first_3_5s": "This is what would happen if you became immortal.",
+          "full_transcript": "This is what would happen if you became immortal. I'm not sure if you're going to be immortal."
+        },
+        {
+          "id": "gfGNAPEn1Yg",
+          "title": "MetaBallStudios turns 12 years old",
+          "view_count": 68000,
+          "duration_sec": 15.77,
+          "wpm": 3.8,
+          "hook_first_3_5s": "",
+          "full_transcript": "\u043c\u0443\u0437"
+        }
+      ]
+    }
+  }
+}

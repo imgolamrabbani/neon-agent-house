@@ -13,3 +13,6 @@ outputs/youtube_shorts/*/*.mp4
 outputs/youtube_shorts/*/qa_frame_*.png
 tools/
 dist/
+research/shorts_benchmark/videos/
+research/shorts_benchmark/frames/
+outputs/pilot_showdown/*.mp4
