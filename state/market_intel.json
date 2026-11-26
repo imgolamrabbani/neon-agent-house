@@ -1,0 +1,317 @@
+{
+  "brand": "Kilobyte Labs",
+  "tagline": "Tiny native Apple Silicon macOS utilities. Zero Electron. Zero subscriptions.",
+  "audited_at": "2026-11-26T20:01:11Z",
+  "own_links_health": [
+    {
+      "label": "Storefront",
+      "url": "https://imgolamrabbani.github.io/neon-agent-house/",
+      "http_status": 200,
+      "live": true
+    },
+    {
+      "label": "PortPilot ($9)",
+      "url": "https://adorable48.gumroad.com/l/portpilot",
+      "http_status": 200,
+      "live": true
+    },
+    {
+      "label": "SnapShrink ($7)",
+      "url": "https://adorable48.gumroad.com/l/snapshrink",
+      "http_status": 200,
+      "live": true
+    },
+    {
+      "label": "Mac Power User Bundle ($12)",
+      "url": "https://adorable48.gumroad.com/l/mac-power-bundle",
+      "http_status": 200,
+      "live": true
+    }
+  ],
+  "all_own_links_live": true,
+  "counts": {
+    "reddit_leads": 0,
+    "hacker_news_leads": 15,
+    "github_macos_trends": 10
+  },
+  "top_reddit_opportunities": [],
+  "top_hn_opportunities": [
+    {
+      "source": "hacker_news",
+      "id": "47639853",
+      "title": "Show HN: Pscan \u2013 a macOS menu bar app to monitor your localhost ports",
+      "url": "https://news.ycombinator.com/item?id=47639853",
+      "points": 3,
+      "comments": 0,
+      "created_at": "2026-04-04T15:27:07Z",
+      "query": "localhost port kill",
+      "matched_product": "PortPilot",
+      "matched_url": "https://adorable48.gumroad.com/l/portpilot",
+      "relevance_score": 48
+    },
+    {
+      "source": "hacker_news",
+      "id": "48346481",
+      "title": "Show HN: Compress your screenshots for AI coding agents",
+      "url": "https://news.ycombinator.com/item?id=48346481",
+      "points": 2,
+      "comments": 0,
+      "created_at": "2026-05-31T15:27:38Z",
+      "query": "screenshot compress macOS",
+      "matched_product": "SnapShrink",
+      "matched_url": "https://adorable48.gumroad.com/l/snapshrink",
+      "relevance_score": 32
+    },
+    {
+      "source": "hacker_news",
+      "id": "50464616",
+      "title": "Show HN: MFlare \u2013 Cloudflare usage and deploy status in the macOS menu bar",
+      "url": "https://news.ycombinator.com/item?id=50464616",
+      "points": 5,
+      "comments": 1,
+      "created_at": "2026-11-12T08:45:10Z",
+      "query": "Show HN macOS menu bar",
+      "matched_product": "PortPilot",
+      "matched_url": "https://adorable48.gumroad.com/l/portpilot",
+      "relevance_score": 20
+    },
+    {
+      "source": "hacker_news",
+      "id": "50443654",
+      "title": "Show HN: Gauge, a 900 KB macOS menu bar app for what's using your RAM and disk",
+      "url": "https://news.ycombinator.com/item?id=50443654",
+      "points": 3,
+      "comments": 1,
+      "created_at": "2026-11-10T17:49:44Z",
+      "query": "macOS menu bar app",
+      "matched_product": "PortPilot",
+      "matched_url": "https://adorable48.gumroad.com/l/portpilot",
+      "relevance_score": 18
+    },
+    {
+      "source": "hacker_news",
+      "id": "46959736",
+      "title": "Show HN: Radiant \u2013 Radial Menu Launcher for macOS Inspired by Blender's Pie Menu",
+      "url": "https://news.ycombinator.com/item?id=46959736",
+      "points": 2,
+      "comments": 0,
+      "created_at": "2026-02-10T13:54:13Z",
+      "query": "native macOS utility Electron",
+      "matched_product": "Mac Power User Bundle",
+      "matched_url": "https://adorable48.gumroad.com/l/mac-power-bundle",
+      "relevance_score": 17
+    },
+    {
+      "source": "hacker_news",
+      "id": "46065780",
+      "title": "Show HN: Floaty \u2013 a tiny macOS tool to pin any window always on top",
+      "url": "https://news.ycombinator.com/item?id=46065780",
+      "points": 2,
+      "comments": 4,
+      "created_at": "2025-11-27T04:49:17Z",
+      "query": "native macOS utility Electron",
+      "matched_product": "Mac Power User Bundle",
+      "matched_url": "https://adorable48.gumroad.com/l/mac-power-bundle",
+      "relevance_score": 17
+    },
+    {
+      "source": "hacker_news",
+      "id": "50646969",
+      "title": "Show HN: HealthBar \u2013 Open-source macOS menu bar app that tracks status pages",
+      "url": "https://news.ycombinator.com/item?id=50646969",
+      "points": 1,
+      "comments": 0,
+      "created_at": "2026-11-25T20:19:43Z",
+      "query": "macOS menu bar app",
+      "matched_product": "PortPilot",
+      "matched_url": "https://adorable48.gumroad.com/l/portpilot",
+      "relevance_score": 16
+    },
+    {
+      "source": "hacker_news",
+      "id": "50631057",
+      "title": "Show HN: Proton VPN from your terminal, menu bar and Alfred on macOS",
+      "url": "https://news.ycombinator.com/item?id=50631057",
+      "points": 1,
+      "comments": 0,
+      "created_at": "2026-11-24T17:02:06Z",
+      "query": "macOS menu bar app",
+      "matched_product": "PortPilot",
+      "matched_url": "https://adorable48.gumroad.com/l/portpilot",
+      "relevance_score": 16
+    },
+    {
+      "source": "hacker_news",
+      "id": "50601096",
+      "title": "Show HN: TripleClick \u2013 220-line Mac menu bar app for trackpad middle click",
+      "url": "https://news.ycombinator.com/item?id=50601096",
+      "points": 1,
+      "comments": 0,
+      "created_at": "2026-11-22T16:30:15Z",
+      "query": "macOS menu bar app",
+      "matched_product": "PortPilot",
+      "matched_url": "https://adorable48.gumroad.com/l/portpilot",
+      "relevance_score": 16
+    },
+    {
+      "source": "hacker_news",
+      "id": "50575755",
+      "title": "Show HN: HyprMac: Keyboard-driven tiling window manager for macOS",
+      "url": "https://news.ycombinator.com/item?id=50575755",
+      "points": 1,
+      "comments": 0,
+      "created_at": "2026-11-20T15:10:53Z",
+      "query": "macOS menu bar app",
+      "matched_product": "Mac Power User Bundle",
+      "matched_url": "https://adorable48.gumroad.com/l/mac-power-bundle",
+      "relevance_score": 16
+    },
+    {
+      "source": "hacker_news",
+      "id": "32523884",
+      "title": "Are we losing enterprise desktop?",
+      "url": "https://news.ycombinator.com/item?id=32523884",
+      "points": 14,
+      "comments": 21,
+      "created_at": "2022-08-19T17:33:53Z",
+      "query": "native macOS utility Electron",
+      "matched_product": "Mac Power User Bundle",
+      "matched_url": "https://adorable48.gumroad.com/l/mac-power-bundle",
+      "relevance_score": 14
+    },
+    {
+      "source": "hacker_news",
+      "id": "49009893",
+      "title": "Show HN: SimpleBLE 1.0, a cross-platform Bluetooth LE library",
+      "url": "https://news.ycombinator.com/item?id=49009893",
+      "points": 3,
+      "comments": 0,
+      "created_at": "2026-07-22T17:01:52Z",
+      "query": "native macOS utility Electron",
+      "matched_product": "Mac Power User Bundle",
+      "matched_url": "https://adorable48.gumroad.com/l/mac-power-bundle",
+      "relevance_score": 3
+    },
+    {
+      "source": "hacker_news",
+      "id": "37738146",
+      "title": "Show HN: Project Forge, my local app that helps you build Golang applications",
+      "url": "https://news.ycombinator.com/item?id=37738146",
+      "points": 3,
+      "comments": 0,
+      "created_at": "2023-10-02T13:54:14Z",
+      "query": "native macOS utility Electron",
+      "matched_product": "Mac Power User Bundle",
+      "matched_url": "https://adorable48.gumroad.com/l/mac-power-bundle",
+      "relevance_score": 3
+    },
+    {
+      "source": "hacker_news",
+      "id": "50517001",
+      "title": "Show HN: Hosts Tray \u2013 hosts file switcher with built-in HTTPS proxy",
+      "url": "https://news.ycombinator.com/item?id=50517001",
+      "points": 3,
+      "comments": 0,
+      "created_at": "2026-11-16T12:42:29Z",
+      "query": "Show HN macOS menu bar",
+      "matched_product": "Mac Power User Bundle",
+      "matched_url": "https://adorable48.gumroad.com/l/mac-power-bundle",
+      "relevance_score": 3
+    },
+    {
+      "source": "hacker_news",
+      "id": "47498251",
+      "title": "AI coding tools have broad filesystem and network access",
+      "url": "https://news.ycombinator.com/item?id=47498251",
+      "points": 2,
+      "comments": 1,
+      "created_at": "2026-03-24T03:16:03Z",
+      "query": "localhost port kill",
+      "matched_product": "Mac Power User Bundle",
+      "matched_url": "https://adorable48.gumroad.com/l/mac-power-bundle",
+      "relevance_score": 2
+    }
+  ],
+  "github_macos_trends": [
+    {
+      "source": "github_trends",
+      "name": "stablebox/StableBar",
+      "description": "A native, customizable menu bar for macOS, with themes, widgets, popups and AeroSpace, yabai or OmniWM workspaces. A free, open-source alternative to SketchyBar.",
+      "url": "https://github.com/stablebox/StableBar",
+      "stars": 307,
+      "updated_at": "2026-11-26T19:52:46Z"
+    },
+    {
+      "source": "github_trends",
+      "name": "arun2990/menu-bar-token-economy",
+      "description": "Best AI API Cost Tracker & Token Usage Monitor for Developers 2026",
+      "url": "https://github.com/arun2990/menu-bar-token-economy",
+      "stars": 116,
+      "updated_at": "2026-11-15T11:40:28Z"
+    },
+    {
+      "source": "github_trends",
+      "name": "tang1693/KIKUmap",
+      "description": "A mind map for your Claude/ChatGPT chats \u2014 macOS menu-bar app",
+      "url": "https://github.com/tang1693/KIKUmap",
+      "stars": 579,
+      "updated_at": "2026-11-26T18:38:27Z"
+    },
+    {
+      "source": "github_trends",
+      "name": "SorcRR/MacRazer",
+      "description": "Native macOS menu bar app to control Razer mice (battery, DPI, RGB, button remap) over USB HID, no Synapse required. Tested on Cobra HyperSpeed and Atheris.",
+      "url": "https://github.com/SorcRR/MacRazer",
+      "stars": 45,
+      "updated_at": "2026-11-25T18:13:35Z"
+    },
+    {
+      "source": "github_trends",
+      "name": "lingyired/status-trio",
+      "description": "Status Trio \u2014 a native macOS app that combines Wi-Fi, battery, and volume into one compact, configurable status icon for the menu bar, the Dock, or both, inspired by the iPhone Duo combined status bar.",
+      "url": "https://github.com/lingyired/status-trio",
+      "stars": 2154,
+      "updated_at": "2026-11-26T14:29:13Z"
+    },
+    {
+      "source": "github_trends",
+      "name": "jryang2026-code/MenuBarHome",
+      "description": "macOS / Windows menu bar control for Xiaomi Mijia and Home Assistant devices (formerly MenuBarMijia)",
+      "url": "https://github.com/jryang2026-code/MenuBarHome",
+      "stars": 66,
+      "updated_at": "2026-11-26T13:24:55Z"
+    },
+    {
+      "source": "github_trends",
+      "name": "MF-DEEV/Openbar",
+      "description": "The Dynamic Island for your AI agents. Claude Code, Codex and more in your Mac's notch, plus a full menu bar toolkit.",
+      "url": "https://github.com/MF-DEEV/Openbar",
+      "stars": 36,
+      "updated_at": "2026-11-26T17:35:07Z"
+    },
+    {
+      "source": "github_trends",
+      "name": "Wunderlandmedia/HotkeyClash",
+      "description": "Find where your keyboard shortcuts clash. A free, open-source macOS menu bar app that detects shortcut conflicts across apps, config tools, and system settings.",
+      "url": "https://github.com/Wunderlandmedia/HotkeyClash",
+      "stars": 246,
+      "updated_at": "2026-11-26T19:48:48Z"
+    },
+    {
+      "source": "github_trends",
+      "name": "darrylmorley/whatcable",
+      "description": "macOS menu bar app that tells you, in plain English, what each USB-C cable plugged into your Mac can actually do",
+      "url": "https://github.com/darrylmorley/whatcable",
+      "stars": 9234,
+      "updated_at": "2026-11-26T19:34:29Z"
+    },
+    {
+      "source": "github_trends",
+      "name": "jamesmontemagno/tiny-clips",
+      "description": "A lightweight macOS & Windows menu bar app for capturing screenshots (PNG), video (MP4), and animated GIFs of a selected screen region.",
+      "url": "https://github.com/jamesmontemagno/tiny-clips",
+      "stars": 144,
+      "updated_at": "2026-11-17T16:33:09Z"
+    }
+  ]
+}

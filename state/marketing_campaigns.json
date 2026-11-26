@@ -1,0 +1,191 @@
+{
+  "brand": "Kilobyte Labs",
+  "tagline": "Tiny native Apple Silicon macOS utilities. Zero Electron. Zero subscriptions.",
+  "generated_at": "2026-11-26T19:52:25Z",
+  "campaigns": [
+    {
+      "campaign_id": "reddit-macapps-launch",
+      "platform": "Reddit",
+      "target": "r/macapps",
+      "recommended_flair": "App / Developer",
+      "title": "I built two tiny (<400 KB) native Swift/AppKit macOS menu-bar tools \u2014 PortPilot (localhost port killer) & SnapShrink (offline image compressor + GPS/EXIF stripper)",
+      "body": "Hey r/macapps \u2014 developer here from **Kilobyte Labs**.\n\nI got tired of installing 250 MB Electron wrappers or paying $10/mo subscriptions for basic macOS utilities, so I compiled two pure Swift/AppKit Apple Silicon menu-bar apps (zero Electron, zero Python, zero cloud uploads):\n\n**1. PortPilot ($9 one-time)** \u2014 *337 KB native ARM64 menu-bar localhost port manager*\n- Live radar of listening TCP ports (`:3000` Next.js, `:5173` Vite, `:5432` Postgres, `:8000` FastAPI, `:6379` Redis, etc.) with PID & RAM usage\n- 1-click **Open in Browser**, **Copy URL**, **Pin Favorites**, **Stop (`SIGTERM`) / Force Kill (`SIGKILL`)**, and **Clean All Dev Ports**\n- Free view-only radar works right out of the box; Gumroad license key unlocks 1-click kill & works 100% offline afterward.\n- Link: https://adorable48.gumroad.com/l/portpilot\n\n**2. SnapShrink ($7 one-time)** \u2014 *Native Apple ImageIO screenshot compressor & privacy stripper*\n- Shrinks bloated macOS screenshots & photos (PNG/JPG/HEIC) up to 80% smaller locally using Apple's hardware `ImageIO`\n- Automatically strips hidden GPS location, camera serial, TIFF, and EXIF metadata\n- Optional Auto-Shrink Desktop Screenshots watcher mode\n- Link: https://adorable48.gumroad.com/l/snapshrink\n\n**Mac Power User Bundle ($12 for both \u2014 25% off):** https://adorable48.gumroad.com/l/mac-power-bundle\n**Overview & specs:** https://imgolamrabbani.github.io/neon-agent-house/\n\n*Full transparency:* Both require macOS 14+ (Apple Silicon) and are currently ad-hoc signed indie builds (no $99/yr Apple Developer notarization yet), so first launch uses Right-Click -> Open once. Happy to answer any Swift/AppKit questions or hear what lightweight Mac menu-bar utility you wish existed next!",
+      "cta_urls": [
+        "https://adorable48.gumroad.com/l/portpilot",
+        "https://adorable48.gumroad.com/l/snapshrink",
+        "https://adorable48.gumroad.com/l/mac-power-bundle",
+        "https://imgolamrabbani.github.io/neon-agent-house/"
+      ],
+      "qa": {
+        "pass": true,
+        "score": 100,
+        "checks": [
+          {
+            "name": "transparent_maker_disclosure",
+            "pass": true
+          },
+          {
+            "name": "no_spam_or_fake_review_hype",
+            "pass": true
+          },
+          {
+            "name": "concrete_technical_proof_present",
+            "pass": true
+          },
+          {
+            "name": "valid_cta_links_present",
+            "pass": true
+          }
+        ]
+      },
+      "status": "HELD_FOR_KARMA_AND_PCP_RULE",
+      "notes": "r/macapps Rule 6 requires 200+ karma & 60+ day account (or megathread) + PCP labels (Problem/Comparison/Pricing/Trust) + Lifetime flair. Stopped cleanly before posting to avoid 60-day promo ban."
+    },
+    {
+      "campaign_id": "reddit-sideproject-launch",
+      "platform": "Reddit",
+      "target": "r/SideProject",
+      "recommended_flair": "Show / Launch",
+      "title": "Built Kilobyte Labs: two tiny native macOS menu-bar utilities (<400 KB Swift binaries, zero Electron, one-time $7-$9)",
+      "body": "After getting frustrated with bloated Electron apps eating hundreds of MB of RAM just to sit in the macOS menu bar, I built two ultra-light native Swift/AppKit Apple Silicon utilities under **Kilobyte Labs**:\n\n1. **PortPilot ($9 once)** \u2014 Live menu-bar radar for every listening localhost port (`:3000`, `:5173`, `:5432`, `:8000`, etc.) with 1-click Open in Browser, Copy URL, SIGTERM/SIGKILL, and Clean All Dev Ports. The entire compiled ARM64 binary is **337 KB**.\n2. **SnapShrink ($7 once)** \u2014 Menu-bar image & screenshot compressor built on Apple's native `ImageIO` that shrinks files up to 80% and strips all GPS/camera EXIF metadata completely offline.\n\nBoth ship as drag-and-drop macOS `.dmg` installers with offline hardware-bound Gumroad License Key activation (plus a $12 bundle for both).\n\nStorefront: https://imgolamrabbani.github.io/neon-agent-house/\nBundle ($12): https://adorable48.gumroad.com/l/mac-power-bundle\n\nWould love brutal feedback on the positioning, pricing, and what annoying Mac/dev friction I should build as tool #3!",
+      "cta_urls": [
+        "https://imgolamrabbani.github.io/neon-agent-house/",
+        "https://adorable48.gumroad.com/l/mac-power-bundle"
+      ],
+      "qa": {
+        "pass": true,
+        "score": 100,
+        "checks": [
+          {
+            "name": "transparent_maker_disclosure",
+            "pass": true
+          },
+          {
+            "name": "no_spam_or_fake_review_hype",
+            "pass": true
+          },
+          {
+            "name": "concrete_technical_proof_present",
+            "pass": true
+          },
+          {
+            "name": "valid_cta_links_present",
+            "pass": true
+          }
+        ]
+      },
+      "status": "REMOVED_BY_REDDIT_NEW_ACCOUNT_FILTER",
+      "live_url": "https://www.reddit.com/r/SideProject/comments/1y6a95r/built_kilobyte_labs_two_tiny_native_macos_menubar/",
+      "notes": "Account u/Separate_Passage_997 is 0d old / 1 karma; Reddit sitewide filter removed external-link post. Warm up with zero-link helpful technical comments before posting links."
+    },
+    {
+      "campaign_id": "hn-show-portpilot",
+      "platform": "Hacker News",
+      "target": "Show HN",
+      "title": "Show HN: PortPilot \u2013 A 337 KB native Swift macOS menu-bar localhost port killer",
+      "body": "I built PortPilot because I was typing `lsof -nP -iTCP -sTCP:LISTEN` and `kill -9` ten times a day when Next.js, Vite, and FastAPI dev servers wedged ports.\n\nInstead of wrapping a web view in 200MB of Electron, it's a pure Swift/AppKit/SwiftUI ARM64 binary (337 KB) that lives in the macOS menu bar, parses `lsof -F`, tags common dev runtimes, and gives 1-click Open, Copy URL, SIGTERM/SIGKILL, and Clean All Dev Ports.\n\nLanding page & details: https://imgolamrabbani.github.io/neon-agent-house/\nDirect Gumroad page ($9 one-time): https://adorable48.gumroad.com/l/portpilot\n\nNote: It's currently ad-hoc signed while bootstrapping at $0 fixed cost (Right-Click -> Open on first run). Feedback welcome!",
+      "cta_urls": [
+        "https://imgolamrabbani.github.io/neon-agent-house/",
+        "https://adorable48.gumroad.com/l/portpilot"
+      ],
+      "qa": {
+        "pass": true,
+        "score": 100,
+        "checks": [
+          {
+            "name": "transparent_maker_disclosure",
+            "pass": true
+          },
+          {
+            "name": "no_spam_or_fake_review_hype",
+            "pass": true
+          },
+          {
+            "name": "concrete_technical_proof_present",
+            "pass": true
+          },
+          {
+            "name": "valid_cta_links_present",
+            "pass": true
+          }
+        ]
+      },
+      "status": "READY_TO_PUBLISH"
+    },
+    {
+      "campaign_id": "devto-engineering-post",
+      "platform": "Dev.to",
+      "target": "Dev.to (#macos #swift #indiedev #webdev)",
+      "title": "Why I Built a 337 KB Native Swift Port Manager Instead of Another 200 MB Electron App",
+      "body": "Every full-stack developer hits `Error: listen EADDRINUSE: address already in use :::3000` at least once a day.\n\nThis week I launched **Kilobyte Labs** with two compiled Apple Silicon macOS utilities built in pure Swift/AppKit/CoreGraphics with zero Electron dependencies:\n- **PortPilot** (`337 KB` binary) \u2014 menu-bar localhost port monitor + 1-click process killer: https://adorable48.gumroad.com/l/portpilot\n- **SnapShrink** \u2014 offline Apple `ImageIO` screenshot compressor + GPS/EXIF privacy stripper: https://adorable48.gumroad.com/l/snapshrink\n\nFull showcase: https://imgolamrabbani.github.io/neon-agent-house/",
+      "cta_urls": [
+        "https://adorable48.gumroad.com/l/portpilot",
+        "https://adorable48.gumroad.com/l/snapshrink",
+        "https://imgolamrabbani.github.io/neon-agent-house/"
+      ],
+      "qa": {
+        "pass": true,
+        "score": 100,
+        "checks": [
+          {
+            "name": "transparent_maker_disclosure",
+            "pass": true
+          },
+          {
+            "name": "no_spam_or_fake_review_hype",
+            "pass": true
+          },
+          {
+            "name": "concrete_technical_proof_present",
+            "pass": true
+          },
+          {
+            "name": "valid_cta_links_present",
+            "pass": true
+          }
+        ]
+      },
+      "status": "READY_TO_PUBLISH"
+    },
+    {
+      "campaign_id": "indiehackers-launch",
+      "platform": "Indie Hackers",
+      "target": "Indie Hackers (Mac / Solo Founders)",
+      "title": "Launching Kilobyte Labs: $0/mo fixed-cost studio shipping <400 KB native macOS utilities",
+      "body": "Stopped selling raw code templates and pivoted to shipping compiled, stripped native Apple Silicon macOS utilities with Gumroad License Keys.\n\nJust shipped our first two apps (**PortPilot** $9 + **SnapShrink** $7, or **$12 Mac Power User Bundle**):\nhttps://imgolamrabbani.github.io/neon-agent-house/",
+      "cta_urls": [
+        "https://imgolamrabbani.github.io/neon-agent-house/"
+      ],
+      "qa": {
+        "pass": true,
+        "score": 100,
+        "checks": [
+          {
+            "name": "transparent_maker_disclosure",
+            "pass": true
+          },
+          {
+            "name": "no_spam_or_fake_review_hype",
+            "pass": true
+          },
+          {
+            "name": "concrete_technical_proof_present",
+            "pass": true
+          },
+          {
+            "name": "valid_cta_links_present",
+            "pass": true
+          }
+        ]
+      },
+      "status": "READY_TO_PUBLISH"
+    }
+  ],
+  "reddit_account_audit": {
+    "username": "u/Separate_Passage_997",
+    "karma": 1,
+    "account_age_days": 0,
+    "audited_at": "2026-11-26T20:01:42Z",
+    "strategy": "Warm up with zero-link helpful replies on r/macOS, r/webdev, r/Swift; launch immediately on zero-karma-wall channels (GitHub Showcase, Dev.to, Hacker News, Product Hunt, AlternativeTo)."
+  }
+}

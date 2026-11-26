@@ -15,6 +15,8 @@ from google.genai import types
 from agent_house.config import DEFAULT_MODEL_ID, get_gemini_api_key
 from agent_house.continuous import run_continuous_sync
 from agent_house.graph import build_agent_house_workflow
+from agent_house.marketing_graph import run_wing2_marketing_cycle
+from agent_house.marketing_intel import run_live_internet_audit
 from agent_house.weekly import run_weekly_review
 from agent_house.youtube_graph import run_youtube_wing_sync
 from agent_house.youtube_uploader import (
@@ -147,7 +149,20 @@ def main(argv: list[str] | None = None) -> int:
     up_p.add_argument("--privacy", default="public", choices=["public", "unlisted", "private"])
     up_p.add_argument("--publish-at", default=None, help="Optional RFC3339 schedule timestamp (e.g., 2026-11-26T14:00:00Z).")
 
+    sub.add_parser("mkt-audit", help="Run Wing 2 Kilobyte Labs live internet trend, Reddit, HN & GitHub audit.")
+    sub.add_parser("mkt-plan", help="Run Wing 2 live internet audit + generate & QA-verify all multi-platform launch campaigns.")
+
     args = parser.parse_args(argv)
+
+    if args.command == "mkt-audit":
+        result = run_live_internet_audit()
+        print(json.dumps(result, indent=2))
+        return 0
+
+    if args.command == "mkt-plan":
+        result = run_wing2_marketing_cycle()
+        print(json.dumps(result, indent=2))
+        return 0
 
     if args.command == "weekly":
         result = run_weekly_review()
