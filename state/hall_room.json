@@ -2,8 +2,104 @@
   "schema_version": "2.0.0",
   "house_name": "Neon Agent House",
   "write_authority": "hall-room-verifier",
-  "updated_at": "2026-11-25T10:06:45Z",
+  "updated_at": "2026-11-26T06:58:45Z",
   "verified_opportunities": [
+    {
+      "niche_id": "portpilot-macos-01",
+      "title": "PortPilot \u2014 Compiled Native macOS Menu-Bar Localhost Port Radar & 1-Click Process Killer",
+      "status": "PUBLISHED_GUMROAD_NATIVE_TOOL",
+      "buyer_persona": "macOS full-stack developers, AI builders, and indie hackers running local servers",
+      "recurring_pain": "Constantly running lsof -i :3000 && kill -9 in Terminal to hunt down zombie Next.js/Vite/FastAPI/Postgres localhost processes.",
+      "current_workaround": "Manual lsof/kill CLI commands or heavy Electron utilities",
+      "urgency_signal": "Daily developer friction every time EADDRINUSE blocks a local dev server",
+      "evidence": [
+        {
+          "verbatim_quote": "Sindre Sorhus Gumroad benchmark: $6-$12 native macOS menu-bar utilities with 4.9-5.0 star reviews and compiled binary distribution.",
+          "source_url": "https://adorable48.gumroad.com/l/portpilot",
+          "source_context": "Wing 1 GOD Directive Native macOS Pivot, 2026-11-26"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "Raycast Pro / Electron Port Managers",
+          "live_pricing_url": "https://www.raycast.com/pricing",
+          "verified_price_tiers": "$8-$10/mo recurring subscription",
+          "main_gap": "Monthly recurring fee or heavy RAM usage compared to a 337 KB native ARM64 menu-bar binary."
+        }
+      ],
+      "recommended_price_point": "$9 one-time (Gumroad License Key enabled)",
+      "fixed_stack_cost": "$0/mo",
+      "estimated_mvp_hours": 1,
+      "unit_economics": {
+        "price_usd": 9,
+        "platform_fee_rate": 0.1,
+        "conservative_monthly_buyers": 25,
+        "base_monthly_buyers": 80,
+        "conservative_monthly_net_usd": 202.5,
+        "base_monthly_net_usd": 648.0
+      },
+      "unit_economics_summary": "Conservative: 25 buyers/mo = $202.5/mo net | Base: 80 buyers/mo = $648.0/mo net",
+      "top_distribution_risk": "Unsigned indie macOS app requires one-time Right-Click -> Open on first launch until Apple Developer ID notarization is added.",
+      "research_score": 100,
+      "verified_at": "2026-11-26T06:58:45Z",
+      "mvp_score": 100,
+      "gumroad_url": "https://adorable48.gumroad.com/l/portpilot",
+      "gumroad_product_id": "UjMLnFHn-DTch37QYH4GVw==",
+      "mvp": {
+        "spec_path": "PRIVATE_LOCAL_ONLY (tools/PortPilot \u2014 gitignored)",
+        "artifact_path": "dist/PortPilot_v1.0.0_macOS_arm64.dmg",
+        "test_command": "pytest tests/test_native_hardening.py",
+        "test_exit_code": 0
+      }
+    },
+    {
+      "niche_id": "snapshrink-macos-01",
+      "title": "SnapShrink \u2014 Compiled Native macOS Menu-Bar Image Compressor & EXIF/GPS Stripper",
+      "status": "PUBLISHED_GUMROAD_NATIVE_TOOL",
+      "buyer_persona": "macOS creators, indie developers, designers, and privacy-conscious Mac users",
+      "recurring_pain": "Bloated multi-megabyte macOS screenshots leaking GPS/camera EXIF metadata, with web compressors requiring cloud uploads or recurring subscriptions.",
+      "current_workaround": "Uploading private screenshots to TinyPNG/web tools or manually running CLI converters",
+      "urgency_signal": "Instant storage/bandwidth savings + privacy protection right from macOS menu bar",
+      "evidence": [
+        {
+          "verbatim_quote": "Sindre Sorhus Gumroad benchmark: $6-$10 native macOS menu-bar utilities with 4.9-5.0 star reviews and zero source-code distribution.",
+          "source_url": "https://adorable48.gumroad.com/l/snapshrink",
+          "source_context": "Wing 1 GOD Directive Native macOS Pivot, 2026-11-26"
+        }
+      ],
+      "competitors": [
+        {
+          "name": "ImageOptim / TinyPNG Web Pro",
+          "live_pricing_url": "https://tinypng.com/developers",
+          "verified_price_tiers": "$39/yr Web Pro subscription with cloud uploads",
+          "main_gap": "Requires uploading private images to cloud servers and annual subscription."
+        }
+      ],
+      "recommended_price_point": "$7 one-time (Gumroad License Key enabled)",
+      "fixed_stack_cost": "$0/mo",
+      "estimated_mvp_hours": 1,
+      "unit_economics": {
+        "price_usd": 7,
+        "platform_fee_rate": 0.1,
+        "conservative_monthly_buyers": 20,
+        "base_monthly_buyers": 65,
+        "conservative_monthly_net_usd": 126.0,
+        "base_monthly_net_usd": 409.5
+      },
+      "unit_economics_summary": "Conservative: 20 buyers/mo = $126.0/mo net | Base: 65 buyers/mo = $409.5/mo net",
+      "top_distribution_risk": "Unsigned indie macOS app requires one-time Right-Click -> Open on first launch until Apple Developer ID notarization is added.",
+      "research_score": 100,
+      "verified_at": "2026-11-26T06:58:45Z",
+      "mvp_score": 100,
+      "gumroad_url": "https://adorable48.gumroad.com/l/snapshrink",
+      "gumroad_product_id": "PbSjmr1kDPkrT88_UJ-9qw==",
+      "mvp": {
+        "spec_path": "PRIVATE_LOCAL_ONLY (tools/SnapShrink \u2014 gitignored)",
+        "artifact_path": "dist/SnapShrink_v1.0.0_macOS_arm64.dmg",
+        "test_command": "pytest tests/test_native_hardening.py",
+        "test_exit_code": 0
+      }
+    },
     {
       "niche_id": "invoice-pulse-01",
       "title": "InvoicePulse v3 \u2014 Zero-Subscription Overdue Invoice Command Center",

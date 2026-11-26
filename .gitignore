@@ -11,3 +11,5 @@ secrets/
 mvp_bundle/*/outbox/
 outputs/youtube_shorts/*/*.mp4
 outputs/youtube_shorts/*/qa_frame_*.png
+tools/
+dist/

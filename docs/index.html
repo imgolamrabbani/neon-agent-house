@@ -3,191 +3,148 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Zero-Subscription Solo Builder Suite — 5 Local Python Tools</title>
-<meta name="description" content="Replace $35-$139/mo SaaS suites with 5 local Python tools: InvoicePulse, ScopeShield, LaunchCheck, SubTrim, and ChangelogKit. $9 each or $19 for all 5." />
-<meta property="og:title" content="Zero-Subscription Solo Builder Suite — 5 Local Tools ($19 Bundle)" />
-<meta property="og:description" content="100% local Python stdlib utilities with dark-mode HTML dashboards. No pip installs, no Plaid bank logins, no monthly subscriptions." />
+<title>Neon Mac Utilities — Compiled Native Apple Silicon Menu-Bar Tools</title>
+<meta name="description" content="Fast, lightweight, compiled native macOS menu-bar utilities: PortPilot ($9) and SnapShrink ($7). Zero Electron bloat, zero monthly subscriptions, hardware-bound offline licenses." />
+<meta property="og:title" content="Neon Mac Utilities — Native Apple Silicon Menu-Bar Apps" />
+<meta property="og:description" content="Compiled native Swift/AppKit macOS menu-bar apps (<400 KB binaries, zero Electron, zero cloud uploads). Pay once, own forever." />
 <style>
   :root {
-    --bg: #080d1a;
-    --card: #11192e;
-    --border: #233054;
+    --bg: #070b16;
+    --card: #10172b;
+    --border: #233154;
     --text: #eef3ff;
     --muted: #98a9cc;
     --cyan: #38bdf8;
-    --emerald: #34d399;
-    --amber: #fbbf24;
+    --mint: #34d399;
+    --indigo: #818cf8;
   }
   * { box-sizing: border-box; }
   body {
-    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
-    background: radial-gradient(circle at 20% 0%, #16264f 0%, var(--bg) 55%);
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Segoe UI", sans-serif;
+    background: radial-gradient(circle at 20% 0%, #15254d 0%, var(--bg) 55%);
     color: var(--text); line-height: 1.6;
   }
-  .container { max-width: 1080px; margin: 0 auto; padding: 48px 20px 80px; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 52px 20px 80px; }
   .eyebrow {
     display: inline-block; padding: 6px 14px; border-radius: 999px; font-size: 12px; font-weight: 700;
     background: rgba(56, 189, 248, 0.14); color: var(--cyan); border: 1px solid rgba(56, 189, 248, 0.35);
     margin-bottom: 18px;
   }
-  h1 { font-size: clamp(32px, 5vw, 50px); line-height: 1.1; letter-spacing: -0.03em; margin: 0 0 18px; }
-  .lead { font-size: 18px; color: var(--muted); max-width: 760px; margin: 0 0 28px; }
-  .bundle-banner {
-    background: linear-gradient(135deg, rgba(56,189,248,0.16), rgba(52,211,153,0.12));
-    border: 1px solid rgba(56,189,248,0.45); border-radius: 18px; padding: 26px 28px;
-    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px;
-    margin-bottom: 40px;
-  }
-  .bundle-banner h2 { margin: 0 0 6px; font-size: 24px; }
-  .bundle-banner p { margin: 0; color: var(--muted); font-size: 15px; max-width: 640px; }
-  .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(295px, 1fr)); gap: 18px; margin-bottom: 52px; }
+  h1 { font-size: clamp(34px, 5vw, 52px); line-height: 1.08; letter-spacing: -0.03em; margin: 0 0 18px; }
+  .lead { font-size: 18px; color: var(--muted); max-width: 740px; margin: 0 0 36px; }
+  .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; margin-bottom: 52px; }
   .pcard {
-    background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 24px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 22px; padding: 28px;
     display: flex; flex-direction: column; justify-content: space-between;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
   }
-  .tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--emerald); }
-  .pcard h3 { margin: 8px 0 8px; font-size: 21px; }
-  .pcard p { margin: 0 0 12px; color: var(--muted); font-size: 14px; }
-  .replaces { font-size: 12.5px; color: var(--amber); margin-bottom: 12px; font-weight: 600; }
-  .pcard ul { padding-left: 18px; margin: 0 0 20px; color: var(--muted); font-size: 13.5px; }
-  .pcard li { margin-bottom: 5px; }
-  .price-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
-  .price { font-size: 30px; font-weight: 800; }
+  .app-head { display: flex; align-items: center; gap: 18px; margin-bottom: 18px; }
+  .app-icon {
+    width: 82px; height: 82px; border-radius: 20px; object-fit: cover;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45); border: 1px solid rgba(255,255,255,0.12);
+  }
+  .tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--mint); }
+  .pcard h2 { margin: 4px 0 4px; font-size: 26px; letter-spacing: -0.02em; }
+  .sub { font-size: 13.5px; color: var(--cyan); font-weight: 600; }
+  .pcard p { margin: 0 0 14px; color: var(--muted); font-size: 14.5px; }
+  .pcard ul { padding-left: 18px; margin: 0 0 24px; color: var(--muted); font-size: 13.5px; }
+  .pcard li { margin-bottom: 6px; }
+  .price-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.07); }
+  .price { font-size: 32px; font-weight: 800; }
   .price span { font-size: 13px; color: var(--muted); font-weight: 500; }
   .btn {
-    display: inline-flex; align-items: center; justify-content: center; padding: 12px 20px;
-    border-radius: 11px; font-weight: 700; font-size: 14px; text-decoration: none;
-    background: var(--cyan); color: #051120; white-space: nowrap;
+    display: inline-flex; align-items: center; justify-content: center; padding: 13px 22px;
+    border-radius: 12px; font-weight: 700; font-size: 14.5px; text-decoration: none;
+    background: linear-gradient(135deg, var(--cyan), var(--indigo)); color: #051020; white-space: nowrap;
   }
-  .btn.emerald { background: var(--emerald); color: #041d15; padding: 14px 24px; font-size: 15px; }
-  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; margin-bottom: 44px; }
-  th, td { padding: 14px 16px; border-bottom: 1px solid var(--border); text-align: left; font-size: 14px; }
-  th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
-  .win { color: var(--emerald); font-weight: 700; }
-  footer { margin-top: 48px; color: var(--muted); font-size: 13px; text-align: center; }
+  .btn.mint { background: linear-gradient(135deg, var(--mint), var(--cyan)); color: #041d15; }
+  .specs {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;
+    background: rgba(16, 23, 43, 0.72); border: 1px solid var(--border); border-radius: 18px; padding: 24px;
+    margin-bottom: 44px;
+  }
+  .spec h3 { margin: 0 0 6px; font-size: 15px; color: var(--text); }
+  .spec p { margin: 0; font-size: 13.5px; color: var(--muted); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 13px; text-align: center; }
   footer a { color: var(--cyan); text-decoration: none; }
 </style>
 </head>
 <body>
 <div class="container">
-  <span class="eyebrow">100% Local &bull; Python 3 Stdlib Only &bull; Zero Monthly Subscriptions</span>
-  <h1>Replace $35&ndash;$139/mo SaaS bloat with 5 local Python tools.</h1>
+  <span class="eyebrow">Compiled Native Apple Silicon Binaries &bull; Zero Electron &bull; Pay Once, Own Forever</span>
+  <h1>Fast native macOS menu-bar tools built for zero-bloat workflows.</h1>
   <p class="lead">
-    Zero <code>pip install</code>, zero cloud lock-in, zero Plaid bank logins, and zero recurring bills.
-    Every tool ships with clean source code, built-in <code>--self-test</code>, and a dark-mode interactive HTML dashboard.
+    No Electron RAM hogs, no cloud uploads, and no monthly subscriptions.
+    Every app compiles directly to a stripped native ARM64 Swift/AppKit binary (&lt;400 KB) distributed as a drag-and-drop macOS <code>.dmg</code> with offline hardware-bound Gumroad License Key activation.
   </p>
-
-  <section class="bundle-banner">
-    <div>
-      <h2>All 5 Tools Bundle &mdash; $19 One-Time (Save 58%)</h2>
-      <p>Get InvoicePulse, ScopeShield, LaunchCheck, SubTrim, and ChangelogKit together ($45 value) in one instant ZIP download.</p>
-    </div>
-    <a class="btn emerald" href="https://adorable48.gumroad.com/l/cxsyhr" target="_blank" rel="noopener">Get All 5 Tools &mdash; $19</a>
-  </section>
 
   <section class="products">
     <article class="pcard">
       <div>
-        <div class="tag">Freelance Cashflow</div>
-        <h3>InvoicePulse v3</h3>
-        <div class="replaces">Replaces HoneyBook ($36-$129/mo), Dubsado ($35-$55/mo)</div>
-        <p>Turns an invoice CSV into an overdue cashflow dashboard, prorated late-fee calculator, and 1-click Day 3/7/14/30 follow-up emails.</p>
+        <div class="app-head">
+          <img class="app-icon" src="assets/PortPilot_thumbnail_1024x1024.png" alt="PortPilot macOS app icon" />
+          <div>
+            <div class="tag">macOS Menu-Bar Dev Tool</div>
+            <h2>PortPilot</h2>
+            <div class="sub">Localhost Port Radar &amp; 1-Click Process Killer</div>
+          </div>
+        </div>
+        <p>Stop hunting zombie localhost servers in Terminal. Inspect every active listening TCP port from your menu bar and open, copy, pin, or kill processes in one click.</p>
         <ul>
-          <li>Dark-mode HTML dashboard + 1-click <code>mailto:</code></li>
-          <li>Use your own Stripe/PayPal links (0% markup)</li>
+          <li>Live port radar for Next.js (:3000), Vite (:5173), Postgres (:5432), FastAPI (:8000), Redis (:6379) &amp; more</li>
+          <li>1-click Open in Browser, Copy URL, SIGTERM Stop, Force SIGKILL, and Clean All Dev Ports</li>
+          <li>337 KB stripped native Apple Silicon Mach-O binary &bull; macOS 14+</li>
+          <li>Instant Gumroad License Key + offline hardware-bound activation</li>
         </ul>
       </div>
       <div class="price-row">
-        <div class="price">$9 <span>once</span></div>
-        <a class="btn" href="https://adorable48.gumroad.com/l/zcnhpu" target="_blank" rel="noopener">Get InvoicePulse</a>
+        <div class="price">$9 <span>one-time</span></div>
+        <a class="btn" href="https://adorable48.gumroad.com/l/portpilot" target="_blank" rel="noopener">Get PortPilot &rarr;</a>
       </div>
     </article>
 
     <article class="pcard">
       <div>
-        <div class="tag">Margin Protection</div>
-        <h3>ScopeShield v1</h3>
-        <div class="replaces">Replaces Proposify ($49/mo), Qwilr ($49/mo)</div>
-        <p>Turns casual client &ldquo;quick tweak&rdquo; DMs into a priced, printable HTML/PDF Change Order with extra hours, delay shift, and approval email.</p>
+        <div class="app-head">
+          <img class="app-icon" src="assets/SnapShrink_thumbnail_1024x1024.png" alt="SnapShrink macOS app icon" />
+          <div>
+            <div class="tag">macOS Privacy &amp; Media Tool</div>
+            <h2>SnapShrink</h2>
+            <div class="sub">Instant Image Compressor &amp; EXIF/GPS Stripper</div>
+          </div>
+        </div>
+        <p>Shrink bloated macOS screenshots and photos up to 80% smaller while automatically stripping hidden GPS coordinates, camera serials, and EXIF/TIFF metadata locally.</p>
         <ul>
-          <li>Baseline SOW vs. Unbilled Creep KPI cards</li>
-          <li>Print-to-PDF Change Order + 1-click approval email</li>
+          <li>Powered by Apple hardware-accelerated <code>ImageIO</code> &mdash; zero cloud uploads</li>
+          <li>Strips GPS, camera EXIF, TIFF &amp; IPTC metadata automatically</li>
+          <li>3 presets: Balanced (78%), Ultra Tiny (58%), Clean PNG + Auto-Watch Desktop Screenshots</li>
+          <li>Native Apple Silicon <code>.dmg</code> installer &bull; Instant Gumroad License Key</li>
         </ul>
       </div>
       <div class="price-row">
-        <div class="price">$9 <span>once</span></div>
-        <a class="btn" href="https://adorable48.gumroad.com/l/ktulbs" target="_blank" rel="noopener">Get ScopeShield</a>
-      </div>
-    </article>
-
-    <article class="pcard">
-      <div>
-        <div class="tag">Pre-Launch QA</div>
-        <h3>LaunchCheck v1</h3>
-        <div class="replaces">Replaces Ahrefs ($29-$249/mo), Semrush ($139+/mo)</div>
-        <p>Audits any live URL or local HTML site in 5 seconds for SEO meta/OG tags, placeholder links, alt attributes, and 6 security headers.</p>
-        <ul>
-          <li>0&ndash;100 Launch Readiness HTML dashboard</li>
-          <li>Checks CSP, HSTS, X-Frame-Options &amp; more</li>
-        </ul>
-      </div>
-      <div class="price-row">
-        <div class="price">$9 <span>once</span></div>
-        <a class="btn" href="https://adorable48.gumroad.com/l/pgehvq" target="_blank" rel="noopener">Get LaunchCheck</a>
-      </div>
-    </article>
-
-    <article class="pcard">
-      <div>
-        <div class="tag">Zero-Plaid Privacy</div>
-        <h3>SubTrim v1</h3>
-        <div class="replaces">Replaces YNAB ($14.99/mo), Monarch ($14.99/mo)</div>
-        <p>Scans any local bank/card CSV statement to uncover forgotten recurring SaaS renewals and silent price hikes—with zero bank passwords shared.</p>
-        <ul>
-          <li>Flags price hikes &amp; annualized subscription burn</li>
-          <li>Interactive Mark-to-Cancel Savings Calculator</li>
-        </ul>
-      </div>
-      <div class="price-row">
-        <div class="price">$9 <span>once</span></div>
-        <a class="btn" href="https://adorable48.gumroad.com/l/ijrfzn" target="_blank" rel="noopener">Get SubTrim</a>
-      </div>
-    </article>
-
-    <article class="pcard">
-      <div>
-        <div class="tag">Developer Shipping</div>
-        <h3>ChangelogKit v1</h3>
-        <div class="replaces">Replaces Beamer ($49-$119/mo), Canny ($79-$99/mo)</div>
-        <p>Turns local Git commit logs into a categorized <code>CHANGELOG.md</code> and a searchable dark-mode public HTML Release Notes page in 2 seconds.</p>
-        <ul>
-          <li>Auto-groups Features, Bug Fixes &amp; Breaking Changes</li>
-          <li>Static HTML ready for $0 GitHub Pages hosting</li>
-        </ul>
-      </div>
-      <div class="price-row">
-        <div class="price">$9 <span>once</span></div>
-        <a class="btn" href="https://adorable48.gumroad.com/l/svfzm" target="_blank" rel="noopener">Get ChangelogKit</a>
+        <div class="price">$7 <span>one-time</span></div>
+        <a class="btn mint" href="https://adorable48.gumroad.com/l/snapshrink" target="_blank" rel="noopener">Get SnapShrink &rarr;</a>
       </div>
     </article>
   </section>
 
-  <h2>Annual Savings vs. Typical SaaS Subscriptions</h2>
-  <table>
-    <thead>
-      <tr><th>Workflow</th><th>Typical SaaS Cost</th><th>Our Local Tool</th><th>Data Privacy</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Invoice Follow-Ups</td><td>$36 &ndash; $59 / mo</td><td class="win">InvoicePulse &mdash; $9 once</td><td class="win">100% local CSV</td></tr>
-      <tr><td>Change Orders</td><td>$39 &ndash; $65 / user / mo</td><td class="win">ScopeShield &mdash; $9 once</td><td class="win">100% local JSON</td></tr>
-      <tr><td>Pre-Launch SEO &amp; Security</td><td>$49 &ndash; $139 / mo</td><td class="win">LaunchCheck &mdash; $9 once</td><td class="win">100% local CLI</td></tr>
-      <tr><td>Subscription Leak Audit</td><td>$14.99 / mo + Plaid login</td><td class="win">SubTrim &mdash; $9 once</td><td class="win">Zero Plaid / local CSV</td></tr>
-      <tr><td>Public Release Notes</td><td>$49 &ndash; $99 / mo</td><td class="win">ChangelogKit &mdash; $9 once</td><td class="win">Local Git repo</td></tr>
-    </tbody>
-  </table>
+  <section class="specs">
+    <div class="spec">
+      <h3>True Native Apple Silicon</h3>
+      <p>Compiled directly with Swift/AppKit &amp; CoreGraphics. Launches instantly and uses a fraction of the RAM of Electron utilities.</p>
+    </div>
+    <div class="spec">
+      <h3>Hardened Binary Delivery</h3>
+      <p>Delivered strictly as signed, stripped native <code>.app</code> bundles inside compressed macOS <code>.dmg</code> installers.</p>
+    </div>
+    <div class="spec">
+      <h3>100% Offline Privacy</h3>
+      <p>Your local ports, screenshots, and files never leave your Mac. License activates once via Gumroad and works offline afterward.</p>
+    </div>
+  </section>
 
   <footer>
-    Built autonomously by <a href="https://github.com/imgolamrabbani/neon-agent-house" target="_blank" rel="noopener">Neon Agent House</a> (Google ADK 2.x + Gemini 4 Neon) &bull; Every tool runs offline on Python 3 stdlib.
+    Built by <a href="https://adorable48.gumroad.com" target="_blank" rel="noopener">Neon Mac Utilities</a> &bull; All tools require macOS 14+ (Apple Silicon).
   </footer>
 </div>
 </body>

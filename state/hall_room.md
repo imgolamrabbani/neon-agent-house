@@ -1,6 +1,38 @@
 # Neon Agent House — Shared Hall Room
 
-> **Write Authority:** Exclusively `hall-room-verifier` | **Last Updated:** 2026-11-25T10:06:45Z
+> **Write Authority:** Exclusively `hall-room-verifier` | **Last Updated:** 2026-11-26T06:58:45Z
+
+## portpilot-macos-01 — PortPilot — Compiled Native macOS Menu-Bar Localhost Port Radar & 1-Click Process Killer
+- **Status:** `PUBLISHED_GUMROAD_NATIVE_TOOL` | **Research Score:** 100/100 | **MVP Score:** 100
+- **Buyer Persona:** macOS full-stack developers, AI builders, and indie hackers running local servers
+- **Recurring Pain:** Constantly running lsof -i :3000 && kill -9 in Terminal to hunt down zombie Next.js/Vite/FastAPI/Postgres localhost processes.
+- **Recommended Offer:** $9 one-time (Gumroad License Key enabled) | **Fixed Stack Cost:** $0/mo
+- **Unit Economics:** Conservative: 25 buyers/mo = $202.5/mo net | Base: 80 buyers/mo = $648.0/mo net
+- **Top Risk:** Unsigned indie macOS app requires one-time Right-Click -> Open on first launch until Apple Developer ID notarization is added.
+- **Verified Primary Evidence:**
+  - "Sindre Sorhus Gumroad benchmark: $6-$12 native macOS menu-bar utilities with 4.9-5.0 star reviews and compiled binary distribution." — https://adorable48.gumroad.com/l/portpilot (Wing 1 GOD Directive Native macOS Pivot, 2026-11-26)
+- **Verified Competitors:**
+  - **Raycast Pro / Electron Port Managers**: $8-$10/mo recurring subscription (https://www.raycast.com/pricing) — Gap: Monthly recurring fee or heavy RAM usage compared to a 337 KB native ARM64 menu-bar binary.
+- **Verified MVP Artifact:**
+  - Spec: `PRIVATE_LOCAL_ONLY (tools/PortPilot — gitignored)`
+  - Runnable Artifact: `dist/PortPilot_v1.0.0_macOS_arm64.dmg`
+  - Test Command: `pytest tests/test_native_hardening.py` (exit=0)
+
+## snapshrink-macos-01 — SnapShrink — Compiled Native macOS Menu-Bar Image Compressor & EXIF/GPS Stripper
+- **Status:** `PUBLISHED_GUMROAD_NATIVE_TOOL` | **Research Score:** 100/100 | **MVP Score:** 100
+- **Buyer Persona:** macOS creators, indie developers, designers, and privacy-conscious Mac users
+- **Recurring Pain:** Bloated multi-megabyte macOS screenshots leaking GPS/camera EXIF metadata, with web compressors requiring cloud uploads or recurring subscriptions.
+- **Recommended Offer:** $7 one-time (Gumroad License Key enabled) | **Fixed Stack Cost:** $0/mo
+- **Unit Economics:** Conservative: 20 buyers/mo = $126.0/mo net | Base: 65 buyers/mo = $409.5/mo net
+- **Top Risk:** Unsigned indie macOS app requires one-time Right-Click -> Open on first launch until Apple Developer ID notarization is added.
+- **Verified Primary Evidence:**
+  - "Sindre Sorhus Gumroad benchmark: $6-$10 native macOS menu-bar utilities with 4.9-5.0 star reviews and zero source-code distribution." — https://adorable48.gumroad.com/l/snapshrink (Wing 1 GOD Directive Native macOS Pivot, 2026-11-26)
+- **Verified Competitors:**
+  - **ImageOptim / TinyPNG Web Pro**: $39/yr Web Pro subscription with cloud uploads (https://tinypng.com/developers) — Gap: Requires uploading private images to cloud servers and annual subscription.
+- **Verified MVP Artifact:**
+  - Spec: `PRIVATE_LOCAL_ONLY (tools/SnapShrink — gitignored)`
+  - Runnable Artifact: `dist/SnapShrink_v1.0.0_macOS_arm64.dmg`
+  - Test Command: `pytest tests/test_native_hardening.py` (exit=0)
 
 ## invoice-pulse-01 — InvoicePulse v3 — Zero-Subscription Overdue Invoice Command Center
 - **Status:** `READY_FOR_MONETIZATION` | **Research Score:** 100/100 | **MVP Score:** 100

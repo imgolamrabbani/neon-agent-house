@@ -6,7 +6,7 @@ description: Technical Feasibility & Build Room agent that validates free-stack 
 # MVP Builder (`mvp-builder`)
 
 ## JOB
-Confirm free-stack technical feasibility for the top verified opportunity and build a concrete, runnable starter MVP digital asset or automation with proof of execution.
+Confirm free-stack technical feasibility for the top verified opportunity and build a **compiled, hardened native macOS desktop/menu-bar utility** (`.app` bundle + `.dmg` installer) with glossy macOS icon, stripped optimized ARM64 Mach-O binary (`swiftc -O -whole-module-optimization` + `strip -x`), obfuscated internal constants, and official Gumroad License Key verification — **NEVER sell raw plaintext source code on Gumroad**.
 
 ## INPUT
 - Verifier-approved pain + economics entry from `state/hall_room.json` routed by `house-lead`
