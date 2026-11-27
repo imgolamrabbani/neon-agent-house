@@ -110,7 +110,10 @@
           }
         ]
       },
-      "status": "READY_TO_PUBLISH"
+      "status": "PUBLISHED_LIVE",
+      "live_url": "https://news.ycombinator.com/item?id=50663367",
+      "published_at": "2026-11-27T06:10:41Z",
+      "notes": "Submitted via account bani54361 as standard engineering link post (HN /showlim restricts Show HN prefix & self-comment for 1-karma accounts). Links directly to live Dev.to article."
     },
     {
       "campaign_id": "devto-engineering-post",
@@ -145,7 +148,10 @@
           }
         ]
       },
-      "status": "READY_TO_PUBLISH"
+      "status": "PUBLISHED_LIVE",
+      "live_url": "https://dev.to/imgolamrabbani/why-i-built-a-337-kb-native-swift-port-manager-instead-of-another-200-mb-electron-app-43bi",
+      "published_at": "2026-11-27T06:10:41Z",
+      "notes": "Published live with cover banner from GitHub raw URL and tags #macos #swift #webdev #indiedev."
     },
     {
       "campaign_id": "indiehackers-launch",
@@ -179,6 +185,14 @@
         ]
       },
       "status": "READY_TO_PUBLISH"
+    },
+    {
+      "campaign_id": "github-kilobyte-labs-showcase",
+      "platform": "GitHub",
+      "status": "PUBLISHED_LIVE",
+      "live_url": "https://github.com/imgolamrabbani/kilobyte-labs",
+      "published_at": "2026-11-27T06:10:41Z",
+      "notes": "Public showcase repo with 10 discovery topics (zero proprietary source code exposed)."
     }
   ],
   "reddit_account_audit": {
@@ -187,5 +201,6 @@
     "account_age_days": 0,
     "audited_at": "2026-11-26T20:01:42Z",
     "strategy": "Warm up with zero-link helpful replies on r/macOS, r/webdev, r/Swift; launch immediately on zero-karma-wall channels (GitHub Showcase, Dev.to, Hacker News, Product Hunt, AlternativeTo)."
-  }
+  },
+  "updated_at": "2026-11-27T06:10:41Z"
 }

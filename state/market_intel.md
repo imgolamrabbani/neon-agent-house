@@ -1,6 +1,6 @@
 # Kilobyte Labs — Live Internet Trend & Marketing Audit
 
-> **Updated:** 2026-11-26T20:01:11Z | **All Storefront/Gumroad Links Live:** `True`
+> **Updated:** 2026-11-27T06:06:39Z | **All Storefront/Gumroad Links Live:** `True`
 
 ## Live Product & Storefront Health
 - **Storefront**: https://imgolamrabbani.github.io/neon-agent-house/ (`HTTP 200`)
@@ -21,11 +21,11 @@
 - **[HN]** (1 pts, 0 comments, match=`PortPilot`): [Show HN: Proton VPN from your terminal, menu bar and Alfred on macOS](https://news.ycombinator.com/item?id=50631057)
 
 ## Trending macOS Swift Menu-Bar Repos (Competitor & Feature Radar)
-- **stablebox/StableBar** (307★): A native, customizable menu bar for macOS, with themes, widgets, popups and AeroSpace, yabai or OmniWM workspaces. A free, open-source alternative to SketchyBar. — https://github.com/stablebox/StableBar
+- **lingyired/status-trio** (2158★): Status Trio — a native macOS app that combines Wi-Fi, battery, and volume into one compact, configurable status icon for the menu bar, the Dock, or both, inspired by the iPhone Duo combined status bar. — https://github.com/lingyired/status-trio
+- **elevatesoft/Fleck** (46★): Local-first notes for the macOS menu bar, with on-device dictation and optional agent access to the notes you choose. — https://github.com/elevatesoft/Fleck
+- **misswell/MacPilot** (40★): All-in-one macOS menu-bar toolbox: smart screenshots & OCR, screen recording with GIF export, clipboard history, PiP, window switcher, input-source automation, BLE proximity lock — native Swift, free, notarized. — https://github.com/misswell/MacPilot
 - **arun2990/menu-bar-token-economy** (116★): Best AI API Cost Tracker & Token Usage Monitor for Developers 2026 — https://github.com/arun2990/menu-bar-token-economy
-- **tang1693/KIKUmap** (579★): A mind map for your Claude/ChatGPT chats — macOS menu-bar app — https://github.com/tang1693/KIKUmap
-- **SorcRR/MacRazer** (45★): Native macOS menu bar app to control Razer mice (battery, DPI, RGB, button remap) over USB HID, no Synapse required. Tested on Cobra HyperSpeed and Atheris. — https://github.com/SorcRR/MacRazer
-- **lingyired/status-trio** (2154★): Status Trio — a native macOS app that combines Wi-Fi, battery, and volume into one compact, configurable status icon for the menu bar, the Dock, or both, inspired by the iPhone Duo combined status bar. — https://github.com/lingyired/status-trio
-- **jryang2026-code/MenuBarHome** (66★): macOS / Windows menu bar control for Xiaomi Mijia and Home Assistant devices (formerly MenuBarMijia) — https://github.com/jryang2026-code/MenuBarHome
-- **MF-DEEV/Openbar** (36★): The Dynamic Island for your AI agents. Claude Code, Codex and more in your Mac's notch, plus a full menu bar toolkit. — https://github.com/MF-DEEV/Openbar
-- **Wunderlandmedia/HotkeyClash** (246★): Find where your keyboard shortcuts clash. A free, open-source macOS menu bar app that detects shortcut conflicts across apps, config tools, and system settings. — https://github.com/Wunderlandmedia/HotkeyClash
+- **thaw-app/Thaw** (12931★): The open source menu bar manager — https://github.com/thaw-app/Thaw
+- **Eljot19/runic** (58★): Runic macOS Menu Bar App for AI Usage Cost and Token Tracking — https://github.com/Eljot19/runic
+- **Blinks44/monny** (31★): Native macOS menu bar system monitor, battery charge limit, and AI subscription quota tracker. Free & open source. — https://github.com/Blinks44/monny
+- **fif7y/dimble** (1362★): A calm menu bar, done the native way. Hides the icons you don't need until you do. — https://github.com/fif7y/dimble

@@ -1,7 +1,7 @@
 {
   "brand": "Kilobyte Labs",
   "tagline": "Tiny native Apple Silicon macOS utilities. Zero Electron. Zero subscriptions.",
-  "audited_at": "2026-11-26T20:01:11Z",
+  "audited_at": "2026-11-27T06:06:39Z",
   "own_links_health": [
     {
       "label": "Storefront",
@@ -235,11 +235,27 @@
   "github_macos_trends": [
     {
       "source": "github_trends",
-      "name": "stablebox/StableBar",
-      "description": "A native, customizable menu bar for macOS, with themes, widgets, popups and AeroSpace, yabai or OmniWM workspaces. A free, open-source alternative to SketchyBar.",
-      "url": "https://github.com/stablebox/StableBar",
-      "stars": 307,
-      "updated_at": "2026-11-26T19:52:46Z"
+      "name": "lingyired/status-trio",
+      "description": "Status Trio \u2014 a native macOS app that combines Wi-Fi, battery, and volume into one compact, configurable status icon for the menu bar, the Dock, or both, inspired by the iPhone Duo combined status bar.",
+      "url": "https://github.com/lingyired/status-trio",
+      "stars": 2158,
+      "updated_at": "2026-11-27T06:01:12Z"
+    },
+    {
+      "source": "github_trends",
+      "name": "elevatesoft/Fleck",
+      "description": "Local-first notes for the macOS menu bar, with on-device dictation and optional agent access to the notes you choose.",
+      "url": "https://github.com/elevatesoft/Fleck",
+      "stars": 46,
+      "updated_at": "2026-11-27T04:10:02Z"
+    },
+    {
+      "source": "github_trends",
+      "name": "misswell/MacPilot",
+      "description": "All-in-one macOS menu-bar toolbox: smart screenshots & OCR, screen recording with GIF export, clipboard history, PiP, window switcher, input-source automation, BLE proximity lock \u2014 native Swift, free, notarized.",
+      "url": "https://github.com/misswell/MacPilot",
+      "stars": 40,
+      "updated_at": "2026-11-21T07:37:37Z"
     },
     {
       "source": "github_trends",
@@ -251,67 +267,51 @@
     },
     {
       "source": "github_trends",
-      "name": "tang1693/KIKUmap",
-      "description": "A mind map for your Claude/ChatGPT chats \u2014 macOS menu-bar app",
-      "url": "https://github.com/tang1693/KIKUmap",
-      "stars": 579,
-      "updated_at": "2026-11-26T18:38:27Z"
+      "name": "thaw-app/Thaw",
+      "description": "The open source menu bar manager",
+      "url": "https://github.com/thaw-app/Thaw",
+      "stars": 12931,
+      "updated_at": "2026-11-27T05:06:01Z"
     },
     {
       "source": "github_trends",
-      "name": "SorcRR/MacRazer",
-      "description": "Native macOS menu bar app to control Razer mice (battery, DPI, RGB, button remap) over USB HID, no Synapse required. Tested on Cobra HyperSpeed and Atheris.",
-      "url": "https://github.com/SorcRR/MacRazer",
-      "stars": 45,
-      "updated_at": "2026-11-25T18:13:35Z"
+      "name": "Eljot19/runic",
+      "description": "Runic macOS Menu Bar App for AI Usage Cost and Token Tracking",
+      "url": "https://github.com/Eljot19/runic",
+      "stars": 58,
+      "updated_at": "2026-11-12T14:24:39Z"
     },
     {
       "source": "github_trends",
-      "name": "lingyired/status-trio",
-      "description": "Status Trio \u2014 a native macOS app that combines Wi-Fi, battery, and volume into one compact, configurable status icon for the menu bar, the Dock, or both, inspired by the iPhone Duo combined status bar.",
-      "url": "https://github.com/lingyired/status-trio",
-      "stars": 2154,
-      "updated_at": "2026-11-26T14:29:13Z"
+      "name": "Blinks44/monny",
+      "description": "Native macOS menu bar system monitor, battery charge limit, and AI subscription quota tracker. Free & open source.",
+      "url": "https://github.com/Blinks44/monny",
+      "stars": 31,
+      "updated_at": "2026-11-26T13:46:57Z"
     },
     {
       "source": "github_trends",
-      "name": "jryang2026-code/MenuBarHome",
-      "description": "macOS / Windows menu bar control for Xiaomi Mijia and Home Assistant devices (formerly MenuBarMijia)",
-      "url": "https://github.com/jryang2026-code/MenuBarHome",
-      "stars": 66,
-      "updated_at": "2026-11-26T13:24:55Z"
+      "name": "fif7y/dimble",
+      "description": "A calm menu bar, done the native way. Hides the icons you don't need until you do.",
+      "url": "https://github.com/fif7y/dimble",
+      "stars": 1362,
+      "updated_at": "2026-11-27T00:48:21Z"
     },
     {
       "source": "github_trends",
-      "name": "MF-DEEV/Openbar",
-      "description": "The Dynamic Island for your AI agents. Claude Code, Codex and more in your Mac's notch, plus a full menu bar toolkit.",
-      "url": "https://github.com/MF-DEEV/Openbar",
-      "stars": 36,
-      "updated_at": "2026-11-26T17:35:07Z"
+      "name": "franklioxygen/v2s",
+      "description": "Live bilingual subtitles for any app on macOS. Captures audio, transcribes speech, and translates offline \u2014 all from your menu bar.",
+      "url": "https://github.com/franklioxygen/v2s",
+      "stars": 518,
+      "updated_at": "2026-11-26T17:21:03Z"
     },
     {
       "source": "github_trends",
-      "name": "Wunderlandmedia/HotkeyClash",
-      "description": "Find where your keyboard shortcuts clash. A free, open-source macOS menu bar app that detects shortcut conflicts across apps, config tools, and system settings.",
-      "url": "https://github.com/Wunderlandmedia/HotkeyClash",
-      "stars": 246,
-      "updated_at": "2026-11-26T19:48:48Z"
-    },
-    {
-      "source": "github_trends",
-      "name": "darrylmorley/whatcable",
-      "description": "macOS menu bar app that tells you, in plain English, what each USB-C cable plugged into your Mac can actually do",
-      "url": "https://github.com/darrylmorley/whatcable",
-      "stars": 9234,
-      "updated_at": "2026-11-26T19:34:29Z"
-    },
-    {
-      "source": "github_trends",
-      "name": "jamesmontemagno/tiny-clips",
-      "description": "A lightweight macOS & Windows menu bar app for capturing screenshots (PNG), video (MP4), and animated GIFs of a selected screen region.",
-      "url": "https://github.com/jamesmontemagno/tiny-clips",
-      "stars": 144,
-      "updated_at": "2026-11-17T16:33:09Z"
+      "name": "michellzappa/headroom",
+      "description": "Local-first AI coding quotas and ship status, on your menu bar, iPhone, Watch and an ESP32 desk display.",
+      "url": "https://github.com/michellzappa/headroom",
+      "stars": 266,
+      "updated_at": "2026-11-09T04:41:48Z"
     }
   ]
 }
