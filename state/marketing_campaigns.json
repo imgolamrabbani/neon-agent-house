@@ -202,5 +202,24 @@
     "audited_at": "2026-11-26T20:01:42Z",
     "strategy": "Warm up with zero-link helpful replies on r/macOS, r/webdev, r/Swift; launch immediately on zero-karma-wall channels (GitHub Showcase, Dev.to, Hacker News, Product Hunt, AlternativeTo)."
   },
-  "updated_at": "2026-11-27T06:10:41Z"
+  "updated_at": "2026-11-27T06:10:41Z",
+  "reddit_warmup": {
+    "username": "u/Separate_Passage_997",
+    "updated_at": "2026-11-27T06:24:05Z",
+    "live_warmup_comments": [
+      {
+        "subreddit": "r/webdev",
+        "url": "https://www.reddit.com/r/webdev/comments/1y6c7xk/comment/19t96x0qbsj2a/",
+        "verified_visible_after_reload": true
+      }
+    ],
+    "target_megathread": "https://www.reddit.com/r/macapps/comments/1xks9uj/megathread_the_app_pile_november_2026/",
+    "megathread_requirements": [
+      "Verify email on u/Separate_Passage_997 profile",
+      "Reach 10+ comment karma via zero-link helpful replies first (respecting Reddit 10-min new-account cooldown)",
+      "Post 1 non-link comment in r/macapps before posting any link",
+      "Use strict PCP format with ZERO em-dashes or AI formatting"
+    ],
+    "ready_pcp_megathread_draft_no_emdash": "PortPilot (Kilobyte Labs)\n\nProblem: Local dev servers (Next.js, Vite, FastAPI, Postgres) leave zombie TCP ports open and force constant terminal lsof/kill lookups.\n\nComparison:\n- Raycast Kill Process / Port extensions: Raycast is much broader as a full launcher with a huge plugin ecosystem, while PortPilot is a standalone 337 KB native Swift menu-bar app dedicated to live listening port inspection with a live port count badge and 1-click Open/Copy/SIGTERM/SIGKILL.\n- LocalCan / Electron port monitors: Those offer extra features like .local mDNS domains and ngrok-style tunneling, while PortPilot skips Electron completely for a tiny native ARM64 footprint and offline one-time licensing.\n\nPricing: $9 one-time (free view-only radar included), or $12 bundle with SnapShrink (native ImageIO screenshot compressor + EXIF/GPS stripper). Website: https://imgolamrabbani.github.io/neon-agent-house/\n\nNote: macOS 14+ Apple Silicon, currently ad-hoc signed while bootstrapping (Right-Click -> Open once on first launch)."
+  }
 }
